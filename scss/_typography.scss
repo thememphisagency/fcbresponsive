@@ -1,0 +1,141 @@
+// Google Web Fonts - http://www.google.com/webfonts#UsePlace:use/Collection:Lato|Cabin:400,500,600,400italic
+@import url(http://fonts.googleapis.com/css?family=Lato|Cabin:400,500,600,400italic);
+
+body {
+    font-family: arial;
+    font-style: normal;
+    font-weight: normal;
+}
+
+blockquote {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 25px;
+    font-family: 'Century Schoolbook';
+    color: #4FA0AD;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 54px;
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: Cabin;
+    letter-spacing: -1px;
+    color: #000000;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: Cabin;
+}
+
+h3 {
+    font-size: 21px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: Cabin;
+    color: #000000;
+}
+
+h4 {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-family: Cabin;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h5 {
+    margin-bottom: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: Cabin;
+    font-size: 16px;
+    color: #000000;
+    line-height: 24px;
+}
+
+h6 {
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-family: Cabin;
+    font-size: 14px;
+    color: #666666;
+    line-height: 21px;
+}
+
+p a:link {
+    color: #00A502;
+}
+
+p a:visited {
+    color: #A8A7A3;
+}
+
+p a:hover {
+    color: #006E01;
+}
+
+p {
+    margin-bottom: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 21px;
+    color: #333333;
+}
+
+p.intro {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: Lato;
+    line-height: 27px;
+    color: #555555;
+    margin-top: 0px;
+}
+
+p.list {
+    text-align: center;
+    font-size: 14px;
+    line-height: 27px;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 25px;
+}
+
+p.listfooter {
+    font-size: 16px;
+    line-height: 42px;
+    color: #666666;
+    font-weight: 700;
+    font-style: italic;
+}
+
+p.copyright {
+    font-size: 12px;
+    line-height: 16px;
+    color: #666666;
+    text-align: center;
+}
+
+p.disclaimer {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+}
