@@ -1,0 +1,16 @@
+.top {
+	background: $baseColor;
+	height: 55px;
+	position: relative;
+	overflow: hidden;
+}
+
+.logo {
+	text-indent: -9999em;
+	display: block;
+	width: 242px;
+	height: 28px;
+	background: url('/wsimages/logo.png') no-repeat;
+	background-size: 121px;
+	margin: 14px 0 0 $outerPadding;
+}

@@ -1,16 +1,22 @@
 // Google Web Fonts - http://www.google.com/webfonts#UsePlace:use/Collection:Lato|Cabin:400,500,600,400italic
 @import url(http://fonts.googleapis.com/css?family=Lato|Cabin:400,500,600,400italic);
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: arial;
     font-style: normal;
     font-weight: normal;
+    color: #333;
+    @include font-size();
 }
 
 blockquote {
     font-style: italic;
     font-weight: 400;
-    font-size: 24px;
+    @include font-size(24);
     line-height: 36px;
     margin-bottom: 25px;
     font-family: 'Century Schoolbook';
@@ -18,7 +24,7 @@ blockquote {
 }
 
 h1 {
-    font-size: 32px;
+    @include font-size(32);
     line-height: 54px;
     margin-bottom: 5px;
     font-style: normal;
@@ -29,7 +35,7 @@ h1 {
 }
 
 h2 {
-    font-size: 26px;
+    @include font-size(26);
     line-height: 34px;
     margin-bottom: 15px;
     font-style: normal;
@@ -38,7 +44,7 @@ h2 {
 }
 
 h3 {
-    font-size: 21px;
+    @include font-size(21);
     line-height: 28px;
     margin-bottom: 15px;
     font-style: normal;
@@ -52,7 +58,7 @@ h4 {
     font-weight: 500;
     font-style: normal;
     font-family: Cabin;
-    font-size: 20px;
+    @include font-size(20);
     line-height: 30px;
 }
 
@@ -61,7 +67,7 @@ h5 {
     font-style: normal;
     font-weight: 400;
     font-family: Cabin;
-    font-size: 16px;
+    @include font-size(16);
     color: #000000;
     line-height: 24px;
 }
@@ -71,7 +77,7 @@ h6 {
     font-style: italic;
     margin-bottom: 10px;
     font-family: Cabin;
-    font-size: 14px;
+    @include font-size(14);
     color: #666666;
     line-height: 21px;
 }
@@ -93,13 +99,13 @@ p {
     font-style: normal;
     font-weight: 400;
     font-family: Lato;
-    font-size: 14px;
+    @include font-size(14);
     line-height: 21px;
     color: #333333;
 }
 
 p.intro {
-    font-size: 18px;
+    @include font-size(18);
     font-style: normal;
     font-weight: 400;
     font-family: Lato;
@@ -110,7 +116,7 @@ p.intro {
 
 p.list {
     text-align: center;
-    font-size: 14px;
+    @include font-size(14);
     line-height: 27px;
     font-weight: 700;
     font-style: normal;
@@ -118,7 +124,7 @@ p.list {
 }
 
 p.listfooter {
-    font-size: 16px;
+    @include font-size(16);
     line-height: 42px;
     color: #666666;
     font-weight: 700;
@@ -126,14 +132,14 @@ p.listfooter {
 }
 
 p.copyright {
-    font-size: 12px;
+    @include font-size(12);
     line-height: 16px;
     color: #666666;
     text-align: center;
 }
 
 p.disclaimer {
-    font-size: 12px;
+    @include font-size(12);
     text-align: center;
     font-weight: 700;
     font-style: normal;

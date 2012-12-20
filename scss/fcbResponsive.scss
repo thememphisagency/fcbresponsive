@@ -1,12 +1,58 @@
+@import "normalize";
+
+// Variables and mixins
+@import "variables";
+@import "mixins";
+
+// Site wide styles (html, body)
+@import "site";
+
 @import "colours";
 @import "fonts";
 @import "typography";
 
-body {
-	
+@import "header";
+
+
+//MEDIA QUERIES 		==============================
+
+@media print {
+	@import "print";
 }
 
+// 480px
+@media only screen and (min-width: 480px) {
+	@import "480";
+}
 
-span {
-	font-family: 'entypo';
+// 600px
+@media only screen and (min-width: 600px) {
+	@import "600";
+}
+
+// 768px
+@media only screen and (min-width: 768px) {
+	@import "768";
+}
+
+// 992px
+@media only screen and (min-width: 992px) {
+	@import "992";
+}
+
+// 1382px
+@media only screen and (min-width: 1382px) {
+	@import "1382";
+}
+
+// 2x (Retina)
+@media (min--moz-device-pixel-ratio: 1.5),
+       (-o-min-device-pixel-ratio: 3/2),
+       (-webkit-min-device-pixel-ratio: 1.5),
+       (min-device-pixel-ratio: 1.5),
+       (min-resolution: 144dpi),
+       (min-resolution: 1.5dppx) {
+
+	/* Retina rules! */
+	@import "2x";
 }
