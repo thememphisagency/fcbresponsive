@@ -5,14 +5,16 @@
 @import "mixins";
 
 // Site wide styles (html, body)
-@import "site";
 
 @import "colours";
+@import "site";
 @import "fonts";
 @import "typography";
 @import "buttons";
 
 @import "header";
+@import "modules";
+@import "footer";
 
 
 //MEDIA QUERIES 		==============================

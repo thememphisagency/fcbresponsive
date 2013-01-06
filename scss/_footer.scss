@@ -1,0 +1,29 @@
+footer{
+	background-color:#efefef;
+	
+	.footerlower{
+	background-color:#dedede;
+	}
+
+	.quicklinks{
+		list-style-type:disc;
+		padding:20px;
+		> li{
+			display:inline-block;
+			text-align:center;
+			margin:0 0 10px 10px;
+			min-width:140px;
+			font:{
+				family:Lato;
+				weight:bold;
+				style:italic;
+			}
+			color:#666666;
+			@include font-size(16);
+		}
+		> li::before{
+			content: '\2022';
+			padding:10px;
+		}
+	}
+}

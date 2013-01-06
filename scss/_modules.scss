@@ -1,0 +1,27 @@
+.banner{
+	background-color:#ddd;
+	height:140px;
+	text-align:center;
+}
+
+.services{
+	background-color:#efefef;
+	padding:0px;
+	> li{
+	
+		list-style-type:none;
+		height:100px;
+		text-align:center;
+		display:inline-block;
+		margin:0 0 10px 10px;
+		min-width:140px;
+		font-family:Lato;
+		font-weight:bold;
+		@include font-size(14);
+
+	}
+	.icon{
+		color:$baseColor;
+		font-weight:normal;
+	}
+}

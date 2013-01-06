@@ -4,18 +4,19 @@
 	width:255px;
 	height:35px;
 	padding: 12px 14px 0px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	@include font-size(18);
-	color:#fff;
-	text-decoration:none;
-	font-style:italic
+	@include rounded(5px);
+	
+
+}
+.button:hover{
+	background-color:lighten($baseColor, 5%);
 }
 .button .icon{
-	// TODO Make this colour a variable
+	// TODO Make this colour a variable?
 	color:#53a7dd;
 	display:inline-block;
 	float:right;
 	@include font-size(55);
-	line-height:0.0em
+	line-height:0.0em;
+	font-style:normal;
 }
