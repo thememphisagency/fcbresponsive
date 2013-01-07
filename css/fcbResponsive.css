@@ -569,6 +569,20 @@ body {
   background-color: transparent; }
 
 /* Layout Rules */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_layout\.scss}line{font-family:\000033}}
+article, aside {
+  margin: 10px 18px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_layout\.scss}line{font-family:\000038}}
+section article {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c2c2c2; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_layout\.scss}line{font-family:\0000312}}
+section article img {
+  float: left;
+  margin: 0 20px 20px 0; }
+
 /* Module Rules */
 /* Header */
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\000034}}
@@ -647,20 +661,20 @@ body {
     font-weight: normal; }
 
 /* Footer */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\0000382}}
 footer {
   background-color: #efefef; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\0000385}}
   footer .footerlower {
     background-color: #dedede; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\0000389}}
   footer .quicklinks {
     list-style-type: disc;
-    padding: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\0000390}}
+    padding: 30px 0 30px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\0000392}}
     footer .quicklinks > li {
       display: inline-block;
-      text-align: center;
+      text-align: left;
       margin: 0 0 10px 10px;
       min-width: 140px;
       font-family: Lato;
@@ -669,13 +683,38 @@ footer {
       color: #666666;
       font-size: 16px;
       font-size: 1.6rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003105}}
     footer .quicklinks > li::before {
       content: '\2022';
       padding: 10px; }
 
-/* Buttons */
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003112}}
+.copyright {
+  padding-top: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003115}}
+.disclaimer {
+  padding: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003117}}
+  .disclaimer > li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 15px;
+    font-family: Lato;
+    font-size: 12px;
+    font-size: 1.2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003127}}
+  .disclaimer > li:before {
+    content: "/";
+    padding-right: 15px;
+    font-weight: bold;
+    color: #bababa; }
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003135}}
+  .disclaimer > li:first-child:before {
+    content: ""; }
+
+/* Buttons */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003142}}
 .button {
   display: inline-block;
   background-color: #006fb6;
@@ -686,11 +725,11 @@ footer {
   -moz-border-radius: 5px;
   border-radius: 5px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003152}}
 .button:hover {
   background-color: #007fd0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbresponsive\/scss\/_modules\.scss}line{font-family:\00003155}}
 .button .icon {
   color: #53a7dd;
   display: inline-block;

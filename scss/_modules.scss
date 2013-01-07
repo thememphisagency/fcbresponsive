@@ -75,6 +75,8 @@
 	}
 }
 
+
+
 /* Footer */
 
 footer{
@@ -86,10 +88,10 @@ footer{
 
 	.quicklinks{
 		list-style-type:disc;
-		padding:20px;
+		padding:30px 0 30px 0;
 		> li{
 			display:inline-block;
-			text-align:center;
+			text-align:left;
 			margin:0 0 10px 10px;
 			min-width:140px;
 			font:{
@@ -107,6 +109,34 @@ footer{
 	}
 }
 
+.copyright{
+	padding-top:20px;
+}
+.disclaimer{
+	padding:0px;
+	> li{
+		list-style-type:none;
+		display:inline-block;
+		padding-right:15px;
+		font:{
+			family:Lato;
+
+		}
+		@include font-size(12);
+	}
+	> li:before{
+		content:"/";
+		padding-right:15px;
+		font:{
+			weight:bold;
+		}
+		color:#bababa;
+	}
+	> li:first-child:before{
+		content:"";
+	}
+
+}
 /* Buttons */
 
 .button{
