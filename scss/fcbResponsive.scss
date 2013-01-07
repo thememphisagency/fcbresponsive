@@ -7,14 +7,16 @@
 // Site wide styles (html, body)
 
 @import "colours";
-@import "site";
 @import "fonts";
 @import "typography";
-@import "buttons";
 
-@import "header";
+// SMACSS
+@import "base";
+@import "layout";
 @import "modules";
-@import "footer";
+/* @import "states"; 	*/
+/* @import "theme" 		*/
+
 
 
 //MEDIA QUERIES 		==============================

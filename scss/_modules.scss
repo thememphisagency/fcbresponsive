@@ -1,3 +1,52 @@
+/* Module Rules */
+/* Header */
+
+.top {
+	background: $baseColor;
+	height: 55px;
+	position: relative;
+	overflow: hidden;
+}
+
+.logo {
+	text-indent: -9999em;
+	display: block;
+	width: 140px;
+	height: 28px;
+	background: url('/wsimages/logo.png') no-repeat;
+	background-size: 121px;
+	margin: 14px 0 0 $outerPadding;
+	float:left;
+}
+.toggleSearch{
+	background-color: darken($baseColor, 10%);
+	display:inline;
+	float:right;
+	color:#fff;
+	width:55px;
+	text-decoration:none;
+	
+}
+.toggleMenu{
+	background-color: darken($baseColor, 5%);
+	display:inline;
+	float:right;
+	color:#fff;
+	width:55px;
+	text-decoration:none;	
+}
+.toggleSearch:hover,.toggleMenu:hover{
+	background-color: lighten($baseColor, 5%);
+}
+
+.toggleMenu .icon, .toggleSearch .icon{
+	color:#fff;
+	height:50px;
+	line-height:0.4em;
+	text-decoration:none;
+	font-size:3.6em
+}
+
 .banner{
 	background-color:#ddd;
 	height:140px;
@@ -24,4 +73,61 @@
 		color:$baseColor;
 		font-weight:normal;
 	}
+}
+
+/* Footer */
+
+footer{
+	background-color:#efefef;
+	
+	.footerlower{
+	background-color:#dedede;
+	}
+
+	.quicklinks{
+		list-style-type:disc;
+		padding:20px;
+		> li{
+			display:inline-block;
+			text-align:center;
+			margin:0 0 10px 10px;
+			min-width:140px;
+			font:{
+				family:Lato;
+				weight:bold;
+				style:italic;
+			}
+			color:#666666;
+			@include font-size(16);
+		}
+		> li::before{
+			content: '\2022';
+			padding:10px;
+		}
+	}
+}
+
+/* Buttons */
+
+.button{
+	display:inline-block;
+	background-color:$baseColor;
+	width:255px;
+	height:35px;
+	padding: 12px 14px 0px;
+	@include rounded(5px);
+	
+
+}
+.button:hover{
+	background-color:lighten($baseColor, 5%);
+}
+.button .icon{
+	// TODO Make this colour a variable?
+	color:#53a7dd;
+	display:inline-block;
+	float:right;
+	@include font-size(55);
+	line-height:0.0em;
+	font-style:normal;
 }

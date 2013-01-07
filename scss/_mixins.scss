@@ -1,10 +1,10 @@
-// @include font-size(VALUE);
+// Usage: @include font-size(VALUE);
 @mixin font-size($sizeValue: 16){
   font-size: ($sizeValue) + px;
   font-size: $sizeValue / 10 + rem;
 }
 
-// @include rounded(VALUE);
+// Usage: @include rounded(VALUE);
 
 @mixin rounded($radius:4px) {
 -webkit-border-radius : $radius;
