@@ -1,5 +1,5 @@
 // Google Web Fonts - http://www.google.com/webfonts#UsePlace:use/Collection:Lato|Cabin:400,500,600,400italic
-@import url(http://fonts.googleapis.com/css?family=Lato|Cabin:400,500,600,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic|Cabin:400,500,600,400italic);
 
 html {
     font-size: 62.5%;
@@ -145,6 +145,7 @@ p.copyright {
     font-style: normal;
     color: #000000;
 }
+
 .button{
     @include font-size(18);
     color:#fff;
@@ -158,6 +159,7 @@ a{
     font-family:Lato;
     font-weight:bold;
     font-style:oblique;
+    @include font-size(14);
 }
 .toTop{
     // TODO - Make this colour a variable ?
