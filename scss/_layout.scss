@@ -14,3 +14,25 @@ section article img{
 	margin:0 20px 20px 0;
 }
 
+.l-columns{
+	display:inline-block;
+
+}
+.col{
+	background-color:#ddddff;
+	display:inline-block;
+	margin:0;
+	float:left;
+	padding:$outerPadding;
+	border:1px solid black;
+}
+.l-cols-three{
+	.col{
+		width:33.33%;
+	}
+}
+.l-cols-four{
+	.col{
+		width:25%;
+	}
+}
