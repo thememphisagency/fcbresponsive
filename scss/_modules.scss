@@ -2,49 +2,49 @@
 /* Header */
 
 .top {
-	background: $baseColor;
-	height: 55px;
 	position: relative;
+	height: 55px;
+	background: $baseColor;
 	
 }
 
 .logo {
-	text-indent: -9999em;
 	display: block;
+	float:left;
+	margin: 14px 0 0 $outerPadding;
 	width: 140px;
 	height: 28px;
 	background: url('/wsimages/logo.png') no-repeat;
 	background-size: 121px;
-	margin: 14px 0 0 $outerPadding;
-	float:left;
+	text-indent: -9999em;
 }
-.toggleSearch{
-	background-color: darken($baseColor, 10%);
+.toggleSearch {
 	display:inline;
 	float:right;
-	color:#fff;
 	width:55px;
+	background-color: darken($baseColor, 10%);
+	color:#fff;
 	text-decoration:none;
 	
 }
-a.toggleMenu{
-	background-color: darken($baseColor, 5%);
+a.toggleMenu {
 	display:inline;
 	float:right;
-	color:#fff;
 	width:55px;
+	background-color: darken($baseColor, 5%);
+	color:#fff;
 	text-decoration:none;	
 }
-.toggleSearch:hover,.toggleMenu:hover{
+.toggleSearch:hover,.toggleMenu:hover {
 	background-color: lighten($baseColor, 5%);
 }
 
-.toggleMenu .icon, .toggleSearch .icon{
-	color:#fff;
+.toggleMenu .icon, .toggleSearch .icon {
 	height:55px;
-	line-height:0.55em;
+	color:#fff;
 	text-decoration:none;
-	font-size:3.6em
+	font-size:3.6em;
+	line-height:0.55em;
 }
 
 nav[role=navigation] {
@@ -70,30 +70,30 @@ nav[role=navigation] ul {
 nav[role=navigation] li a {
 	display: block;
 	padding: 0.8em;
-	border-bottom: 1px solid lighten($baseColor, 10%);;
+	border-bottom: 1px solid lighten($baseColor, 10%);
 	background-color:$baseColor;
 	color:#fff;
-	font:{
-		style:normal;
-	}
 	text-decoration:none;
+	font: {
+		style:normal;
+	};
 }
-nav[role=navigation] li a:hover{
+nav[role=navigation] li a:hover {
 	background-color:lighten($baseColor,10%);
 }
 
 
 
-.banner{
-	background-color:#ddd;
+.banner {
 	height:140px;
+	background-color:#ddd;
 	text-align:center;
 	> h3{
 		margin:0;
 	}
 }
 
-.services{
+.services {
 	padding:0 0 30px 0;
 	background-color:#efefef;
 	> li{
@@ -108,7 +108,7 @@ nav[role=navigation] li a:hover{
 		font-family:Lato;
 
 	}
-	.icon{
+	.icon {
 		color:$baseColor;
 		font-weight:normal;
 	}
@@ -118,88 +118,89 @@ nav[role=navigation] li a:hover{
 
 /* Footer */
 
-footer{
+footer {
 	background-color:#efefef;
 	
-	.siteinfo{
+	.siteinfo {
 	background-color:#dedede;
 	}
 
-	.quicklinks{
-		list-style-type:disc;
+	.quicklinks {
 		padding:30px 0 30px 0;
+		list-style-type:disc;
 		> li{
+			@include font-size(16);
 			display:inline-block;
-			text-align:left;
 			margin:0 0 10px 10px;
 			min-width:130px;
-			font:{
+			color:#666666;
+			text-align:left;
+			font: {
 				family:Lato;
 				weight:bold;
 				style:italic;
 			}
-			color:#666666;
-			@include font-size(16);
 		}
 		> li::before{
-			content: '\2022';
 			padding:10px;
+			content: '\2022';
 		}
 	}
 }
 
-.copyright{
+.copyright {
 	padding-top:20px;
 }
-.disclaimer{
+.disclaimer {
 	padding:0px;
 	> li{
-		list-style-type:none;
+		@include font-size(12);
 		display:inline-block;
-		padding-right:20px;
-		font:{
+		padding-right:18px;
+		list-style-type:none;
+
+		font: {
 			family:Lato;
 
 		}
-		@include font-size(12);
 	}
-	> li:before{
-		content:"/";
+	> li:before {
 		padding-right:20px;
+		color:#bababa;
+		content:"/";
 		font:{
 			weight:bold;
 		}
-		color:#bababa;
 	}
 	> li:first-child:before{
 		content:"";
 	}
 
 }
-.hidden{
+.hidden {
 	display:none;
 }
 /* Buttons */
 
-.button{
+.button {
+	@include rounded(5px);
 	display:inline-block;
-	background-color:$baseColor;
+	padding: 12px 14px 0px;
 	width:280px;
 	height:45px;
-	padding: 12px 14px 0px;
-	@include rounded(5px);
+	background-color:$baseColor;
 	font-weight:400;
 
 }
-.button:hover{
+.button:hover {
 	background-color:lighten($baseColor, 5%);
 }
-.button .icon{
-	// TODO Make this colour a variable?
-	color:#53a7dd;
+.button .icon {
+	@include font-size(55);
 	display:inline-block;
 	float:right;
-	@include font-size(55);
-	line-height:0.0em;
 	font-style:normal;
+	line-height:0.0em;
+	// TODO Make this colour a variable?
+	color:#53a7dd;
 }

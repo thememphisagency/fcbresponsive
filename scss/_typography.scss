@@ -146,28 +146,28 @@ p.copyright {
     color: #000000;
 }
 
-.button{
+.button {
     @include font-size(18);
-    color:#fff;
-    text-decoration:none;
-    font-style:italic;
-    font-family:Cabin;
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    font-family: Cabin;
 
 }
-a{
-    color:$linkGreen;
-    font-family:Lato;
-    font-weight:bold;
-    font-style:oblique;
+a {
+    color: $linkGreen;
+    font-family: Lato;
+    font-weight: bold;
+    font-style: oblique;
     @include font-size(14);
 }
-.toTop{
+.toTop {
     // TODO - Make this colour a variable ?
-    text-decoration:none;
-    text-indent:-9999px;
-    .icon{
-    color:#8f938f;
-    text-indent:0px;
-    text-align:center;
+    text-decoration: none;
+    text-indent: -9999px;
+    .icon {
+        color: #8f938f;
+        text-indent: 0px;
+        text-align: center;
     }
 }

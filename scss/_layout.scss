@@ -1,38 +1,18 @@
 /* Layout Rules */
 
-article, aside{
+article, aside {
 	margin: 10px $outerPadding;
 
 }
 
-section article{
-	padding-bottom:20px;
-	border-bottom:2px solid #c2c2c2;
+section article {
+	padding-bottom: 20px;
+	border-bottom: 2px solid #c2c2c2;
 }
-section article img{
-	float:left;
-	margin:0 20px 20px 0;
+section article img {
+	float: left;
+	margin: 0 20px 20px 0;
 }
 
-.l-columns{
-	display:inline-block;
 
-}
-.col{
-	background-color:#ddddff;
-	display:inline-block;
-	margin:0;
-	float:left;
-	padding:$outerPadding;
-	border:1px solid black;
-}
-.l-cols-three{
-	.col{
-		width:33.33%;
-	}
-}
-.l-cols-four{
-	.col{
-		width:25%;
-	}
-}
+
