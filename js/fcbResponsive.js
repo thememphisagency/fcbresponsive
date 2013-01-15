@@ -11,14 +11,12 @@ $(document).ready(function() {
 
   	$.fn.appendAround = function(){
 	    return this.each(function(){
-		    console.log('test');
-		      
+
 		    var $self = $( this ),
 		        att = "data-set",
 		        $set = $( "["+ att +"='"+ $self.closest( "["+ att +"]" ).attr( att ) + "']" );
 		     
 		    function appendToVisibleContainer(){
-		    	console.log($set);
 		        if( $self.is( ":hidden" ) ){
 		          $self.appendTo( $set.filter( ":visible:eq(0)" ) );
 		        }
