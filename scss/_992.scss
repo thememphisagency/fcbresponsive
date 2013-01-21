@@ -16,14 +16,18 @@
 	margin: 0 auto;	
 }
 article{
-
+	width:60%;
+	float:left;
 }
-aside {
+aside.right {
 	display: block;
 	width: 300px;
 	float:right;
-	background-color:#dfd;
+	margin-top:35px;
 
+}
+aside.bottom{
+	display:none;
 }
 // 3. MODULE 				==============================
 
@@ -75,6 +79,13 @@ aside {
 
 .sponsor {
 	width: 100%;
+	display: inline-block;
+	margin:10px;
+}
+
+ul.disclaimer {
+	
+	margin: 21px 183px 0;	
 	display: inline-block;
 }
 // 4. STATE 				==============================
