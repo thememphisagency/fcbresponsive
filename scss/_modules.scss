@@ -183,24 +183,33 @@ footer {
 /* Buttons */
 
 .button {
-	@include rounded(5px);
-	display:inline-block;
-	padding: 12px 14px 0px;
-	width:280px;
-	height:45px;
-	background-color:$baseColor;
-	font-weight:400;
 
+	@include rounded($btnRadius);
+	background: $baseColor;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	font-family: Cabin;
+	font-weight: 600;
+	font-style: italic;
+	font-size: 18px;
+	line-height: 28px;
+	padding: 9px 12px;
+	position: relative;
+	text-decoration: none;
+	width: 200px;
+		
+	&:hover {
+		background: lighten($baseColor, 5%);
+	}
 }
-.button:hover {
-	background-color:lighten($baseColor, 5%);
-}
-.button .icon {
-	@include font-size(55);
-	display:inline-block;
-	float:right;
-	font-style:normal;
-	line-height:0.0em;
-	// TODO Make this colour a variable?
-	color:#53a7dd;
-}
+
+	.button [data-icon] {
+		float: right;
+	}
+
+	.button [data-icon]:before {
+		color: lighten($baseColor, 50%);
+		opacity: 0.5;
+	}

@@ -1,34 +1,47 @@
 /* @font-face rules */
 @font-face {
-    font-family: 'entypo';
-    src: url('/fonts/entypo/entypo.eot');
-    src: url('/fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/entypo/entypo.woff') format('woff'),
-         url('/fonts/entypo/entypo.ttf') format('truetype'),
-         url('/fonts/entypo/entypo.svg#entypo') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'entypo';
+	src: url('/fonts/entypo/entypo.eot');
+	src: url('/fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/entypo/entypo.woff') format('woff'),
+		 url('/fonts/entypo/entypo.ttf') format('truetype'),
+		 url('/fonts/entypo/entypo.svg#entypo') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'entypo-social';
-    src: url('/fonts/entypoSocial/entypo-social.eot');
-    src: url('/fonts/entypoSocial/entypo-social.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/entypoSocial/entypo-social.woff') format('woff'),
-         url('/fonts/entypoSocial/entypo-social.ttf') format('truetype'),
-         url('/fonts/entypoSocial/entypo-social.svg#entypo-social') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'entypo-social';
+	src: url('/fonts/entypoSocial/entypo-social.eot');
+	src: url('/fonts/entypoSocial/entypo-social.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/entypoSocial/entypo-social.woff') format('woff'),
+		 url('/fonts/entypoSocial/entypo-social.ttf') format('truetype'),
+		 url('/fonts/entypoSocial/entypo-social.svg#entypo-social') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 .icon {
-    font-family: "entypo";
-    font-size: 5em;
-    line-height: 1;
-    text-align: center;
-    color: #333;
-    display: block;
-    font-style:normal;
-    font-weight:normal;
+	font-family: "entypo";
+	font-size: 5em;
+	line-height: 1;
+	text-align: center;
+	color: #333;
+	display: block;
+	font-style:normal;
+	font-weight:normal;
+}
+
+[data-icon]:before {
+	font-family: "entypo"; /* BYO icon font, mapped smartly */
+	content: attr(data-icon);
+	speak: none; /* Not to be trusted, but hey. */
+	text-transform: none;
+	position: relative;
+	top: 4px;
+	font-size: 40px;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 0;
 }

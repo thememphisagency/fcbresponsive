@@ -152,8 +152,13 @@ p.copyright {
     text-decoration: none;
     font-style: italic;
     font-family: Cabin;
-
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -1px;
+    line-height: 18px;
 }
+
+
 a {
     color: $linkGreen;
     font-family: Lato;
