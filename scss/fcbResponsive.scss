@@ -1,25 +1,27 @@
-@import "normalize";
 
 // Variables and mixins
-@import "variables";
-@import "mixins";
+@import "components/settings";
+
+@import "components/mixins";
+@import "components/variables";
+
 
 // Site wide styles (html, body)
-
-@import "colours";
-@import "fonts";
-@import "typography";
+@import "components/grid";
+@import "components/fonts";
+@import "components/typography";
 
 // SMACSS
+@import "normalize";
 @import "base";
 @import "layout";
 @import "modules";
- @import "states"; 	
-/* @import "theme" 		*/
+@import "states"; 	
+//@import "theme"
 
 
-
-//MEDIA QUERIES 		==============================
+//MEDIA QUERIES
+//----------------------------------------------------------------------------------------------------
 
 @media print {
 	@import "print";
