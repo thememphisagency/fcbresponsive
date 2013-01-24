@@ -1,9 +1,6 @@
 /* Layout Rules */
 
-article, aside {
-	margin: 10px 20px;
-}
-
+/*
 section article {
 	padding-bottom: 20px;
 	border-bottom: 2px solid #c2c2c2;
@@ -11,10 +8,31 @@ section article {
 section article img {
 	float: left;
 	margin: 0 20px 20px 0;
+}*/
+
+.wrap-left {
+	float: left;
+	margin: 0 $outerPadding $outerPadding 0;
 }
 
+.wrap-right {
+	float: right;
+	margin: 0 0 $outerPadding $outerPadding;
+}
+
+//Misc Elements
+.left        { float: left; }
+.right       { float: right; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
+.hide        { display: none; }
+.hide-override { display: none !important; }
+.highlight   { background: $highlightColor; }
+
+
 aside.right{
-display:none;
+	display:none;
 }
 aside.bottom{
 	display:block;

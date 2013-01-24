@@ -1,15 +1,10 @@
 
 // Variables and mixins
-@import "components/settings";
+@import "functions/all";
+@import "variables";
 
-@import "components/mixins";
-@import "components/variables";
-
-
-// Site wide styles (html, body)
-@import "components/grid";
-@import "components/fonts";
-@import "components/typography";
+@import "mixins/all";
+@import "components/all";
 
 // SMACSS
 @import "normalize";

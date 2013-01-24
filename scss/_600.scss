@@ -20,19 +20,6 @@ section article {
 	;
 }
 
-.col {
-	
-	display: inline-block;
-	margin: 0;
-	float: left;
-	padding: $outerPadding;
-	
-}
-.l-content{
-	.col{
-		width: 50%;
-	}
-}
 aside {
 	display: block;
 	width: 100%;
@@ -70,17 +57,17 @@ a.toggleMenu  {
 nav[role=navigation] ul  {
 	margin:  0 0 0 -0.25em;
 	border:  0;
-	background-color: darken($baseColor, 5%);
+	background-color: darken($mainColor, 5%);
 	
 }
 
 nav[role=navigation]  li  {
 	display:  inline-block;
 	margin:  0 0.25em;
-	background-color: darken($baseColor, 10%);
+	background-color: darken($mainColor, 10%);
 }
 nav[role=navigation] li a  {
-	border:  0;background-color: darken($baseColor, 5%);
+	border:  0;background-color: darken($mainColor, 5%);
 	padding: 0.969em 0.8em;
 	@include font-size(16);
 }

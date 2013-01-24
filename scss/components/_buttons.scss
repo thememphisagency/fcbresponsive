@@ -1,0 +1,30 @@
+.button {
+	@include rounded($buttonRadius);
+	background: $mainColor;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	font-family: Cabin;
+	font-weight: 600;
+	font-style: italic;
+	font-size: 18px;
+	line-height: 28px;
+	padding: 9px 12px;
+	position: relative;
+	text-decoration: none;
+	width: 200px;
+		
+	&:hover {
+		background: lighten($mainColor, 5%);
+	}
+}
+
+	.button [data-icon] {
+		float: right;
+	}
+
+	.button [data-icon]:before {
+		color: lighten($mainColor, 50%);
+		opacity: 0.5;
+	}

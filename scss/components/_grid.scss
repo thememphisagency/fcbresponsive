@@ -1,314 +1,89 @@
-// Grid
-//--------------------------------------
-// This is the mobile-friendly, responsive grid that
-// lets Foundation work much of its magic
+  /* The Grid ---------------------- */
 
-.container {
-  padding: 0 20px;
-}
+  .row { width: $rowWidth; max-width: 100%; min-width: $screenSmall; margin: 0 auto;
+    .row { width: auto; max-width: none; min-width: 0; margin: 0 (-($columnGutter/2)); }
 
-.row {
-  width: 100%;
-  max-width: $grid-max-width;
-  min-width: $grid-min-width;
-  margin: 0 auto;
-  .row {
-    min-width: 0;
-  }
-}
-
-.column, .columns {
-  margin-left: 4.4%;
-  float: left;
-  min-height: 1px;
-  position: relative;
-  &:first-child {
-    margin-left: 0;
-  }
-}
-
-[class*="column"]+[class*='column']:last-child {
-  float: right;
-}
-
-[class*="column"]+.end[class*="column"] {
-  float: left;
-}
-
-.row {
-  .one.columns {
-    width: 4.3%;
-  }
-  .two.columns {
-    width: 13%;
-  }
-  .three.columns {
-    width: 21.679%;
-  }
-  .four.columns {
-    width: 30.37%;
-  }
-  .five.columns {
-    width: 39.1%;
-  }
-  .six.columns {
-    width: 47.8%;
-  }
-  .seven.columns {
-    width: 56.5%;
-  }
-  .eight.columns {
-    width: 65.2%;
-  }
-  .nine.columns {
-    width: 73.9%;
-  }
-  .ten.columns {
-    width: 82.6%;
-  }
-  .eleven.columns {
-    width: 91.3%;
-  }
-  .twelve.columns {
-    width: 100%;
-  }
-  .offset-by-one {
-    margin-left: 13.1%;
-    &:first-child {
-      margin-left: 8.7%;
+    &.collapse {
+      .column, .columns { padding: 0; }
+    }
+    .row { width: auto; max-width: none; min-width: 0; margin: 0 (-($columnGutter/2));
+      &.collapse { margin: 0; }
     }
   }
-  .offset-by-two {
-    margin-left: 21.8%;
-    &:first-child {
-      margin-left: 17.4%;
+
+  .column, .columns { float: $defaultFloat; min-height: 1px; padding: 0 ($columnGutter/2); position: relative;
+    &.centered { float: none; margin: 0 auto; }
+  }
+
+  [class*="column"] + [class*="column"]:last-child { float: $defaultOpposite; }
+  [class*="column"] + [class*="column"].end { float: $defaultFloat; }
+
+  // Creating column classes
+  @for $i from 1 through $totalColumns {
+    .#{convert-number-to-word($i)} { width: gridCalc($i, $totalColumns); }
+  }
+
+  // Creating .row-# classes
+  @for $i from 1 through $totalColumns {
+    .row {
+      .#{convert-number-to-word($i)} { @extend .#{convert-number-to-word($i)}; }
     }
   }
-  .offset-by-three {
-    margin-left: 30.5%;
-    &:first-child {
-      margin-left: 26.1%;
+
+  // Creating .row .offset-by-# classes
+  @for $i from 1 through $totalColumns - 2 {
+    .row {
+      .offset-by-#{convert-number-to-word($i)} { margin-#{$defaultFloat}: gridCalc($i, $totalColumns); }
     }
   }
-  .offset-by-four {
-    margin-left: 39.2%;
-    &:first-child {
-      margin-left: 34.8%;
-    }
+
+  // Creating .row .push-# classes
+  @for $i from 2 through $totalColumns - 2 {
+    .push-#{convert-number-to-word($i)} { #{$defaultFloat}: gridCalc($i, $totalColumns); }
+    .pull-#{convert-number-to-word($i)} { #{$defaultOpposite}: gridCalc($i, $totalColumns); }
   }
-  .offset-by-five {
-    margin-left: 47.9%;
-    &:first-child {
-      margin-left: 43.5%;
-    }
-  }
-  .offset-by-six {
-    margin-left: 56.6%;
-    &:first-child {
-      margin-left: 52.2%;
-    }
-  }
-  .offset-by-seven {
-    margin-left: 65.3%;
-    &:first-child {
-      margin-left: 60.9%;
-    }
-  }
-  .offset-by-eight {
-    margin-left: 74%;
-    &:first-child {
-      margin-left: 69.6%;
-    }
-  }
-  .offset-by-nine {
-    margin-left: 82.7%;
-    &:first-child {
-      margin-left: 78.3%;
-    }
-  }
-  .offset-by-ten {
-    margin-left: 91.4%;
-    &:first-child {
-      margin-left: 87%;
-    }
-  }
-  .offset-by-eleven {
-    &:first-child {
-      margin-left: 95.7%;
-    }
-  }
-  .centered {
-    float: none;
-    margin: 0 auto;
-  }
-}
 
-// Source Ordering
-.push-two {
-  left: 17.4%;
-}
+  img { height: auto; }
+  img, object, embed { max-width: 100%; }
+  img { -ms-interpolation-mode: bicubic; }
+  #map_canvas img, .map_canvas img {max-width: none!important;}
 
-.push-three {
-  left: 26.1%;
-}
+  /* Nicolas Gallagher's micro clearfix */
+  .row { @include clearfix(); }
 
-.push-four {
-  left: 34.8%;
-}
+/* Block Grids ---------------------- */
 
-.push-five {
-  left: 43.5%;
-}
+/* These are 2-up, 3-up, 4-up and 5-up ULs, suited
+for repeating blocks of content. Add 'mobile' to
+them to switch them just like the layout grid
+(one item per line) on phones
 
-.push-six {
-  left: 52.2%;
-}
+For IE7/8 compatibility block-grid items need to be
+the same height. You can optionally uncomment the
+lines below to support arbitrary height, but know
+that IE7/8 do not support :nth-child.
+-------------------------------------------------- */
 
-.push-seven {
-  left: 60.9%;
-}
+  .block-grid { display: block; overflow: hidden; padding: 0;
 
-.push-eight {
-  left: 69.6%;
-}
+    &>li { display: block; height: auto; float: $defaultFloat; }
 
-.push-nine {
-  left: 78.3%;
-}
-
-.push-ten {
-  left: 87%;
-}
-
-.pull-two {
-  right: 17.4%;
-}
-
-.pull-three {
-  right: 26.1%;
-}
-
-.pull-four {
-  right: 34.8%;
-}
-
-.pull-five {
-  right: 43.5%;
-}
-
-.pull-six {
-  right: 52.2%;
-}
-
-.pull-seven {
-  right: 60.9%;
-}
-
-.pull-eight {
-  right: 69.6%;
-}
-
-.pull-nine {
-  right: 78.3%;
-}
-
-.pull-ten {
-  right: 87%;
-}
-
-img, object, embed {
-  max-width: 100%;
-  height: auto;
-}
-
-img {
-  -ms-interpolation-mode: bicubic;
-}
-
-#map_canvas img, .map_canvas img {
-  max-width: none !important;
-}
-
-// Nicolas Gallagher's micro clearfix
-.row:before, .row:after, .clearfix:before, .clearfix:after {
-  content: "";
-  display: table;
-}
-
-.row:after, .clearfix:after {
-  clear: both;
-}
-
-.row, .clearfix {
-  zoom: 1;
-}
-
-// Blockgrids
-//----------------------------------------------------------------------------------------------------
-
-// Notes:
-//
-//    These are 2-up, 3-up, 4-up and 5-up ULs suited for repeating blocks of content.
-//    Add 'mobile' to them to switch them just like the layout grid (one item per line) on phones
-//
-//    For IE7/8 compatibility, block-grid items need to be the same height.
-//    To support arbitrary height, set $support-block-grid-nth-child to true
-//    Just know that IE7/8 do not support :nth-child
-
-.block-grid {
-  display: block;
-  overflow: hidden;
-  & > li {
-    display: block;
-    height: auto;
-    float: left;
-  }
-  &.two-up {
-    margin-left: -4%;
-    & > li {
-      margin-left: 4%;
-      width: 46%;
-      @if $support-block-grid-nth-child {
-        &:nth-child(2n+1) {
-          clear: left;
+    @for $i from 1 through $blockGridElements {
+      &.#{convert-number-to-word($i)}-up {
+        @if $i == 1 { margin: 0; }
+        @else if $i == 2 { margin: 0 -15px; }
+        @else if $i == 3 { margin: 0 -12px; }
+        @else if $i == 4 { margin: 0 -10px; }
+        @else { margin: 0 -8px; }
+        &>li {
+          width: 100%/$i;
+          @if $i == 1 { padding: 0 0 15px; }
+          @else if $i == 2 { padding: 0 15px 15px; }
+          @else if $i == 3 { padding: 0 12px 12px; }
+          @else if $i == 4 { padding: 0 10px 10px; }
+          @else { padding: 0 8px 8px; }
+          @if $i > 1 { &:nth-child(#{$i}n+1) { clear: both; } }
         }
       }
     }
   }
-  &.three-up {
-    margin-left: -2%;
-    & > li {
-      margin-left: 2%;
-      width: 31.3%;
-      @if $support-block-grid-nth-child {
-        &:nth-child(3n+1) {
-          clear: left;
-        }
-      }
-    }
-  }
-  &.four-up {
-    margin-left: -2%;
-    & > li {
-      margin-left: 2%;
-      width: 23%;
-      @if $support-block-grid-nth-child {
-        &:nth-child(4n+1) {
-          clear: left;
-        }
-      }
-    }
-  }
-  &.five-up {
-    margin-left: -1.5%;
-    & > li {
-      margin-left: 1.5%;
-      width: 18.5%;
-      @if $support-block-grid-nth-child {
-        &:nth-child(5n+1) {
-          clear: left;
-        }
-      }
-    }
-  }
-}

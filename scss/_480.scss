@@ -12,24 +12,5 @@
 // 1. BASE 					==============================
 // 2. LAYOUT				==============================
 // 3. MODULE 				==============================
-.services{
-	padding:0 0 30px 0;
-	background-color:#efefef;
-	> li{
-		@include font-size(14);
-		display:inline-block;
-		margin:0 0 10px 10px;
-		min-width:31%;
-		height:70px;
-		list-style-type:none;
-		text-align:center;
-		font-weight:bold;
-		font-family:Lato;
-	}
-	.icon{
-		color:$baseColor;
-		font-weight:normal;
-	}
-}
 // 4. STATE 				==============================
 // 5. THEME 				==============================

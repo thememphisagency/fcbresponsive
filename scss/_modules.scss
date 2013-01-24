@@ -1,11 +1,10 @@
 /* Module Rules */
 /* Header */
-
+//-----------------------------------------------------------------------
 .top {
 	position: relative;
 	height: 55px;
-	background: $baseColor;
-	
+	background: $mainColor;
 }
 
 .logo {
@@ -22,7 +21,7 @@
 	display:inline;
 	float:right;
 	width:55px;
-	background-color: darken($baseColor, 10%);
+	background-color: darken($mainColor, 10%);
 	color:#fff;
 	text-decoration:none;
 	
@@ -31,12 +30,12 @@ a.toggleMenu {
 	display:inline;
 	float:right;
 	width:55px;
-	background-color: darken($baseColor, 5%);
+	background-color: darken($mainColor, 5%);
 	color:#fff;
 	text-decoration:none;	
 }
 .toggleSearch:hover,.toggleMenu:hover {
-	background-color: lighten($baseColor, 5%);
+	background-color: lighten($mainColor, 5%);
 }
 
 .toggleMenu .icon, .toggleSearch .icon {
@@ -47,6 +46,30 @@ a.toggleMenu {
 	line-height:0.55em;
 }
 
+
+//Seach Nav
+//-----------------------------------------------------------------------
+.header-search {
+	position: relative;
+}
+.header-search-form {
+	position: absolute;
+	bottom: -80px;
+	width: 100%;
+	background: white;
+
+	input[type="input"] {
+		display: block;
+	}
+
+	input[type="submit"] {
+		
+	}
+}
+
+
+//Main Navigation
+//-----------------------------------------------------------------------
 nav[role=navigation] {
 	clear: both;
 	-webkit-transition: all 0.3s ease-out;  
@@ -65,13 +88,13 @@ nav[role=navigation].active {
 nav[role=navigation] ul {
 	margin: 0;
 	padding: 0;
-	border-top: 1px solid lighten($baseColor, 10%);;
+	border-top: 1px solid lighten($mainColor, 10%);;
 }
 nav[role=navigation] li a {
 	display: block;
 	padding: 0.8em;
-	border-bottom: 1px solid lighten($baseColor, 10%);
-	background-color:$baseColor;
+	border-bottom: 1px solid lighten($mainColor, 10%);
+	background-color:$mainColor;
 	color:#fff;
 	text-decoration:none;
 	font: {
@@ -79,10 +102,14 @@ nav[role=navigation] li a {
 	};
 }
 nav[role=navigation] li a:hover {
-	background-color:lighten($baseColor,10%);
+	background-color:lighten($mainColor,10%);
 }
 
-
+//Main Body Styles
+//-----------------------------------------------------------------------
+.introduction {
+	margin:0 0 37px 0;
+}
 
 .banner {
 	height:140px;
@@ -94,30 +121,25 @@ nav[role=navigation] li a:hover {
 }
 
 .services {
-	padding:0 0 30px 0;
+	margin: 37px 0 0 0;
+	padding: 0 0 30px 0;
 	background-color:#efefef;
 	> li{
 		@include font-size(14);
-		display:inline-block;
-		margin:0 0 10px 10px;
-		min-width:45%;
-		height:70px;
 		list-style-type:none;
 		text-align:center;
 		font-weight:bold;
 		font-family:Lato;
-
 	}
 	.icon {
-		color:$baseColor;
+		color:$mainColor;
 		font-weight:normal;
 	}
 }
 
 
-
-/* Footer */
-
+/* Footer Styles */
+//-----------------------------------------------------------------------
 footer {
 	background-color:#efefef;
 	
@@ -151,6 +173,7 @@ footer {
 .copyright {
 	padding-top:20px;
 }
+
 .disclaimer {
 	padding:0px;
 	> li{
@@ -175,41 +198,4 @@ footer {
 	> li:first-child:before{
 		content:"";
 	}
-
 }
-.hidden {
-	display:none;
-}
-/* Buttons */
-
-.button {
-
-	@include rounded($btnRadius);
-	background: $baseColor;
-	border-radius: 5px;
-	color: #FFF;
-	cursor: pointer;
-	display: inline-block;
-	font-family: Cabin;
-	font-weight: 600;
-	font-style: italic;
-	font-size: 18px;
-	line-height: 28px;
-	padding: 9px 12px;
-	position: relative;
-	text-decoration: none;
-	width: 200px;
-		
-	&:hover {
-		background: lighten($baseColor, 5%);
-	}
-}
-
-	.button [data-icon] {
-		float: right;
-	}
-
-	.button [data-icon]:before {
-		color: lighten($baseColor, 50%);
-		opacity: 0.5;
-	}
