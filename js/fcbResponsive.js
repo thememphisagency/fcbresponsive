@@ -1,4 +1,33 @@
 $(document).ready(function() {
+		
+	/* 
+		All functionality that requires responsive     
+		Should be included here
+	*/	
+	enquire.register("screen and (min-width:320px) and (max-width:991px)", {
+		match: function() {
+			$('.toggleSearch').on("click", function(){
+				$('.header-search-form').toggleClass('active');
+			});
+		},
+
+		unmatch: function() {
+			$('.toggleSearch').off("click");
+		}
+	})
+	.register("screen and (min-width:992px)",{
+		match: function() {
+			//Turn the searchToggle button into a search submit
+		},
+
+		unmatch: function() {
+		}
+	})
+	.listen();
+
+
+	$(".sponsors").appendAround();
+
 	$('body').addClass('js');
   	var $menu = $('#menu'),
     $menulink = $('.toggleMenu');
@@ -8,36 +37,4 @@ $(document).ready(function() {
 		$menu.toggleClass('active');
 		return false;
 	});
-
-  	$(".sponsors").appendAround();
 });
-
-
-/*! appendAround markup pattern. [c]2012, @scottjehl, Filament Group, Inc. MIT/GPL 
-	https://github.com/filamentgroup/AppendAround
-how-to:
-	1. Insert potential element containers throughout the DOM
-	2. give each container a data-set attribute with a value that matches all other containers' values
-	3. Place your appendAround content in one of the potential containers
-	4. Call appendAround() on that element when the DOM is ready
-*/
-
-$.fn.appendAround = function(){
-	return this.each(function(){
-
-	    var $self = $( this ),
-	        att = "data-set",
-	        $set = $( "["+ att +"='"+ $self.closest( "["+ att +"]" ).attr( att ) + "']" );
-	     
-	    function appendToVisibleContainer(){
-	        if( $self.is( ":hidden" ) ){
-	          $self.appendTo( $set.filter( ":visible:eq(0)" ) );
-	        }
-	    }
-	      
-	    appendToVisibleContainer();
-	      
-	    $(window).resize( appendToVisibleContainer );
-	      
-	});
-};

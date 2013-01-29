@@ -49,6 +49,11 @@ a.toggleMenu  {
 .toggleMenu .icon, .toggleSearch .icon {
 	height: 50px;
 }
+
+.header-search-form {
+	bottom:-200px;			
+}
+
 .js nav[role=navigation]  {
 	max-height:  55px;
 	position: relative;
@@ -57,10 +62,8 @@ a.toggleMenu  {
 nav[role=navigation] ul  {
 	margin:  0 0 0 -0.25em;
 	border:  0;
-	background-color: darken($mainColor, 5%);
-	
+	background-color: darken($mainColor, 5%);	
 }
-
 nav[role=navigation]  li  {
 	display:  inline-block;
 	margin:  0 0.25em;
@@ -161,6 +164,7 @@ a.toTop {
 }
 
 // 4. STATE 				==============================
+
 /* Header */
 .toggleMenu {
 	display: none;
@@ -172,5 +176,4 @@ a.toTop {
 .quicklinks {
 	display: none;
 }
-
 // 5. THEME 				==============================

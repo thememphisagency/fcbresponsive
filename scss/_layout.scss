@@ -31,6 +31,10 @@ section article img {
 .highlight   { background: $highlightColor; }
 
 
+.hb-wrap {
+	overflow:hidden; /* hides verticle scrollbar for .header-search-form */
+}
+
 aside.right{
 	display:none;
 }

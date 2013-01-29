@@ -54,16 +54,38 @@ a.toggleMenu {
 }
 .header-search-form {
 	position: absolute;
-	bottom: -80px;
+	bottom:-107px;
+	left:-4000px;
 	width: 100%;
-	background: white;
+	background: #fff;
+	text-align: right;
+	padding: 8px;
+	font-size:0;
+	-webkit-transition: all 0.3s ease-out;  
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 
-	input[type="input"] {
-		display: block;
+	input[type="text"] {
+		display: inline-block;
+		padding: 0.8rem;
+		font-size: 16px;
+		width: 80%;
+		border: 0;
+		color: #fff;
+		background-color: darken($mainColor, 10%);
+		@include font-size(16);
+		font: {
+			style: italic;
+		}
 	}
 
 	input[type="submit"] {
-		
+		font-size: 16px;
+		width:20%;
+		padding: 0.8rem;
+		border: none;
 	}
 }
 
