@@ -1,15 +1,5 @@
 /* Layout Rules */
 
-/*
-section article {
-	padding-bottom: 20px;
-	border-bottom: 2px solid #c2c2c2;
-}
-section article img {
-	float: left;
-	margin: 0 20px 20px 0;
-}*/
-
 .wrap-left {
 	float: left;
 	margin: 0 $outerPadding $outerPadding 0;
@@ -29,11 +19,6 @@ section article img {
 .hide        { display: none; }
 .hide-override { display: none !important; }
 .highlight   { background: $highlightColor; }
-
-
-.hb-wrap {
-	overflow:hidden; /* hides verticle scrollbar for .header-search-form */
-}
 
 aside.right{
 	display:none;
