@@ -99,6 +99,8 @@ nav[role=navigation] {
 	-ms-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
+	position: relative;
+	z-index: 10;
 }
 .js nav[role=navigation] {
 	overflow: hidden;
