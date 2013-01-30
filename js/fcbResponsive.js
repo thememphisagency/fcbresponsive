@@ -1,3 +1,12 @@
+/* 
+	Use the comment-based directives to compress and minify all js files into one 
+*/
+
+// @depends lib/jquery-1.8.3.min.js
+// @depends lib/enquire.min.js
+// @depends lib/appendAround.js
+
+
 $(document).ready(function() {
 		
 	/* 
@@ -24,7 +33,6 @@ $(document).ready(function() {
 		}
 	})
 	.listen();
-
 
 	$(".sponsors").appendAround();
 

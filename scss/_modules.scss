@@ -52,6 +52,7 @@ a.toggleMenu {
 .header-search {
 	position: relative;
 }
+
 .header-search-form {
 	position: absolute;
 	bottom:-107px;
@@ -137,6 +138,7 @@ nav[role=navigation] li a:hover {
 	height:140px;
 	background-color:#ddd;
 	text-align:center;
+	
 	> h3{
 		margin:0;
 	}
@@ -145,7 +147,8 @@ nav[role=navigation] li a:hover {
 .services {
 	margin: 37px 0 0 0;
 	padding: 0 0 30px 0;
-	background-color:#efefef;
+	background-color: $secondaryColor;
+	
 	> li{
 		@include font-size(14);
 		list-style-type:none;
@@ -153,17 +156,60 @@ nav[role=navigation] li a:hover {
 		font-weight:bold;
 		font-family:Lato;
 	}
+	
 	.icon {
 		color:$mainColor;
 		font-weight:normal;
 	}
 }
 
+.sponsors {
+	font-size: 0px;
+
+	.sponsor {
+		text-align:center;
+		display: inline-block;
+		width: 100%;
+		margin: 25px 0 0 0;
+		font-size:0px;
+		line-height:0;
+
+		&:first-child {
+			margin: 0;
+		}
+	}
+}
+
+
+/* Index Styles */
+//-----------------------------------------------------------------------
+.index {
+
+}
+	
+.index-teaser {
+	background: $secondaryColor;
+	margin: 5px 0 0;
+
+	&:first-child {
+		margin:0;
+	}
+
+	h3 {
+		margin: 0;
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}	
+
 
 /* Footer Styles */
 //-----------------------------------------------------------------------
 footer {
-	background-color:#efefef;
+	background-color: $secondaryColor;
 	
 	.siteinfo {
 	background-color:#dedede;

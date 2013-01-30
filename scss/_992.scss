@@ -15,23 +15,12 @@
 	max-width: 980px;
 	margin: 0 auto;	
 }
-article{
-	width:60%;
-	float:left;
-}
-aside.right {
-	display: block;
-	width: 300px;
-	float:right;
-	margin-top:35px;
 
-}
 aside.bottom{
 	display:none;
 }
 
 // 3. MODULE 				==============================
-
 .banner {
 	height: 370px;
 }
@@ -64,7 +53,6 @@ aside.bottom{
 }
 
 ul.disclaimer {
-	
 	margin: 21px 183px 0;	
 	display: inline-block;
 }
