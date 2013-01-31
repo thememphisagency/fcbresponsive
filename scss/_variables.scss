@@ -31,6 +31,14 @@ $mainColor: #006fb6;
 $secondaryColor: #efefef;
 $highlightColor: #000;
 $white:#fff;
+$alertColor: #c60f13 !default;
+$successColor: #5da423 !default;
+$txtColor: #222 !default;
+$highlightColor: #ffff99 !default;
+$black: #000 !default;
+$white: #fff !default;
+$shinyEdge: rgba(#fff, .5) !default;
+$darkEdge: rgba(#000, .2) !default;
 
 
 // Button Settings (ONLY MODIFY DO NOT DELETE)
@@ -42,8 +50,8 @@ $tinyBtnBase: $btnBase - 5 !default;
 $smallBtnBase: $btnBase - 3 !default;
 $largeBtnBase: $btnBase + 5 !default;
 
-// Form Settings
-
+// Form Settings (ONLY MODIFY DO NOT DELETE)
+//----------------------------------------------------------------------------------------------------
 $formSpacing: 12px !default;
 $labelFontWeight: 500 !default;
 $labelFontColor: lighten(#000, 30%) !default;
@@ -58,6 +66,24 @@ $inputBorderStyle: solid !default;
 $inputBorderWidth: 1px !default;
 $inputBorderRadius: 2px !default;
 $fieldsetBorderRadius: 3px !default;
+
+// Custom Form Settings (ONLY MODIFY DO NOT DELETE)
+//----------------------------------------------------------------------------------------------------
+$custFormBorderColor: #ccc !default;
+$custFormBgColor: #fff !default;
+$custCheckColor: #222 !default;
+$custSelectCurrentFontColor: #141414 !default;
+$custSelectBgColor: #fff !default;
+$custSelectBorderColor: #ddd !default;
+$custSelectTriangleColor: #aaa !default;
+$custSelectTriangleColorOpen: #222 !default;
+$custSelectDropHeight: 200px !default;
+$custDropdownBgColor: #fff !default;
+$custDropdownBorderColor: darken(#fff, 20%) !default;
+$custDropdownFontColor: #555 !default;
+$custDropdownSelectedBgColor: lighten(#2ba6cb, 40%) !default;
+$custDropdownSelectedFontColor: #000 !default;
+$custFormDisabledBgColor: #ddd !default;
 
 
 /* Text direction settings (ONLY MODIFY DO NOT DELETE) */
