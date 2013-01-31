@@ -30,6 +30,7 @@ $screenXlarge: 1441px !default;
 $mainColor: #006fb6;
 $secondaryColor: #efefef;
 $highlightColor: #000;
+$white:#fff;
 
 
 // Button Settings (ONLY MODIFY DO NOT DELETE)
@@ -40,6 +41,23 @@ $btnBase: 10px !default;
 $tinyBtnBase: $btnBase - 5 !default;
 $smallBtnBase: $btnBase - 3 !default;
 $largeBtnBase: $btnBase + 5 !default;
+
+// Form Settings
+
+$formSpacing: 12px !default;
+$labelFontWeight: 500 !default;
+$labelFontColor: lighten(#000, 30%) !default;
+$labelBtmMargin: 3px !default;
+$inputFontColor: rgba(0,0,0,0.75) !default;
+$inputFontSize: 14px !default;
+$inputBgColor: #fff !default;
+$inputFocusBgColor: darken(#fff, 2%) !default;
+$inputBorderColor: darken(#fff, 20%) !default;
+$inputFocusBorderColor: darken(#fff, 30%) !default;
+$inputBorderStyle: solid !default;
+$inputBorderWidth: 1px !default;
+$inputBorderRadius: 2px !default;
+$fieldsetBorderRadius: 3px !default;
 
 
 /* Text direction settings (ONLY MODIFY DO NOT DELETE) */

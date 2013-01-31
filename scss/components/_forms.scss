@@ -1,14 +1,9 @@
-/*
-
-  THIS IS CURRENTLY NOT BEING USED
-
-
- Requires
+/* Requires
    globals.css */
 
 /* Standard Forms ---------------------- */
 
-  form { margin: 0 0 ($formSpacing); }
+  form { margin: 0 0 ($formSpacing * $ratio); }
 
   .row form .row { margin: 0 (-($formSpacing / 2));
 
