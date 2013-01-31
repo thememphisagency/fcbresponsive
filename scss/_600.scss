@@ -77,9 +77,8 @@ nav[role=navigation] li a  {
 .banner {
 	height: 290px;
 }
-.sponsor {
-	width: 49%;
-	display: inline-block;
+.sponsor, .sponsor:first-child {
+	margin:0; /* reset margin as these elements will be confined to a row */
 }
 
 /* Footer */

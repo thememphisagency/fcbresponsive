@@ -54,9 +54,12 @@ aside.bottom{
 }
 
 .sponsor {
-	width: 100%;
 	display: inline-block;
-	margin:10px;
+	margin: 25px 0 0 0;
+
+	&:first-child {
+		margin: 0;
+	}
 }
 
 ul.disclaimer {
