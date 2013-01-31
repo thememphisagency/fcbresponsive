@@ -16,7 +16,10 @@ section article {
 // 2. LAYOUT				==============================
 .wrapper {
 	margin: 0 auto;	
-	;
+}
+
+.row.content-block  .teaser.medium-three:last-child {
+	float: left; /* override last child float:right as there are only three blocks */
 }
 
 aside {
@@ -78,7 +81,7 @@ nav[role=navigation] li a  {
 	height: 290px;
 }
 .sponsor, .sponsor:first-child {
-	margin:0; /* reset margin as these elements will be confined to a row */
+	margin: 0; /* reset margin as these elements will be confined to a row */
 }
 
 /* Footer */

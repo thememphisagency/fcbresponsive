@@ -196,10 +196,14 @@ nav[role=navigation] li a:hover {
 	.teaser {
 		background: $secondaryColor;
 		margin: 5px 0 0;
-		padding:0 0 0 0;
+		padding:22px 63px 25px 20px;
 
 		&:first-child {
 			margin:0;
+		}
+
+		.icon {
+			color:#00a502;
 		}
 	}
 }
@@ -209,6 +213,7 @@ nav[role=navigation] li a:hover {
 
 	h3 {
 		margin: 0;
+		@include font-size(22);
 	}
 
 	p {
@@ -219,10 +224,9 @@ nav[role=navigation] li a:hover {
 	.icon {
 		position: absolute;
 		@include font-size(60);
-		right:0;
-		bottom:0;
-		width:3rem;
-		height:3rem;
+		right:20px;
+		bottom:25px;
+		color:#000;
 	}
 }	
 

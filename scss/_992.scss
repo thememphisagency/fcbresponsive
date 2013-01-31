@@ -27,6 +27,10 @@ aside.bottom{
 	display:none;
 }
 
+.row.content-block .teaser.medium-three:last-child {
+	float: right; /* override last child float:right as there are only three blocks */
+}
+
 // 3. MODULE 				==============================
 .banner {
 	height: 370px;
