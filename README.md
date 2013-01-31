@@ -1,13 +1,22 @@
-fcbresponsive
-=============
+#fcbResponsive
 
-Responsive skeleton for FarCry
+Responsive framework for FarCry
 
-CSS Setup
-======
+## CSS & JS Preprocessing
 
-1. Make changes to the SASS scss files in the scss/ folder
+### CSS
 
-2. Compile  scss/fcbResponsive.scss to css/fcbResposnive.css
+We use [SASS](http://sass-lang.com/).
 
-Note: Do not commit or push the css folder
+To compile the scss to css, navigate to the /scss folder and run:
+
+	sass fcbResponsive.scss:../css/fcbREsponsive.css
+
+### JS
+
+We use [FUSE](https://github.com/smebberson/fuse)
+
+To compile the javascript files, navigate to the /js folder and run:
+
+
+	fuse -i fcbResponsive.js -o fcbResponsive.min.js
