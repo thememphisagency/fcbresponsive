@@ -54,6 +54,7 @@ a.toggleMenu {
 }
 
 .header-search-form {
+	margin: 0;
 	position: absolute;
 	bottom:-107px;
 	left:-4000px;
@@ -129,6 +130,29 @@ nav[role=navigation] li a {
 nav[role=navigation] li a:hover {
 	background-color:lighten($mainColor,10%);
 }
+
+//Bread Crumbs
+//-----------------------------------------------------------------------
+.bread-crumb {
+	background: $secondaryColor;
+	@include font-size(12);
+	font: {
+		family:Lato;
+		weight:400;
+		style:italic;
+	}
+
+	a {
+		@include font-size(12);
+	}
+}
+
+.bread-crumb-inner {
+	padding: 11px $columnGutter/2;
+	margin: 0 auto;
+	max-width: $screenMedium;
+}
+
 
 //Main Body Styles
 //-----------------------------------------------------------------------

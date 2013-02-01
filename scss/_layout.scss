@@ -1,5 +1,4 @@
 /* Layout Rules */
-
 .wrap-left {
 	float: left;
 	margin: 0 $outerPadding $outerPadding 0;
@@ -9,16 +8,6 @@
 	float: right;
 	margin: 0 0 $outerPadding $outerPadding;
 }
-
-//Misc Elements
-.left        { float: left; }
-.right       { float: right; }
-.text-left   { text-align: left; }
-.text-right  { text-align: right; }
-.text-center { text-align: center; }
-.hide        { display: none; }
-.hide-override { display: none !important; }
-.highlight   { background: $highlightColor; }
 
 aside.right{
 	display:none;
