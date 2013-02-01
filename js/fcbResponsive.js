@@ -7,8 +7,7 @@
 // @depends lib/appendAround.js
 
 
-$(document).ready(function() {
-		
+$(document).ready(function() {	
 	/* 
 		All functionality that requires responsive     
 		Should be included here
@@ -36,7 +35,6 @@ $(document).ready(function() {
 
 	$(".sponsors").appendAround();
 
-	$('body').addClass('js');
   	var $menu = $('#menu'),
     $menulink = $('.toggleMenu');
 	$menulink.click(function() {
@@ -45,4 +43,16 @@ $(document).ready(function() {
 		$menu.toggleClass('active');
 		return false;
 	});
+
+	// Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking).
+	if (Modernizr.touch && !window.location.hash) {
+		$(window).load(function () {
+		  setTimeout(function () {
+		    // At load, if user hasn't scrolled more than 20px or so...
+					if( $(window).scrollTop() < 20 ) {
+		      window.scrollTo(0, 1);
+		    }
+		  }, 0);
+		});
+	}
 });
