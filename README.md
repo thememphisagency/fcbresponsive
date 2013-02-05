@@ -1,0 +1,1 @@
+This is the codebase for FCBResponsive, without the Farcry Core or FCBLib
