@@ -144,6 +144,8 @@ nav[role=navigation] li a:hover {
 
 	a {
 		@include font-size(12);
+		color: $mainColor;
+		text-decoration: none;
 	}
 }
 
@@ -224,7 +226,7 @@ nav[role=navigation] li a:hover {
 
 	p {
 		margin: 0;
-		padding: 0;
+		padding: 0 0 12px;
 	}
 
 	.icon {

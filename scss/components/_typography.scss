@@ -155,14 +155,6 @@ p.copyright {
     line-height: 18px;
 }
 
-a {
-    color: $linkGreen;
-    font-family: Lato;
-    font-weight: bold;
-    font-style: oblique;
-    @include font-size(14);
-}
-
 .toTop {
     // TODO - Make this colour a variable ?
     text-decoration: none;
