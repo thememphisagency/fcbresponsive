@@ -16,6 +16,7 @@
 	width: 100%;
 		
 	&:hover {
+		color: #fff;
 		background: lighten($mainColor, 5%);
 	}
 }
