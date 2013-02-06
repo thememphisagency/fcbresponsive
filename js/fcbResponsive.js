@@ -3,6 +3,7 @@
 */
 
 // @depends lib/jquery-1.8.3.min.js
+// @depends lib/respond.min.js
 // @depends lib/enquire.min.js
 // @depends lib/appendAround.js
 
