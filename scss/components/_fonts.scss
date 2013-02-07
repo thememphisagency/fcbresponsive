@@ -26,17 +26,6 @@
 }
 
 /* Define a font icon here */
-.icon {
-	font-family: "entypo";
-	font-size: 5em;
-	line-height: 1;
-	text-align: center;
-	color: #333;
-	display: block;
-	font-style:normal;
-	font-weight:normal;
-}
-
 [data-icon]:before {
 	font-family: "entypo"; /* BYO icon font, mapped smartly */
 	content: attr(data-icon);

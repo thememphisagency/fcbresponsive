@@ -17,34 +17,55 @@
 	background-size: 121px;
 	text-indent: -9999em;
 }
-.toggleSearch {
-	display:inline;
-	float:right;
-	width:55px;
+
+.toggleBtn {
+	display: inline-block;
+	float: right;
+	width: 55px;
 	background-color: darken($mainColor, 10%);
-	color:#fff;
-	text-decoration:none;
-	
-}
-a.toggleMenu {
-	display:inline;
-	float:right;
-	width:55px;
-	background-color: darken($mainColor, 5%);
-	color:#fff;
-	text-decoration:none;	
-}
-.toggleSearch:hover,.toggleMenu:hover {
-	background-color: lighten($mainColor, 5%);
+	color: #fff;
+	text-decoration: none;
+	height: 55px;
+	line-height: 63px;
+	text-align: center;
+
+	[data-icon]:before {
+		@include font-size(50);
+	}
+
+	&:hover {
+		color: #fff;
+	}
+
+	&.menu {
+		background-color: darken($mainColor, 5%);
+	}
+
 }
 
-.toggleMenu .icon, .toggleSearch .icon {
-	height:55px;
-	color:#fff;
-	text-decoration:none;
-	font-size:3.6em;
-	line-height:0.55em;
-}
+// .toggleSearch {
+	
+	
+// }
+// a.toggleMenu {
+// 	display:inline;
+// 	float:right;
+// 	width:55px;
+// 	background-color: darken($mainColor, 5%);
+// 	color:#fff;
+// 	text-decoration:none;	
+// }
+// .toggleSearch:hover,.toggleMenu:hover {
+// 	background-color: lighten($mainColor, 5%);
+// }
+
+// .toggleMenu .icon, .toggleSearch .icon {
+// 	height:55px;
+// 	color:#fff;
+// 	text-decoration:none;
+// 	font-size:3.6em;
+// 	line-height:0.55em;
+// }
 
 
 //Seach Nav
@@ -179,8 +200,8 @@ nav[role=navigation] li a:hover {
 }
 
 .services {
-	margin: 37px 0 0 0;
-	padding: 0 0 30px 0;
+	margin-top: 30px;
+	padding: 15px 0;
 	background-color: $secondaryColor;
 	
 	> li{
@@ -189,12 +210,24 @@ nav[role=navigation] li a:hover {
 		text-align:center;
 		font-weight:bold;
 		font-family:Lato;
+		margin-bottom: 8px;
 	}
 	
-	.icon {
-		color:$mainColor;
-		font-weight:normal;
+	.label {
+		display: block;
 	}
+
+	span[data-icon] {
+		line-height: 50px;
+		&:before {
+			color:$mainColor;
+			font-weight:normal;
+			@include font-size(70);
+			position: relative;
+			top: 13px;
+		}
+	}
+
 }
 
 .sponsors {
@@ -214,7 +247,7 @@ nav[role=navigation] li a:hover {
 }
 
 
-/* Teaser and Index Styles */
+/* Generic Teaser Styles */
 //-----------------------------------------------------------------------	
 .teaser {
 	position: relative;
@@ -228,30 +261,31 @@ nav[role=navigation] li a:hover {
 		margin: 0;
 		padding: 0 0 12px;
 	}
-
-	.icon {
-		position: absolute;
-		@include font-size(60);
-		right:20px;
-		bottom:25px;
-		color:#000;
-	}
 }
 
+/* Index Teaser Styles */
+//-----------------------------------------------------------------------
 .index {
 	margin:0 -15px;
 
 	.teaser {
 		background: $secondaryColor;
 		margin: 5px 0 0;
-		padding:22px 63px 25px 20px;
+		padding: 22px 63px 25px 20px;
 
 		&:first-child {
-			margin:0;
+			margin: 0;
 		}
 
-		.icon {
-			color:#00a502;
+		[data-icon] {
+			position: absolute;
+			right:20px;
+			bottom:25px;
+
+			&:before {
+				color:#00a502;
+				@include font-size(60);
+			}
 		}
 	}
 }	
@@ -264,7 +298,8 @@ footer {
 	overflow: hidden;
 	
 	.siteinfo {
-	background-color:#dedede;
+		background-color:#dedede;
+		text-align: center;
 	}
 
 	.quicklinks {

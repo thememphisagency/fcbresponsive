@@ -38,15 +38,22 @@ aside {
 	background-size: 170px;
 	background-position: 12px 30px;
 }
-.toggleSearch {
-	height: 50px;
-	width: 50px;
-	position: relative;
-	top: 98px;
-	z-index: 99;
-}
-a.toggleMenu  {
-   display:  none;
+
+.toggleBtn  {
+
+	line-height: 57px;
+
+	&.search {
+		height: 50px;
+		width: 50px;
+		position: relative;
+		top: 98px;
+		z-index: 99;
+	}
+
+	&.menu {
+		display:  none;
+	}
 }
 .toggleMenu .icon, .toggleSearch .icon {
 	height: 50px;
@@ -137,6 +144,7 @@ footer {
 footer .siteinfo {
 	height: 60px;
 	margin-top: 10px;
+	text-align: left;
 }
 p.copyright {
 	float: left;
@@ -148,13 +156,12 @@ ul.disclaimer {
 	margin: 21px 41px 0;	
 	display: inline-block;
 }
-a.toTop {
+.toTop {
 	float: right;
-	margin: 4px 15px;	
-	display: inline-block;
-	.icon {
-		@include font-size(58);
-		line-height: 0.4em;
+
+	[data-icon]:before {
+		top: 14px;
+		right: 15px;
 	}
 }
 
