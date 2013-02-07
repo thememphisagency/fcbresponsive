@@ -43,31 +43,6 @@
 
 }
 
-// .toggleSearch {
-	
-	
-// }
-// a.toggleMenu {
-// 	display:inline;
-// 	float:right;
-// 	width:55px;
-// 	background-color: darken($mainColor, 5%);
-// 	color:#fff;
-// 	text-decoration:none;	
-// }
-// .toggleSearch:hover,.toggleMenu:hover {
-// 	background-color: lighten($mainColor, 5%);
-// }
-
-// .toggleMenu .icon, .toggleSearch .icon {
-// 	height:55px;
-// 	color:#fff;
-// 	text-decoration:none;
-// 	font-size:3.6em;
-// 	line-height:0.55em;
-// }
-
-
 //Seach Nav
 //-----------------------------------------------------------------------
 .header-search {
@@ -117,11 +92,11 @@
 //-----------------------------------------------------------------------
 nav[role=navigation] {
 	clear: both;
-	-webkit-transition: all 0.3s ease-out;  
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.2s ease-out;  
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
 	position: relative;
 	z-index: 10;
 }

@@ -38,7 +38,7 @@ $(document).ready(function() {
 	$(".sponsors").appendAround();
 
   	var $menu = $('#menu'),
-    $menulink = $('.toggleMenu');
+    $menulink = $('.toggleBtn.menu');
 	$menulink.click(function() {
 		
 		$menulink.toggleClass('active');
