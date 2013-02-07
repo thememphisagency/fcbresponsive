@@ -158,10 +158,13 @@ p.copyright {
 .toTop {
     // TODO - Make this colour a variable ?
     text-decoration: none;
-    text-indent: -9999px;
-    .icon {
+
+    [data-icon] {
         color: #8f938f;
-        text-indent: 0px;
-        text-align: center;
+        line-height: 60px;
+
+        &:before{
+            @include font-size(70);
+        }
     }
 }
