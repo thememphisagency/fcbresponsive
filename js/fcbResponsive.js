@@ -16,13 +16,13 @@ $(document).ready(function() {
 	*/	
 	enquire.register("screen and (min-width:320px) and (max-width:991px)", {
 		match: function() {
-			$('.toggleSearch').on("click", function(){
+			$('.toggleBtn.search').on("click", function(){
 				$('.header-search-form').toggleClass('active');
 			});
 		},
 
 		unmatch: function() {
-			$('.toggleSearch').off("click");
+			$('.toggleButton.search').off("click");
 		}
 	})
 	.register("screen and (min-width:992px)",{
