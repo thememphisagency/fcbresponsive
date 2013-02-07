@@ -22,7 +22,7 @@ $(document).ready(function() {
 		},
 
 		unmatch: function() {
-			$('.toggleButton.search').off("click");
+			$('.toggleBtn.search').off("click");
 		}
 	})
 	.register("screen and (min-width:992px)",{
