@@ -6,6 +6,7 @@
 // @depends lib/respond.min.js
 // @depends lib/enquire.min.js
 // @depends lib/appendAround.js
+// @depends lib/fastclick.js
 
 
 $(document).ready(function() {	
@@ -56,4 +57,11 @@ $(document).ready(function() {
 		  }, 0);
 		});
 	}
+
+	// Instantiate FastClick
+		window.addEventListener('load', function() {
+	    new FastClick(document.body);
+	}, false);
+
+
 });
