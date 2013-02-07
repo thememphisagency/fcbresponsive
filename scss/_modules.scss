@@ -52,28 +52,33 @@
 .header-search-form {
 	margin: 0;
 	position: absolute;
-	bottom:-107px;
+	bottom:-124px;
 	left:-4000px;
 	width: 100%;
-	background: #fff;
+	background: darken($mainColor, 10%);
 	text-align: right;
-	padding: 8px;
+	padding: 1.7rem;
 	font-size:0;
-	-webkit-transition: all 0.3s ease-out;  
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.2s ease-out;  
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
 
 	input[type="text"] {
 		display: inline-block;
-		padding: 0.8rem;
+		padding: 0.9rem;
 		font-size: 16px;
-		width: 80%;
+		width: 75%;
 		border: 0;
-		color: #fff;
-		background-color: darken($mainColor, 10%);
+		color: #999999;
+		background: #fff;
+		margin: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
 		@include font-size(16);
+
+		outline: none;
 		font: {
 			style: italic;
 		}
@@ -81,9 +86,14 @@
 
 	input[type="submit"] {
 		font-size: 16px;
-		width:20%;
+		width:25%;
 		padding: 0.8rem;
 		border: none;
+		background: darken($mainColor, 5%);
+		color: #fff;
+		font-family: cabin;
+		font-weight: 600;
+		font-style: italic;
 	}
 }
 

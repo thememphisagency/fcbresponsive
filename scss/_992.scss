@@ -50,6 +50,8 @@ aside.bottom{
 		top: 98px;
 		z-index: 100;
 		float: right;
+		background: darken($mainColor, 10%);
+		color: #fff;
 	}
 
 	input[type="submit"] {
