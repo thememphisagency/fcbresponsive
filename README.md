@@ -2,19 +2,11 @@
 
 Responsive framework for FarCry
 
-## CSS & JS Preprocessing
+## Buildtools
 
 ### CSS
 
-We use [COMPASS](http://compass-style.org/).
-
-To compile the scss to css, navigate to the root folder for the project:
-
-	compass watch [DIRECTORY]
-
-If you would like to compile the scss with with the debug info for easy css debuging in chrome
-
-	compass watch [DIRECTORY] --debug-info
+We're using [COMPASS][compass]. Make sure you have compass installed before getting started.
 
 If you recieve an error when compiling with compass about not finding the modular-scale package, please run this command in your command panel.
 
@@ -22,9 +14,23 @@ If you recieve an error when compiling with compass about not finding the modula
 
 ### JS
 
-We use [FUSE](https://github.com/smebberson/fuse)
+We're using [FUSE][fuse] to compile JavaScript. Make sure you have Fuse installed before getting started.
 
-To compile the javascript files, navigate to the /js folder and run:
+### Building fcbresponsive
 
+You can issue the following lines on your terminal (individual terminal sessions):
 
-	fuse -i fcbResponsive.js -o fcbResponsive.min.js
+	compass watch
+	fuse -i ./js/fcbResponsive.js -o ./js/fcbResponsive.min.js
+
+OR
+
+You can use cake with coffeescript and run one command:
+
+	cake build
+
+This will start both compass and fuse, and output any messages from either program to the console. Please note, you must have node.js installed, and also have the [coffee-script][csp] package installed and setup (global mode).
+
+[csp]: https://npmjs.org/package/coffee-script
+[compass]: http://compass-style.org/
+[fuse]: https://github.com/smebberson/fuse
