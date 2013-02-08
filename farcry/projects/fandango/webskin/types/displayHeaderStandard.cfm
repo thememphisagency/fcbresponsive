@@ -25,7 +25,6 @@
 </head>
 
 <body>
-
     <!-- Header -->
     <header class="top">
         <div class="wrapper">
@@ -57,7 +56,9 @@
             </nav>
         </div>
     </header>
-    
+
+    <div class="main clearfix">
+
 </cfoutput>
 
 <cfsetting enablecfoutputonly="false">
