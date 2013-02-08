@@ -1,0 +1,24 @@
+/* State Rules */
+//----------------------------------------------------------------------------------------------------
+.left        { float: left; }
+.right       { float: right; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
+.hide        { display: none; }
+.hide-override { display: none !important; }
+.highlight   { background: $highlightColor; }
+
+
+//----------------------------------------------------------------------------------------------------
+.hidden {
+	display:none;
+}
+
+.footerlinks {
+	display: none;
+}
+
+.header-search-form.active {
+	left: 0;
+}

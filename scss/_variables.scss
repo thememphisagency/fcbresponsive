@@ -1,0 +1,117 @@
+// Custom variables ( Place All you custom project specific variables here )
+//----------------------------------------------------------------------------------------------------
+$linkGreen: #00a502;
+$tmaPink: #ec0064;
+
+/* Base Variables (ONLY MODIFY DO NOT DELETE) */
+//----------------------------------------------------------------------------------------------------
+$outerPadding: 9px;
+
+
+// Grid Settings (ONLY MODIFY DO NOT DELETE)
+//----------------------------------------------------------------------------------------------------
+$rowWidth: 980px !default;
+$columnGutter: 30px !default;
+$totalColumns: 12 !default;
+$mobileTotalColumns: 4 !default;
+$mediumTotalColumns: 6 !default;
+$blockGridElements: 12 !default; // Highest number of block grid elements, Maximum of 24 supported
+
+
+// Media Queries (ONLY MODIFY DO NOT DELETE)
+//----------------------------------------------------------------------------------------------------
+$screenSmall: 600px !default;
+$screenMedium: 980px !default;
+$screenXlarge: 1441px !default;
+
+
+//Base Colour Variables (ONLY MODIFY DO NOT DELETE)
+//----------------------------------------------------------------------------------------------------
+$mainColor: #006fb6;
+$secondaryColor: #efefef;
+$highlightColor: #000;
+$white:#fff;
+$alertColor: #c60f13 !default;
+$successColor: #5da423 !default;
+$txtColor: #222 !default;
+$highlightColor: #ffff99 !default;
+$black: #000 !default;
+$white: #fff !default;
+$shinyEdge: rgba(#fff, .5) !default;
+$darkEdge: rgba(#000, .2) !default;
+
+
+// Button Settings (ONLY MODIFY DO NOT DELETE)
+//----------------------------------------------------------------------------------------------------
+$buttonRadius: 4px !default;
+$btnBase: 10px !default;
+
+$tinyBtnBase: $btnBase - 5 !default;
+$smallBtnBase: $btnBase - 3 !default;
+$largeBtnBase: $btnBase + 5 !default;
+
+// Form Settings (ONLY MODIFY DO NOT DELETE)
+//----------------------------------------------------------------------------------------------------
+$formSpacing: 12px !default;
+$labelFontWeight: 500 !default;
+$labelFontColor: lighten(#000, 30%) !default;
+$labelBtmMargin: 3px !default;
+$inputFontColor: rgba(0,0,0,0.75) !default;
+$inputFontSize: 14px !default;
+$inputBgColor: #fff !default;
+$inputFocusBgColor: darken(#fff, 2%) !default;
+$inputBorderColor: darken(#fff, 20%) !default;
+$inputFocusBorderColor: darken(#fff, 30%) !default;
+$inputBorderStyle: solid !default;
+$inputBorderWidth: 1px !default;
+$inputBorderRadius: 2px !default;
+$fieldsetBorderRadius: 3px !default;
+
+// Custom Form Settings (ONLY MODIFY DO NOT DELETE)
+//----------------------------------------------------------------------------------------------------
+$custFormBorderColor: #ccc !default;
+$custFormBgColor: #fff !default;
+$custCheckColor: #222 !default;
+$custSelectCurrentFontColor: #141414 !default;
+$custSelectBgColor: #fff !default;
+$custSelectBorderColor: #ddd !default;
+$custSelectTriangleColor: #aaa !default;
+$custSelectTriangleColorOpen: #222 !default;
+$custSelectDropHeight: 200px !default;
+$custDropdownBgColor: #fff !default;
+$custDropdownBorderColor: darken(#fff, 20%) !default;
+$custDropdownFontColor: #555 !default;
+$custDropdownSelectedBgColor: lighten(#2ba6cb, 40%) !default;
+$custDropdownSelectedFontColor: #000 !default;
+$custFormDisabledBgColor: #ddd !default;
+
+
+/* Text direction settings (ONLY MODIFY DO NOT DELETE) */
+//----------------------------------------------------------------------------------------------------
+$textDirection: ltr !default; // Controls default global text direction, 'rtl' or 'ltr'
+$defaultFloat: left !default; // Change this to 'right' for right-to-left languages
+$defaultOpposite: right !default; // Change this to 'left' for right-to-left languages
+
+
+// Tooltip Settings (ONLY MODIFY DO NOT DELETE)
+//----------------------------------------------------------------------------------------------------
+$hasTipBorderBottom: dotted 1px #ccc !default;
+$hasTipFontWeight: bold !default;
+$hasTipFontColor: #333 !default;
+$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%) !default;
+$hasTipFontColorHover: $mainColor !default;
+$tooltipBackgroundColor: #000 !default;
+$tooltipBackgroundOpacity: 0.85 !default;
+$tooltipFontSize: 12px !default;
+$tooltipFontWeight: bold !default;
+$tooltipFontColor: #fff !default;
+$tapToCloseFontSize: 10px !default;
+$tapToCloseFontWeight: normal !default;
+$tapToCloseFontColor: #888 !default;
+$tooltipFontSizeScreenSm: 14px !default;
+$tooltipBgOpacityScreenSm: 0.85 !default;
+$tooltipBorderRadius: 4px !default;
+
+
+
+

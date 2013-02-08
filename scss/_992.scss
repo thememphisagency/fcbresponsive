@@ -1,0 +1,80 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* 992 =================================================== */
+
+// 1. BASE 					==============================
+// 2. LAYOUT				==============================
+.wrapper {
+	max-width: 980px;
+	margin: 0 auto;	
+}
+
+aside.right {
+	display: block;
+	width: 300px;
+	float:right;
+	margin-top:35px;
+}
+
+aside.bottom{
+	display:none;
+}
+
+.row.content-block .teaser.medium-three:last-child {
+	float: right; /* override last child float:right as there are only three blocks */
+}
+
+// 3. MODULE 				==============================
+.banner {
+	height: 370px;
+}
+
+.header-search-form {
+	position: static;
+	background: transparent;
+	text-align: left;
+	padding:0;
+
+	input[type="text"] {
+		display:block;
+		height: 50px;
+		width:180px;
+		position: relative;
+		top: 98px;
+		z-index: 100;
+		float: right;
+		background: darken($mainColor, 10%);
+		color: #fff;
+	}
+
+	input[type="submit"] {
+		display:none;
+	}
+}
+
+.sponsor {
+	display: inline-block;
+	margin: 25px 0 0 0;
+
+	&:first-child {
+		margin: 0;
+	}
+}
+
+ul.disclaimer {
+	margin: 21px 183px 0;	
+	display: inline-block;
+}
+// 4. STATE 				==============================
+
+.search{
+	display:block
+}
+// 5. THEME 				==============================

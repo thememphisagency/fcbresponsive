@@ -1,0 +1,179 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* 600 =================================================== */
+
+// 1. BASE 					==============================
+section article {
+	border: none;
+}
+// 2. LAYOUT				==============================
+.wrapper {
+	margin: 0 auto;	
+}
+
+.row.content-block  .teaser.medium-three:last-child {
+	float: left; /* override last child float:right as there are only three blocks */
+}
+
+aside {
+	display: block;
+	width: 100%;
+}
+
+// 3. MODULE 				==============================
+/* Header */
+.top {
+	height: 148px;
+}
+.logo {
+	width:  190px;
+	height: 68px;
+	background-size: 170px;
+	background-position: 12px 30px;
+}
+
+.toggleBtn  {
+
+	line-height: 57px;
+
+	&.search {
+		height: 50px;
+		width: 50px;
+		position: relative;
+		top: 98px;
+		z-index: 99;
+	}
+
+	&.menu {
+		display:  none;
+	}
+}
+
+.header-search-form {
+	bottom:-217px;			
+}
+
+.js nav[role=navigation]  {
+	max-height:  55px;
+	position: relative;
+	top: 16px;
+}
+nav[role=navigation] ul  {
+	margin:  0 0 0 -0.25em;
+	border:  0;
+	background-color: darken($mainColor, 5%);	
+}
+nav[role=navigation]  li  {
+	display:  inline-block;
+	margin:  0 0.25em;
+	background-color: darken($mainColor, 10%);
+}
+nav[role=navigation] li a  {
+	border:  0;background-color: darken($mainColor, 5%);
+	padding: 0.969em 0.8em;
+	@include font-size(16);
+}
+
+.banner {
+	height: 290px;
+}
+.sponsor, .sponsor:first-child {
+	margin: 0; /* reset margin as these elements will be confined to a row */
+}
+
+/* Footer */
+footer {
+	margin-top: 45px;
+}
+.footerlinks {
+	padding-top: 10px;
+	.col{
+		width:25%;
+	}
+	h4 {
+		@include font-size(18);
+		font:  {
+			family: Lato;
+			weight: bold;
+			style: italic;
+		}
+
+	}
+	ul {
+		padding: 0 0 0 1.1em;
+		li {
+			@include font-size(12);
+			text-indent: 0;
+			line-height: 2em;
+			font:  {
+				family: Lato;
+			}
+		}
+	}
+	ul.contact {
+		list-style-type: none;
+		text-indent: 0;
+		padding: 0;
+		margin: 0;
+		.icon {
+			@include font-size(36);
+			text-align: left;
+			text-indent: 0;
+			display: inline-block;
+			line-height: 0.4em;
+			vertical-align:  40%;
+			padding-left: 0;
+		}
+		li span {
+			padding-left: 10px;
+		
+		}
+	}
+	
+}
+footer .siteinfo {
+	height: 60px;
+	margin-top: 10px;
+	text-align: left;
+}
+p.copyright {
+	float: left;
+	margin: 0;
+	display: inline-block;
+}
+ul.disclaimer {
+	
+	margin: 21px 41px 0;	
+	display: inline-block;
+}
+.toTop {
+	float: right;
+
+	[data-icon]:before {
+		top: 14px;
+		right: 15px;
+	}
+}
+
+
+// 4. STATE 				==============================
+
+/* Header */
+.toggleMenu {
+	display: none;
+}
+/* Footer */
+.footerlinks {
+	display: block;
+}
+.quicklinks {
+	display: none;
+}
+// 5. THEME 				==============================

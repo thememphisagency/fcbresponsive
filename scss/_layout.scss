@@ -1,0 +1,20 @@
+/* Layout Rules */
+.wrap-left {
+	float: left;
+	margin: 0 $outerPadding $outerPadding 0;
+}
+
+.wrap-right {
+	float: right;
+	margin: 0 0 $outerPadding $outerPadding;
+}
+
+aside.right{
+	display:none;
+}
+aside.bottom{
+	display:block;
+	padding-top: 34px;
+	padding-bottom: 32px;
+}
+

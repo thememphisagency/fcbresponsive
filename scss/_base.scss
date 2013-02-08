@@ -1,0 +1,64 @@
+/* Base Rules */
+//----------------------------------------------------------------------------------------------------
+html { }
+
+body {
+	margin : 0;
+	padding : 0;
+	width : 100%;
+	background-color : transparent;
+}
+
+/* apply a natural box layout model to all elements */
+//----------------------------------------------------------------------------------------------------
+*, *:after, *:before { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+// Links
+//----------------------------------------------------------------------------------------------------
+
+a img { border: none; }
+
+a {
+	color: $linkGreen;
+	text-decoration: underline; 
+	line-height: inherit;
+	font-family: Lato;
+    font-weight: bold;
+    font-style: italic;
+    @include font-size(14);
+
+    &:hover { 
+    	color: darken($linkGreen, 5%); 
+    }
+
+    &:focus { 
+    	color: darken($linkGreen, 5%); 
+    }
+}
+
+  p a, p a:visited { line-height: inherit; }
+
+
+//Clear fix
+//----------------------------------------------------------------------------------------------------
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
