@@ -1,6 +1,6 @@
 <cfsetting enablecfoutputonly="true">
 <!--- @@displayname: Header Standard --->
-<!--- @@author: Justin Carter (justin@daemon.com.au)--->
+<!--- @@author: Matthew Attanasio (justin@daemon.com.au)--->
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 
