@@ -7,73 +7,57 @@
 <!--- params --->
 <cfparam name="stParam.title" default="#stobj.label#">
 
-
 <cfcontent reset="true">
-<cfoutput><!doctype html>
-<!--[if lt IE 7]><html class="ie6 oldie" lang="en"><![endif]-->
-<!--[if IE 7]><html class="ie7 oldie" lang="en"><![endif]-->
-<!--[if IE 8]><html class="ie8 oldie" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<cfoutput><!DOCTYPE HTML>
+<html class="no-js">
 
 <head>
 	<meta charset="utf-8">
 
 	<title>#stParam.title#</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" />
 
-	<link rel="stylesheet" type="text/css" href="/css/960_12_col.css"></link>
-	<link rel="stylesheet" type="text/css" href="/css/style.css"></link>
-
-	<skin:loadJS id="jquery" />
-	<skin:loadJS id="farcry-devicetype" />
-
+	<script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
 </head>
-
-<!--- temporary!!! --->
-
-	<script src="//cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
-
-	<script type="text/javascript">
-	$j(function(){
-		$j("##header-search input[name='q']").focus(function(){
-			if (this.value == "Search") this.value = "";
-		});
-		$j("##header-search input[name='q']").blur(function(){
-			if (this.value == "") this.value = "Search";
-		});
-	});
-	</script>
-
-<!--- temporary!!! --->
 
 <body>
 
-<div class="wrapper">
+    <!-- Header -->
+    <header class="top">
+        <div class="wrapper">
+            <a class="logo" href="##">Farcry in a Box</a>
+            
+            <div class="header-search">
+                <a class="toggleBtn search" href="##">
+                    <span data-icon="&##128269;"></span>
+                    <span class="hide">Search</span>
+                </a>
+                <form action="/" method="post" class="header-search-form">
+                    <input type="text" class="search" placeholder="Search our website..." value="" />
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
 
-	<header>
-		<div class="container_12">
-			<div class="grid_3" id="header-logo">
-				<a href="/"><img src="/css/images/logo.png" alt="Logo"></a>
-			</div>
-			<div class="grid_6" id="header-nav">
-				<nav>
-					<skin:genericNav navID="#application.navid.home#" id="nav" depth="1" bActive="true" bIncludeHome="true" />
-				</nav>
-			</div>
-			<div class="grid_3" id="header-search">
-				<form method="get" action="#application.fapi.getLink(type="dmSimpleSearch")#">
-					<div class="search-box">
-						<input type="hidden" name="type" value="dmSimpleSearch">
-						<input type="text" name="q" class="input" value="Search"><button type="submit">Search</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</header>
-
+            <a class="toggleBtn menu" href="##menu">
+                <span data-icon="&##9776;"></span>
+                <span class="hide">Menu</span>
+            </a>
+            <nav id="menu" role="navigation">
+                <ul>
+                    <li><a href="##">Home</a></li>
+                    <li><a href="##">About</a></li>
+                    <li><a href="##">Our Products</a></li>
+                    <li><a href="##">Latest News</a></li>
+                    <li><a href="##">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
 </cfoutput>
 
 <cfsetting enablecfoutputonly="false">
