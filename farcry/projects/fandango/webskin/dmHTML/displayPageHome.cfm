@@ -6,7 +6,7 @@
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin" />
 
 
-<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayHeaderStandard" columns="2">
+<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayHeaderStandard" columns="2" layoutclass="home">
 
 <cfoutput>
 <!-- Banner -->
@@ -27,14 +27,16 @@
 </div>
 
 <!-- Services -->
-<ul class="services row">
-    <li class="two mobile-two medium-two columns"><span data-icon="&##128241;"></span><span class="label">Mobile First</span></li>
-    <li class="two mobile-two medium-two columns"><span data-icon="&##128202;"></span><span class="label">Scalable Solution</span></li>
-    <li class="two mobile-two medium-two columns"><span data-icon="&##128319;"></span><span class="label">Future-Friendly</span></li>
-    <li class="two mobile-two medium-two columns"><span data-icon="&##62977;"></span><span class="label">Adaptive Website</span></li>
-    <li class="two mobile-two medium-two columns"><span data-icon="&##59214;"></span><span class="label">Responsive UI</span></li>
-    <li class="two mobile-two medium-two columns"><span data-icon="&##9874;"></span><span class="label">CMS Integrated</span></li>
-</ul>
+<div class="row">
+    <ul class="services clearfix">
+        <li class="two mobile-two medium-two columns"><span data-icon="&##128241;"></span><span class="label">Mobile First</span></li>
+        <li class="two mobile-two medium-two columns"><span data-icon="&##128202;"></span><span class="label">Scalable Solution</span></li>
+        <li class="two mobile-two medium-two columns"><span data-icon="&##128319;"></span><span class="label">Future-Friendly</span></li>
+        <li class="two mobile-two medium-two columns"><span data-icon="&##62977;"></span><span class="label">Adaptive Website</span></li>
+        <li class="two mobile-two medium-two columns"><span data-icon="&##59214;"></span><span class="label">Responsive UI</span></li>
+        <li class="two mobile-two medium-two columns"><span data-icon="&##9874;"></span><span class="label">CMS Integrated</span></li>
+    </ul>
+</div>
 
 <div class="row content-block">
     <!-- Content Blocks -->
@@ -62,7 +64,7 @@
 </div>
 </cfoutput>
 
-<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayFooterStandard" columns="2">
+<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayFooterStandard" columns="2" layoutclass="home">
 
 	
 <cfsetting enablecfoutputonly="false">
