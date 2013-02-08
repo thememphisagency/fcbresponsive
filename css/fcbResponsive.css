@@ -3324,7 +3324,7 @@ footer .quicklinks > li::before {
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_600\.scss}line{font-family:\0000317}}
-  .main {
+  .wrapper {
     margin: 0 auto;
   }
 
@@ -3527,7 +3527,7 @@ footer .quicklinks > li::before {
 @media only screen and (min-width: 992px) {
   /* 992 =================================================== */
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_992\.scss}line{font-family:\0000314}}
-  .main {
+  .wrapper {
     max-width: 980px;
     margin: 0 auto;
   }

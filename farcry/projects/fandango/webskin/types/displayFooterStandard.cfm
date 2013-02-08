@@ -4,8 +4,26 @@
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 
-<cfoutput>
+<cfparam name="stParam.multiplecol" default="true">
 
+
+<cfif stParam.multiplecol >
+    <cfoutput>
+    <!-- Secondary Column -->
+    <aside class="bottom row" data-set="asides">
+        <div class="sponsors">
+           <a class="sponsor column medium-three">
+                <img src="/wsimages/TMA.png" alt="The Memphis Agency" />
+            </a>
+            <a class="sponsor column medium-three">
+                <img src="/wsimages/Farcry.png" alt="Farcry" />
+            </a>
+        </div>
+    </aside>
+    </cfoutput>
+</cfif>
+
+<cfoutput>
     </div><!-- End .wrapper -->
 
     <!-- Footer --> 

@@ -3,6 +3,7 @@
 <!--- @@author: Matthew Attanasio (justin@daemon.com.au)--->
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
+<cfimport taglib="/farcry/plugins/fcblib/tags/fcb/ui" prefix="ui" />
 
 <!--- params --->
 <cfparam name="stParam.title" default="#stobj.label#">
@@ -45,19 +46,19 @@
                 <span data-icon="&##9776;"></span>
                 <span class="hide">Menu</span>
             </a>
-            <nav id="menu" role="navigation">
-                <ul>
-                    <li><a href="##">Home</a></li>
-                    <li><a href="##">About</a></li>
-                    <li><a href="##">Our Products</a></li>
-                    <li><a href="##">Latest News</a></li>
-                    <li><a href="##">Contact Us</a></li>
-                </ul>
-            </nav>
+            </cfoutput>
+
+            <ui:FcbNav navID="#application.navid.home#"
+                class="fcbNav"
+                depth="2"
+                bIncludeHome="true"
+                bFirstNodeInLevel="1" />
+
+            <cfoutput>
         </div>
     </header>
 
-    <div class="main clearfix">
+    <div class="row">
 
 </cfoutput>
 
