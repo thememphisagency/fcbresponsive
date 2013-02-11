@@ -1,6 +1,7 @@
 .sass-cache/
 .svn
 cache/
+css/
 farcry/core
 farcry/plugins/fcblib
 .project
