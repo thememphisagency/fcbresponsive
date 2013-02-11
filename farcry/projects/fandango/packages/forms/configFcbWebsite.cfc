@@ -1,5 +1,5 @@
 <cfcomponent displayname="Website Configuration" hint="Configuration for the website" extends="farcry.core.packages.forms.forms" output="false" key="fcbWebsite">
-	<cfproperty ftSeq="1" ftFieldset="" name="footerText" type="String" default="&copy; Copyright 2008" hint="" ftLabel="Footer Text" />
+	<cfproperty ftSeq="1" ftFieldset="" name="footerText" type="String" default="The Memphis Agency" hint="" ftHint="&copy; 2013 [your text here]" ftLabel="Footer Text" />
 	<cfproperty ftSeq="2" ftFieldset="" name="pageTitlePrefix" type="String" default="" hint="" ftLabel="Page Title Prefix" />
 	<cfproperty ftSeq="3" ftFieldset="" name="pageTitleSuffix" type="String" default="" hint="" ftLabel="Page Title Suffix" />
 	<cfproperty ftSeq="4" ftFieldset="" name="searchBoxDefaultText" type="String" default="Enter keywords..." hint="" ftLabel="Search Box Text" />
