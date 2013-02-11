@@ -4,10 +4,10 @@
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 <cfimport taglib="/farcry/plugins/fcblib/tags/fcb/ui" prefix="ui" />
+<cfimport taglib="/farcry/plugins/fcblib/tags/fcb/net" prefix="net" />
 
 <cfparam name="stParam.multiplecol" default="true">
 <cfparam name="stParam.layoutClass" default="internal">
-
 
 <cfif stParam.multiplecol >
     <cfif stParam.layoutClass NEQ "home">
@@ -102,6 +102,15 @@
     
     <!--- All Js files should be included in this file --->    
     <script src="/js/fcbResponsive.min.js" type="text/javascript"></script>
+
+    </cfoutput>
+    <!--- Only output the tracking code when user is not a logged in admin --->
+    <cfif NOT structKeyExists(session, 'dmSec') 
+          OR (  structKeyExists(session, 'dmSec') AND structKeyExists(session.dmSec, 'authentication') 
+                AND structKeyExists(session.dmSec.authentication, 'bAdmin') AND session.dmSec.authentication.bAdmin IS 0)>
+        <net:GoogleAnalytics>
+    </cfif>
+    <cfoutput>
 
 </body>
 

@@ -37,29 +37,19 @@ $Developer: Mat Bryant (m.bryant@daemon.com.au)$
 <!--------------------------------- 
 PUT PRODUCTION OR DEFAULT CODE HERE
  --------------------------------->
-
+<!--- Initialise Object Bucket --->
+<cfset fcbObjectBucket = createObject("component","farcry.plugins.fcblib.packages.fcb.fcbObjectBucket") />
+<cfset fcbObjectBucket.init() />
 
 
 <!--------------------------------------------------- 
 PUT DEVELOPER OR STAGING/TESTING SPECIFIC CODE BELOW
  --------------------------------------------------->
-<!--- Initialise Object Bucket --->
-<cfset fcbObjectBucket = createObject("component","farcry.plugins.fcblib.packages.fcb.fcbObjectBucket") />
-<cfset fcbObjectBucket.init() />
 
-<farcry:machineSpecific name="DEVELOPER_1_MACHINE_NAME_HERE">
-	<!--- DEVELOPER SPECIFIC OVERRIDING CODE HERE --->
-</farcry:machineSpecific>	
-
-
-<farcry:machineSpecific name="DEVELOPER_2_MACHINE_NAME_HERE">
-	<!--- DEVELOPER SPECIFIC OVERRIDING CODE HERE --->
-</farcry:machineSpecific>	
-
-
-<farcry:machineSpecific name="DEVELOPER_3_MACHINE_NAME_HERE">
-	<!--- DEVELOPER SPECIFIC OVERRIDING CODE HERE --->
-</farcry:machineSpecific>	
+<!--- Only the developers comp are set as staging site --->
+<farcry:machineSpecific name="pollock,bodoni,alessi,davinci,kandinsky,vangogh,mccurry,warhol">
+	<cfset request.fcbStaging = true />
+</farcry:machineSpecific>
 
 	
 <cfsetting enablecfoutputonly="no">
