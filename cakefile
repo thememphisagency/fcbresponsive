@@ -1,0 +1,10 @@
+{spawn, exec} = require 'child_process'
+
+task 'build', 'Watch source files and build JS & CSS', (options) ->
+
+  console.log "Watching for changes to scss files and fcbresponsive.js..."
+
+  # Enable compass watch
+  exec 'compass watch --debug-info', (err, stdout, stderr) ->
+    throw err if err
+    console.log stdout + stderr
