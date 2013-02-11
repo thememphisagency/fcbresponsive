@@ -21,6 +21,12 @@ $(document).ready(function() {
 		return false;
 	});
 
+	
+	jQuery(".toTop").click(function(event){		
+		event.preventDefault();	
+		$('html,body').animate({scrollTop:0}, 500);	
+	});
+
 	// Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking).
 	if ( Modernizr.touch && !window.location.hash ) {
 		$(window).load(function () {
@@ -66,6 +72,5 @@ $(document).ready(function() {
 		}
 	})
 	.listen();
-
 
 });
