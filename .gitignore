@@ -5,5 +5,5 @@ farcry/core
 farcry/plugins/fcblib
 .project
 js/fcbResponsive.min.js
-.sublime-project
-.sublime-workspace
+*.sublime-project
+*.sublime-workspace
