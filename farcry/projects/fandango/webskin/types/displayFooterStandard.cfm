@@ -3,6 +3,7 @@
 <!--- @@author: Matthew Attanasio --->
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
+<cfimport taglib="/farcry/plugins/fcblib/tags/fcb/ui" prefix="ui" />
 
 <cfparam name="stParam.multiplecol" default="true">
 <cfparam name="stParam.layoutClass" default="internal">
@@ -77,13 +78,19 @@
         </div>
         <div class="siteinfo">
             <div class="wrapper">
-                <p class="copyright">&copy; 2013 The Memphis Agency</p>
-                <ul class="disclaimer">
+                <p class="copyright">&copy; #DateFormat(Now(),'yyyy')# #application.config.fcbwebsite.footertext#</p>
+                 <ui:GenericNav navID="#application.navid.footer#"
+                    id="footerNav"
+                    depth="1"
+                    bActive="true"
+                    bIncludeHome="false"
+                    class="disclaimer">
+              <!---   <ul class="disclaimer">
                     <li>Privacy</li>
                     <li>Sitemap</li>
                     <li>Credits</li>
                 </ul>
-                
+                 --->
                 <a class="toTop" href="##">
                     <span data-icon="&##59227;"></span>
                     <span class="hide">Go to Top</span>

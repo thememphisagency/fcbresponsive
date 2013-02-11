@@ -3180,6 +3180,19 @@ footer .quicklinks > li::before {
 .disclaimer > li:first-child:before {
   content: "";
 }
+/* line 305, ../scss/_modules.scss */
+.disclaimer > li a {
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-style: normal;
+  color: #333;
+  font-family: Lato;
+}
+/* line 316, ../scss/_modules.scss */
+.disclaimer > li a:hover {
+  color: #bababa;
+}
 
 /* State Rules */
 /* line 3, ../scss/_states.scss */

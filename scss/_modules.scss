@@ -302,4 +302,18 @@ footer {
 	> li:first-child:before{
 		content:"";
 	}
+	> li a {
+		@include font-size(12);
+		text-decoration: none;
+		font-style: normal;
+		color:#333;
+		font: {
+			family:Lato;
+
+		}
+	}
+
+	> li a:hover {
+		color:#bababa;
+	}
 }
