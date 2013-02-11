@@ -8,7 +8,7 @@
 <cfset request.navid = application.navid.home />
 <cfset stObj.typename = 'dmHTML' />
 
-<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" template="displayHeaderStandard" pageTitle="Page not found" />
+<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" template="displayHeaderStandard" title="Page not found" />
 
 <cfset searchLink = '##' />
 <cfif StructKeyExists(application.navid, 'search')>
