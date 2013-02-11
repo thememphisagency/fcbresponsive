@@ -2,8 +2,8 @@
 	Use the comment-based directives to compress and minify all js files into one 
 */
 
-// @depends lib/jquery-1.8.3.min.js
 // @depends lib/respond.min.js
+// @depends lib/jquery-1.8.3.min.js
 // @depends lib/enquire.min.js
 // @depends lib/appendAround.js
 // @depends lib/fastclick.js
@@ -33,10 +33,13 @@ $(document).ready(function() {
 		});
 	}
 
-	// Instantiate FastClick
-	window.addEventListener('load', function() {
-	    new FastClick(document.body);
-	}, false);
+	//Add the fast click events if touch is enabled
+	if(Modernizr.touch ) {
+		// Instantiate FastClick
+		window.addEventListener('load', function() {
+		    new FastClick(document.body);
+		}, false); 
+	}
 
 
 	/******************************************** 
