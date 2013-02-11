@@ -3089,27 +3089,27 @@ aside.bottom {
 }
 
 /* Index Teaser Styles */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003217}}
 .index {
   margin: 0 -15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003219}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003220}}
 .index .teaser {
   background: #efefef;
   margin: 5px 0 0;
   padding: 22px 63px 25px 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003224}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003225}}
 .index .teaser:first-child {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003229}}
 .index .teaser [data-icon] {
   position: absolute;
   right: 20px;
   bottom: 25px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003233}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003234}}
 .index .teaser [data-icon]:before {
   color: #00a502;
   font-size: 60px;
@@ -3117,22 +3117,22 @@ aside.bottom {
 }
 
 /* Footer Styles */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003245}}
 footer {
   background-color: #efefef;
   overflow: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003248}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003249}}
 footer .siteinfo {
   background-color: #dedede;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003253}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003254}}
 footer .quicklinks {
   padding: 30px 0 30px 0;
   list-style-type: disc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003256}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003257}}
 footer .quicklinks > li {
   font-size: 16px;
   font-size: 1.6rem;
@@ -3145,22 +3145,22 @@ footer .quicklinks > li {
   font-weight: bold;
   font-style: italic;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003269}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003270}}
 footer .quicklinks > li::before {
   padding: 10px;
   content: '\2022';
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003276}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003277}}
 .copyright {
   padding-top: 20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003280}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003281}}
 .disclaimer {
   padding: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003282}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003283}}
 .disclaimer > li {
   font-size: 12px;
   font-size: 1.2rem;
@@ -3169,14 +3169,14 @@ footer .quicklinks > li::before {
   list-style-type: none;
   font-family: Lato;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003293}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003294}}
 .disclaimer > li:before {
   padding-right: 20px;
   color: #bababa;
   content: "/";
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003301}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/websites\/fcbResponsiveSKeleton\/scss\/_modules\.scss}line{font-family:\00003302}}
 .disclaimer > li:first-child:before {
   content: "";
 }
