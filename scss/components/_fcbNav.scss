@@ -1,0 +1,47 @@
+//Main Navigation
+//-----------------------------------------------------------------------
+nav[role=navigation] {
+	clear: both;
+	-webkit-transition: all 0.2s ease-out;  
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	position: relative;
+	z-index: 10;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		border-top: 1px solid lighten($mainColor, 10%);
+
+		.lvl2 {
+			display:none; /* This will need to be changed shortly to include the second navigation */
+		}
+	}
+
+	li a {
+		display: block;
+		padding: 0.8em;
+		border-bottom: 1px solid lighten($mainColor, 10%);
+		background-color:$mainColor;
+		color:#fff;
+		text-decoration:none;
+		font: {
+			style:normal;
+		};
+
+		&:hover {
+			background-color:lighten($mainColor,10%);
+		}
+	}
+
+	.active {
+		max-height: 15em;
+	}
+}
+
+.js nav[role=navigation] {
+	overflow: hidden;
+	max-height: 0;
+}

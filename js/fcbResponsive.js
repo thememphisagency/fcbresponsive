@@ -22,7 +22,7 @@ $(document).ready(function() {
 	});
 
 	// Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking).
-	if (Modernizr.touch && !window.location.hash) {
+	if ( Modernizr.touch && !window.location.hash ) {
 		$(window).load(function () {
 		  setTimeout(function () {
 		    // At load, if user hasn't scrolled more than 20px or so...
@@ -34,7 +34,7 @@ $(document).ready(function() {
 	}
 
 	//Add the fast click events if touch is enabled
-	if(Modernizr.touch ) {
+	if( Modernizr.touch ) {
 		// Instantiate FastClick
 		window.addEventListener('load', function() {
 		    new FastClick(document.body);
