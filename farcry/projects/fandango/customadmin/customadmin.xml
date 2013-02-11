@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webtop>
+	<section id="fandango" label="Fandango">
+		<subsection id="fandangosub" label="Content">
+			<menu id="fandangocontent" label="Content">
+				<menuitem sequence="1" label="Carousel Items" link="/admin/customadmin.cfm?module=basic/basicadmin.cfm&amp;contenttype=dmCarouselItem" />
+<!--
+				<menuitem sequence="2" label="HTML Pages" link="/admin/customadmin.cfm?module=basic/basicadmin.cfm&amp;contenttype=dmHTML" />
+ -->
+			</menu>
+		</subsection>
+	</section>	
+</webtop>
