@@ -7,6 +7,7 @@
 // @depends lib/enquire.min.js
 // @depends lib/appendAround.js
 // @depends lib/fastclick.js
+// @depends galleria/galleria-1.2.9b.js
 
 
 $(document).ready(function() {	
@@ -71,5 +72,6 @@ $(document).ready(function() {
 		unmatch: function() {
 		}
 	})
+			   
 	.listen();
 });
