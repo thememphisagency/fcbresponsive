@@ -215,7 +215,9 @@
 /* Index Teaser Styles */
 //-----------------------------------------------------------------------
 .index {
-	margin:0 -15px;
+	margin:0 -($columnGutter / 2);
+	padding: 0;
+	list-style-type: none;
 
 	.teaser {
 		background: $secondaryColor;
@@ -237,6 +239,10 @@
 			}
 		}
 	}
+}
+
+.index-search {
+	margin:0;
 }	
 
 /* Sitemap Styles */

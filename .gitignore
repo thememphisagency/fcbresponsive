@@ -3,6 +3,7 @@ css/
 .DS_Store
 farcry/core
 farcry/plugins/
+farcry/projects/*/collections/
 .project
 js/fcbResponsive.min.js
 .sass-cache/

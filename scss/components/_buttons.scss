@@ -1,7 +1,7 @@
 .button {
 	@include rounded($buttonRadius);
 	background: $mainColor;
-	border-radius: 5px;
+	border-radius: $buttonRadius;
 	color: #FFF;
 	cursor: pointer;
 	display: inline-block;
@@ -9,11 +9,12 @@
 	font-weight: 600;
 	font-style: italic;
 	font-size: 18px;
-	line-height: 28px;
+	line-height: 1em;
 	padding: 9px 12px;
 	position: relative;
 	text-decoration: none;
 	width: 100%;
+	border:none;
 		
 	&:hover {
 		color: #fff;

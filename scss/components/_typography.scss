@@ -143,18 +143,6 @@ p.copyright {
     color: #000000;
 }
 
-.button {
-    @include font-size(18);
-    color: #fff;
-    text-decoration: none;
-    font-style: italic;
-    font-family: Cabin;
-    font-weight: 600;
-    font-style: italic;
-    letter-spacing: -1px;
-    line-height: 18px;
-}
-
 .toTop {
     // TODO - Make this colour a variable ?
     text-decoration: none;

@@ -264,6 +264,11 @@
     /* The Grid --- */
     /*              */
 
+    // Creating column for the medium classes
+    @for $i from 1 through $totalColumns {
+      .medium-#{convert-number-to-word($i)} { width: gridCalc($i, $mediumTotalColumns); }
+    }
+
     @for $i from 1 through $totalColumns - 2 {
       .offset-by-#{convert-number-to-word($i)} { @extend %no-default-margin; }
     }
