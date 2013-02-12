@@ -1,5 +1,5 @@
 <cfsetting enablecfoutputonly="true" /> 
-<!--- @@displayname: Standard Page (2 Col) --->
+<!--- @@displayname: Standard Page Full --->
 <!--- @@author: Matthew Attanasio --->
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin" />
