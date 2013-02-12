@@ -36,7 +36,7 @@
                     <span data-icon="&##128269;"></span>
                     <span class="hide">Search</span>
                 </a>
-                <form action="/" method="post" class="header-search-form">
+                <form action="#application.fapi.getLink(alias='search',includeDomain=true)#" method="post" class="header-search-form">
                     <input type="text" class="search" placeholder="Search our website..." value="" />
                     <input type="submit" value="Submit">
                 </form>
