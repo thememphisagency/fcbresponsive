@@ -1,10 +1,11 @@
-.sass-cache/
-.svn
 cache/
 css/
+.DS_Store
 farcry/core
-farcry/plugins/fcblib
+farcry/plugins/
 .project
 js/fcbResponsive.min.js
+.sass-cache/
 *.sublime-project
 *.sublime-workspace
+.svn
