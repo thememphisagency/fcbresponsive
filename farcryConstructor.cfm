@@ -35,7 +35,7 @@
 
 <cfset THIS.dbOwner = "" /> 
 
-<cfset THIS.plugins = "farcrycms" /> 
+<cfset THIS.plugins = "farcrycms,fcblib" /> 
 
 <!--- 
 THE VIRTUAL WEBSERVER PROJECT FOLDER
