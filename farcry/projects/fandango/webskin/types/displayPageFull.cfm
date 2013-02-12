@@ -7,7 +7,7 @@
 
 <skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayHeaderStandard">
 
-<cfoutput>
+<!--- <cfoutput>
 
 	<div id="main-title">
 		<div class="container_12">
@@ -24,10 +24,12 @@
 			</div>
 		</div>
 	</div>
-
+#stobj.typename#
 </cfoutput>
+ --->
 
-<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayFooterStandard">
+<skin:view typename="#stobj.typename#" objectid="#stobj.objectid#" webskin="#url.bodyView#" columns="twelve" />
+<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayFooterStandard" multiplecol="false">
 
 	
 <cfsetting enablecfoutputonly="false">
