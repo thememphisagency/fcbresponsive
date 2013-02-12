@@ -5,6 +5,7 @@
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 <cfimport taglib="/farcry/plugins/fcblib/tags/fcb/ui" prefix="ui" />
 <cfimport taglib="/farcry/plugins/fcblib/tags/fcb/net" prefix="net" />
+<cfimport taglib="/farcry/core/tags/container" prefix="con" />
 
 <cfparam name="stParam.multiplecol" default="true">
 <cfparam name="stParam.layoutClass" default="internal">
@@ -59,12 +60,7 @@
                     </ul>
                 </div>                
                 <div class="three mobile-two columns">
-                    <h4>Latest News</h4>
-                    <ul >
-                        <li>News &amp; Media</li>            
-                        <li>From the Blog</li>            
-                        <li>Latest Tweets</li>            
-                    </ul>
+                    <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>               
                 <div class="three mobile-two columns">
                     <h4>Contact Us</h4>
@@ -85,12 +81,7 @@
                     bActive="true"
                     bIncludeHome="false"
                     class="disclaimer">
-              <!---   <ul class="disclaimer">
-                    <li>Privacy</li>
-                    <li>Sitemap</li>
-                    <li>Credits</li>
-                </ul>
-                 --->
+            
                 <a class="toTop" href="##">
                     <span data-icon="&##59227;"></span>
                     <span class="hide">Go to Top</span>
