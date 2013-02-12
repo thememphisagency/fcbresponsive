@@ -1,9 +1,7 @@
 @import "compass/css3";
 @import "modular-scale";
+@import "functions/all"; //Local functions folder
 
-
-// Variables and mixins
-@import "functions/all";
 @import "variables";
 
 @import "mixins/all";
