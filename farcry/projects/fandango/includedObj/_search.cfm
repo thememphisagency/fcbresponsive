@@ -40,9 +40,9 @@
 
 
 <cfoutput>
-	<div class="wrapper">
+	<div class="search">
 
-		<div class="option-bar clearfix">
+		<div class="option-bar">
 			<form name="quickSearch" id="quickSearch" method="post" action="#sLink#">				
 				<label for="criteria">Enter Keywords</label>
 				<div class="row collapse">
@@ -50,7 +50,7 @@
 						<input type="text" class="text" name="criteria" id="criteria" placeholder="#form.criteria#" value="#form.criteria#" />
 					</div>
 					<div class="column two">
-						<input type="submit" class="button postfix" id="quickSearchSubmit" name="quickSearchSubmit" value="search" />
+						<input type="submit" class="button expand postfix" id="quickSearchSubmit" name="quickSearchSubmit" value="search" />
 					</div>
 				</div>
 			</form>
@@ -93,12 +93,12 @@
 		</cfif>
 
 		<cfoutput>		
-		<div class="resultDetails clearfix">
+		<div class="result-details">
 		 	<p>Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
 		 	#sPaginator#
 		</div>
 		
-		<ul class="index index-search">
+		<ul class="result result-search">
 		</cfoutput>	
 		
 	        <!--- output results --->
@@ -108,7 +108,7 @@
 	        		
 		<cfoutput>
 		</ul>
-		<div class="paginationBottom resultDetails clearfix">
+		<div class="paginationBottom result-details">
 			<p>Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
 			#sPaginator#
 		</div>
@@ -116,7 +116,7 @@
 	
     <cfelse>
         <cfoutput>
-			<div class="resultDetails">
+			<div class="result-details">
             	<p>Your search for <span class="criteria">#form.criteria#</span> produced no results.</p>
 			</div>
         </cfoutput>
@@ -124,7 +124,7 @@
 	
 <cfelse>
 	<cfoutput>  
-		<div class="resultDetails">
+		<div class="result-details">
 			<p>Please enter a search term in the box above.</p>
 		</div>
 	</cfoutput>

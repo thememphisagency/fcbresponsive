@@ -20,13 +20,20 @@
 		color: #fff;
 		background: lighten($mainColor, 5%);
 	}
-}
 
-	.button [data-icon] {
+	/* Sizes */
+	&.expand { 
+		width: 100%; 
+		text-align: center; 
+	}
+
+	/* Icons */
+	& [data-icon] {
 		float: right;
-	}
 
-	.button [data-icon]:before {
-		color: lighten($mainColor, 50%);
-		opacity: 0.5;
-	}
+		:before {
+			color: lighten($mainColor, 50%);
+			opacity: 0.5;
+		}
+	}	
+}
