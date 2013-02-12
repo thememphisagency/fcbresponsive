@@ -58,7 +58,7 @@
         </div>
     </header>
 
-    <div class="wrapper">
+    <div class="wrapper clearfix">
 
 </cfoutput>
 

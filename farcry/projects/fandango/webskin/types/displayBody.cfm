@@ -1,12 +1,16 @@
 <cfsetting enablecfoutputonly="true">
 <!--- @@displayname: Standard Body --->
-<!--- @@author: Justin Carter (justin@daemon.com.au) --->
+<!--- @@author: Matthew Attanasio --->
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 <cfimport taglib="/farcry/core/tags/container" prefix="con">
 
 <cfparam name="stParam.breadcrumb" default="false">
 
+<cfoutput>
+<div class="columns #stParam.columns#">
+	<h1>#stObj.title#</h1>
+</cfoutput>
 
 <cfif stParam.breadcrumb>
 	<skin:breadcrumb separator=" / " includeSelf="true">
@@ -18,5 +22,6 @@
 
 <con:container label="#stObj.objectID#_Body_Bottom" />
 
+<cfoutput></div><!-- End .columns --></cfoutput>
 
 <cfsetting enablecfoutputonly="false">
