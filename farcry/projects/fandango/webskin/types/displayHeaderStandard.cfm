@@ -58,7 +58,7 @@
         </div>
     </header>
 
-    <div class="row">
+    <div class="wrapper">
 
 </cfoutput>
 
