@@ -3,7 +3,7 @@
 cache/
 css/
 farcry/core
-farcry/plugins/fcblib
+farcry/plugins/
 .project
 js/fcbResponsive.min.js
 *.sublime-project
