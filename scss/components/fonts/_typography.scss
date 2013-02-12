@@ -1,0 +1,59 @@
+
+//    --- All typogrpahy styles should be added here
+//----------------------------------------------------------------------------------------------------
+
+p.intro {
+    @include font-size(18);
+    font-style: normal;
+    font-weight: 400;
+    font-family: Lato;
+    line-height: 27px;
+    color: #555555;
+    margin-top: 0px;
+}
+
+p.list {
+    text-align: center;
+    @include font-size(14);
+    line-height: 27px;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 25px;
+}
+
+.listfooter {
+    @include font-size(16);
+    line-height: 42px;
+    color: #666666;
+    font-weight: 700;
+    font-style: italic;
+}
+
+p.copyright {
+    @include font-size(12);
+    line-height: 16px;
+    color: #666666;
+    text-align: center;
+}
+
+.disclaimer {
+    @include font-size(12);
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+}
+
+.toTop {
+    // TODO - Make this colour a variable ?
+    text-decoration: none;
+
+    [data-icon] {
+        color: darken($secondaryColor,40%); //#8f938f
+        line-height: 60px;
+
+        &:before{
+            @include font-size(70);
+        }
+    }
+}
