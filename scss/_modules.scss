@@ -239,6 +239,68 @@
 	}
 }	
 
+/* Sitemap Styles */
+//-----------------------------------------------------------------------	
+#sitemapNav {
+	padding-left:0; 	
+
+	>li {
+		background: $secondaryColor;
+		margin: 5px 0 0;
+		list-style:none;
+		padding: 22px 63px 25px 20px;
+	}
+
+	> li a {
+		text-decoration: none;
+		color:#333;
+		@include font-size(18);
+		font-style: normal;
+	}
+
+	> li a:hover {
+		color:#bababa;
+	}
+
+	.lvl2 {
+		> li {
+			padding:10px;
+			list-style:none;
+		}
+
+		> li a {
+			@include font-size(16);
+		}
+
+		.lvl3 {
+			> li {
+				padding:10px;
+				list-style:none;
+			}
+			> li a {
+				@include font-size(14);
+			}
+
+			.lvl4 {
+				> li {
+					padding:10px;
+					list-style:none;
+				}
+				> li a {
+					@include font-size(12);
+				}
+			}
+		}
+	}
+
+	
+
+	
+
+
+}
+
+
 
 /* Footer Styles */
 //-----------------------------------------------------------------------
