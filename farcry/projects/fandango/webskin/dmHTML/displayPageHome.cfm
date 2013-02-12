@@ -10,9 +10,7 @@
 
 <cfoutput>
 <!-- Banner -->
-<div class="banner">
-    <h3>Hero Banner</h3>
-</div>
+<con:container label="#stobj.objectID#_localHomeImageSlider" lRules="ruleHandpicked" />
 
 <!-- Feature Box -->
 <div class="row">

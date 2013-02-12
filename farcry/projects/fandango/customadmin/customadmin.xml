@@ -7,6 +7,7 @@
 <!--
 				<menuitem sequence="2" label="HTML Pages" link="/admin/customadmin.cfm?module=basic/basicadmin.cfm&amp;contenttype=dmHTML" />
  -->
+ 				<menuitem id="slideShow" sequence="81" label="Slide Show" link="/admin/customadmin.cfm?module=customlists/fcbSlideShow.cfm" icon="dmarchive" /> 
 			</menu>
 		</subsection>
 	</section>	
