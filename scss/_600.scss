@@ -130,9 +130,12 @@ footer {
 			vertical-align:  40%;
 			padding-left: 0;
 		}
+		li div {
+			position:relative;
+		}
 		li span {
-			padding-left: 10px;
-		
+			left: 30px;
+			position:absolute;
 		}
 	}
 	

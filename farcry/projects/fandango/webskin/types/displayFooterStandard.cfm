@@ -38,20 +38,16 @@
         <div class="wrapper">
             <div class="footerlinks row">
                 <div class="three mobile-two columns">
-                    <con:container label="ColumnOne" bShowIfEmpty="false" lRules="ruleFooterLinks" />
+                    <con:container label="ColumnOne" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
                 </div>
                 <div class="three mobile-two columns">                   
-                    <con:container label="ColumnTwo" bShowIfEmpty="false" lRules="ruleFooterLinks" />
+                    <con:container label="ColumnTwo" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
                 </div>                
                 <div class="three mobile-two columns">
-                    <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks" />
+                    <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
                 </div>               
                 <div class="three mobile-two columns">
-                    <h4>Contact Us</h4>
-                    <ul class="contact">
-                        <li><span data-icon="&##128222;"></span><span>+61 8 8212 2153<span></li>          
-                        <li><span data-icon="&##59172;"></span><span>Level 1, 26 Gray Court Adelaide SA 5000</span></li>         
-                    </ul>
+                    <con:container label="ColumnFour" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />                   
                 </div>              
             </div>
 
