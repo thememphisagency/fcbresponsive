@@ -16,7 +16,23 @@
 }
 
 .footerlinks {
+	padding:0 50px 50px 0;
+}
+
+.footerlinks ul {
 	display: none;
+}
+
+.footerlinks h4 {
+	display:list-item;
+	margin:50px 0 0 50px;
+	color:#666666;
+	@include font-size(28);
+}
+
+.footerlinks h4 .morelink {
+	color:#666666;
+	@include font-size(28);
 }
 
 .header-search-form.active {
