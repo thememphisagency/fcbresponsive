@@ -36,28 +36,12 @@
     <!-- Footer --> 
     <footer>
         <div class="wrapper">
-            <ul class="quicklinks">
-                <li>About Us</li>            
-                <li>Our Products</li>            
-                <li>Latest News</li>            
-                <li>Contact Us</li>
-            </ul>
             <div class="footerlinks row">
                 <div class="three mobile-two columns">
-                    <h4>About Us</h4>
-                    <ul >
-                        <li>Our History</li>            
-                        <li>Our Vision</li>     
-                        <li>The Framework</li>            
-                    </ul>
+                    <con:container label="ColumnOne" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>
-                <div class="three mobile-two columns">
-                    <h4>Our Products</h4>
-                    <ul >
-                        <li>FarCry in a Box</li>            
-                        <li>FCB Responsive</li>            
-                        <li>Web Apps</li>            
-                    </ul>
+                <div class="three mobile-two columns">                   
+                    <con:container label="ColumnTwo" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>                
                 <div class="three mobile-two columns">
                     <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks" />
