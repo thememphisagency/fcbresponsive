@@ -219,6 +219,7 @@
 	margin:0 -($columnGutter / 2);
 	padding: 0;
 	list-style-type: none;
+	@include clearfix;
 
 	.teaser {
 		background: $secondaryColor;
@@ -243,7 +244,7 @@
 }
 
 .result-search {
-	margin:0;
+	margin: 0;
 }
 
 .result-details {
@@ -254,11 +255,8 @@
 	}
 }
 
-.search {
-
-	form {
-		margin:0;
-	}
+.search form {
+	margin:0;
 }
 
 .option-bar {

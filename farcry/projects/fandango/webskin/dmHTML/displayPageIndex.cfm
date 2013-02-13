@@ -6,8 +6,8 @@
 
 <skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayHeaderStandard">
 
-<skin:view typename="#stobj.typename#" objectid="#stobj.objectid#" webskin="displayBodyIndex" columns="eight" />
+<skin:view typename="#stobj.typename#" objectid="#stobj.objectid#" webskin="displayBodyIndex" columns="eight medium-six" />
 
-<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayFooterStandard" columns="four">
+<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayFooterStandard" columns="four medium-six">
 
 <cfsetting enablecfoutputonly="false">

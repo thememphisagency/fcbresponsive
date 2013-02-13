@@ -6,7 +6,7 @@
 
 <skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayHeaderStandard">
 
-<skin:view typename="#stobj.typename#" objectid="#stobj.objectid#" webskin="#url.bodyView#" columns="eight" />
+<skin:view typename="#stobj.typename#" objectid="#stobj.objectid#" webskin="#url.bodyView#" columns="eight medium-six" />
 
 <skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayFooterStandard" columns="four">
 
