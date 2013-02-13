@@ -65,6 +65,27 @@ tr {
 page-break-inside : avoid; }
 
 // 5. ELEMENTS 				==============================
+header.top {
+	background: black !important;
+}
+
+footer, aside, nav, .menu {
+	display:none !important;
+}
+
+.logo {
+	background: url("/wsimages/logo.png") no-repeat !important;
+	background-size: 121px !important;
+}
+
+.wrapper .columns {
+	width:100% !important;
+}
+
+.header-search {
+	display: none !important;
+}
+
 // 6. LAYOUT 				==============================
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================
