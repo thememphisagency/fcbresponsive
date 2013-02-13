@@ -44,12 +44,54 @@
         <cfoutput><meta name="keywords" content="#trim(application.config.fcbWebsite.metaKeywords)#" /></cfoutput>      
     </cfif>
 
+    <!-- facebook open graph meta data -->
+    <cfif application.config.fcbWebsite.enableSocial>
+        <!--- Get meta data for facebook open graph --->
+        <cfset sTeaser = '' />
+        <cfif structKeyExists(stObj, 'teaser') AND len(stObj.teaser) GT 0>
+            <cfset sTeaser = trim(stObj.teaser) />
+        <cfelseif stObj.typename EQ 'bProduct' AND structKeyExists(stObj,'description') AND len(stObj.description) GT 0>
+            <cfset sTeaser = trim(stObj.description) /> 
+        </cfif>
+
+        <cfset sTeaserImage = 'http://#CGI.SERVER_NAME#/wsimages/default_Facebook-Thumb.jpg' />
+        <cfif structKeyExists(stObj, 'teaserImage') AND isValid('uuid', stObj.teaserImage)>
+            <skin:view objectid="#stObj.teaserImage#" typename="dmImage" template="displayFacebookSourceImageURL" r_html="sTeaserImage" />  
+        </cfif>
+
+        <cfoutput>
+        <meta property="og:title" content="#trim(REReplace(stObj.label, '[^a-zA-Z0-9-_\s]', '', 'all'))#"/>
+        <meta property="og:type" content="product"/>
+        <meta property="og:url" content="#trim(application.fapi.getLink(objectid=stobj.objectid,includeDomain=true))#"/>
+        <meta property="og:image" content="#trim(sTeaserImage)#"/>
+        <meta property="og:description" content="#trim(REReplace(sTeaser, '[^a-zA-Z0-9-_\s]', '', 'all'))#"/>
+        <meta property="og:site_name" content="#trim(application.config.general.sitetitle)#"/>
+        <meta property="fb:app_id" content="#application.config.fcbFBGraphApi.AppID#"/>
+        </cfoutput>
+    </cfif>
+
     <cfoutput>
 	<link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" />
 	<script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
 </head>
 
 <body>
+
+    </cfoutput>
+    <cfif application.config.fcbWebsite.enableSocial>
+    <!-- Facebook javascript SDK -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js##xfbml=1&appId=#application.config.fcbFBGraphApi.AppID#";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- END Facebook javascript SDK -->
+    </cfif>
+
+    <cfoutput>
     <!-- Header -->
     <header class="top">
         <div class="wrapper">
