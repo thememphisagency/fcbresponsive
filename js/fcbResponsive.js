@@ -1,5 +1,8 @@
+/*jslint browser: true*/
+/*global $, jQuery, Modernizr, FastClick, enquire */
+
 /* 
-	Use the comment-based directives to compress and minify all js files into one 
+Use the comment-based directives to compress and minify all js files into one 
 */
 
 // @depends lib/respond.min.js
@@ -9,11 +12,10 @@
 // @depends lib/fastclick.js
 // @depends lib/galleria/galleria-1.2.9.min.js
 
-
-$(document).ready(function() {	
+$(document).ready(function () {
 	$(".sponsors").appendAround();
 
-  	var $menu = $('#menu'),
+	var $menu = $('#menu'),
     $menulink = $('.toggleBtn.menu');
 	$menulink.click(function() {
 		
@@ -44,7 +46,7 @@ $(document).ready(function() {
 	if( Modernizr.touch ) {
 		// Instantiate FastClick
 		window.addEventListener('load', function() {
-		    new FastClick(document.body);
+		    var ft = new FastClick(document.body);
 		}, false); 
 	}
 

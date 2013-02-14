@@ -10,3 +10,4 @@ js/fcbResponsive.min.js
 *.sublime-project
 *.sublime-workspace
 .svn
+Thumbs.db
