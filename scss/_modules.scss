@@ -223,7 +223,12 @@
 
 		&:first-child {
 			margin: 0;
+		}		
+
+		.teaserBodyNoImg {
+			width:100%;
 		}
+
 
 		[data-icon] {
 			position: absolute;

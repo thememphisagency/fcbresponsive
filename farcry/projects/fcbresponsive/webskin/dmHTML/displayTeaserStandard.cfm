@@ -12,18 +12,19 @@
 
 		<cfif len(stobj.teaserImage)>
 			
-			<cfoutput><span class="thumbnail"></cfoutput>
+			<cfoutput><div class="thumbnail"></cfoutput>
 			
 			<skin:buildLink objectID="#stobj.objectid#">
 				<skin:view objectid="#stobj.teaserImage#" typename="dmImage" template="displayThumbnailImage" />
 			</skin:buildLink>
 			
-			<cfoutput></span></cfoutput>
+			<cfoutput></div></cfoutput>
 			
 		</cfif>
 		
 	<cfoutput>
-		#stObj.Teaser#		
+		<div class="teaserBody <cfif NOT len(stobj.teaserImage)>teaserBodyNoImg</cfif>">#stObj.Teaser#</div>
+
 	</p>
 	<skin:buildLink objectid="#stobj.objectID#" class="morelink"><span data-icon="&##8862;"></span></skin:buildLink>
 </div><!-- END .teaser -->
