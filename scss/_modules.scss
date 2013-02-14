@@ -370,10 +370,20 @@ footer {
 
 .copyright {
 	padding-top:20px;
+	@include font-size(12);
+    line-height: 16px;
+    color: #666666;
+    text-align: center;
 }
 
 .disclaimer {
 	padding:0px;
+	@include font-size(12);
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+
 	> li{
 		@include font-size(12);
 		display:inline-block;
@@ -410,4 +420,18 @@ footer {
 	> li a:hover {
 		color:#bababa;
 	}
+}
+
+.toTop {
+    // TODO - Make this colour a variable ?
+    text-decoration: none;
+
+    [data-icon] {
+        color: darken($secondaryColor,40%); //#8f938f
+        line-height: 60px;
+
+        &:before{
+            @include font-size(70);
+        }
+    }
 }
