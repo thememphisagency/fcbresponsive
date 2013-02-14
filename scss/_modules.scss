@@ -135,17 +135,7 @@
 .banner {
 	height:140px;
 	background-color:#ddd;
-	text-align:center;
-	display: table;
 	width: 100%;
-	> h3{
-		margin:0;
-		display: table-cell;
-		vertical-align: middle;
-		color: #fff;
-		color:white;
-		text-shadow: -1px -1px 0 #BEBEBE;
-	}
 }
 
 .services {
