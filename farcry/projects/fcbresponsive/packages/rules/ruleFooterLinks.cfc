@@ -2,7 +2,7 @@
 	hint="A rule for adding Footer Links in a way that works Responsively.">
 
 <cfproperty ftSeq="1" ftFieldSet="Heading" name="heading" type="uuid" ftJoin="dmLink,dmNews,dmHTML" hint="Heading link. In mobile view this is all that is shown" ftLabel="Heading" />
-<cfproperty ftSeq="2" ftFieldSet="Selected Objects" name="aPickedObjects" type="array" ftJoin="dmLink,dmNews,dmHTML" arrayProps="webskin:string" ftLabel="Select Objects" />
+<cfproperty ftSeq="2" ftFieldSet="Selected Objects" name="aPickedObjects" type="array" ftJoin="dmLink,dmNews,dmHTML,dmNavigation" arrayProps="webskin:string" ftLabel="Select Objects" />
 
 
 <cffunction name="ftEditAPickedObjects" access="public" output="false" returntype="string" hint="This is going to called from ft:object and will always be passed 'typename,stobj,stMetadata,fieldname'.">
