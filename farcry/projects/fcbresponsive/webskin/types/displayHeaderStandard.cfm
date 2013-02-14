@@ -6,6 +6,7 @@
 <cfimport taglib="/farcry/plugins/fcblib/tags/fcb/ui" prefix="ui" />
 
 <!--- params --->
+<cfparam name="stParam.breadcrumb" default="false">
 <cfparam name="stParam.title" default="#stobj.label#">
 <cfparam name="stParam.pageTitle" default="#stobj.label#" />
 
@@ -123,6 +124,13 @@
             <cfoutput>
         </div>
     </header>
+    <cfif stParam.breadcrumb>
+    <div class="breadcrumbs">
+        <div class="wrapper clearfix">
+            <skin:breadcrumb separator=" / " here='#stobj.label#'>
+        </div>
+    </div>
+    </cfif>
 
     <div class="wrapper clearfix">
 

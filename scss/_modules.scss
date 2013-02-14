@@ -103,7 +103,8 @@
 
 //Bread Crumbs
 //-----------------------------------------------------------------------
-.bread-crumb {
+
+.breadcrumbs {
 	background: $secondaryColor;
 	@include font-size(12);
 	font: {
@@ -111,20 +112,18 @@
 		weight:400;
 		style:italic;
 	}
+	width:100%;
+	padding:10px 0;
+	color:#999999;
 
+	.wrapper {
+		padding-left:20px;
+	}
 	a {
 		@include font-size(12);
-		color: $mainColor;
-		text-decoration: none;
+		color:#006fb6;
 	}
 }
-
-.bread-crumb-inner {
-	padding: 11px $columnGutter/2;
-	margin: 0 auto;
-	max-width: $screenMedium;
-}
-
 
 //Main Body Styles
 //-----------------------------------------------------------------------
@@ -137,6 +136,8 @@
 	background-color:#ddd;
 	width: 100%;
 }
+
+
 
 .services {
 	margin-top: 30px;

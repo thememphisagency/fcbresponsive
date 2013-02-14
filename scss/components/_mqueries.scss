@@ -281,7 +281,7 @@
     /* medium 6-column Grid */
     @for $i from 1 through $mediumTotalColumns {
       .row {
-        .medium-#{convert-number-to-word($i)} { width: gridCalc($i, $mediumTotalColumns) !important; float: $defaultFloat; padding: 0 ($columnGutter/2);
+        .medium-#{convert-number-to-word($i)} { width: gridCalc($i, $mediumTotalColumns) !important; float: $defaultFloat; padding: 0 ($columnGutter/2) ($columnGutter/2) ($columnGutter/2);
           &:last-child { float: $defaultOpposite; }
           &.end { float: $defaultFloat; }
         }
