@@ -7,7 +7,7 @@
 // @depends lib/enquire.min.js
 // @depends lib/appendAround.js
 // @depends lib/fastclick.js
-// @depends galleria/galleria-1.2.9b.js
+// @depends lib/galleria/galleria-1.2.9.min.js
 
 
 $(document).ready(function() {	
