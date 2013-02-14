@@ -5,7 +5,6 @@
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 <cfimport taglib="/farcry/core/tags/container" prefix="con">
 
-<cfparam name="stParam.breadcrumb" default="false">
 <cfparam name="stParam.columns" default="twelve">
 
 <cftry>
@@ -18,10 +17,6 @@
 <div class="columns #stParam.columns#">
 	<h1>#stObj.title#</h1>
 </cfoutput>
-
-<cfif stParam.breadcrumb>
-	<skin:breadcrumb separator=" / " includeSelf="true">
-</cfif>
 
 <cfif structKeyExists(stObj, "body") AND len(stObj.body)>
 	<cfoutput>#stObj.body#</cfoutput>

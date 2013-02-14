@@ -24,8 +24,8 @@ a {
 	text-decoration: underline; 
 	line-height: inherit;
 	font-family: Lato;
-    font-weight: bold;
-    font-style: italic;
+	font-weight: 700;
+	font-style: italic;
     @include font-size(14);
 
     &:hover { 
