@@ -15,8 +15,9 @@
 	text-decoration: none;
 	width: 100%;
 	border:none;
+	text-align: center;
 		
-	&:hover {
+	&:hover, &:focus {
 		color: #fff;
 		background: lighten($mainColor, 5%);
 	}
@@ -36,4 +37,23 @@
 			opacity: 0.5;
 		}
 	}	
+}
+
+// Button Styles
+//----------------------------------------------------------------
+.button-reset {
+	background: desaturate($mainColor, 90);
+
+	&:hover, &:focus {
+		background: lighten( desaturate($mainColor, 90), 5%);
+	}
+}
+
+/* Don't use native buttons on iOS */
+//-----------------------------------------------------------------
+input[type=submit].button, button.button { -webkit-appearance: none; }
+
+/* Correct FF button padding */
+@-moz-document url-prefix() {
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner { border: none; padding: 0;  }
 }

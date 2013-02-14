@@ -348,14 +348,20 @@
 			}
 		}
 	}
-
-	
-
-	
-
-
 }
 
+/* Contact Styles */
+//-----------------------------------------------------------------------
+.required-notify {
+	float:right;
+	color: $alertColor;
+	font-size: 10px;
+	margin:0 0 10px;
+}
+
+.contact-details {
+	width: 100%;
+}
 
 
 /* Footer Styles */

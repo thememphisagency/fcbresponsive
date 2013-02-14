@@ -18,6 +18,8 @@
     <cfoutput>
     <!-- Secondary Column -->
     <aside class="bottom row" data-set="asides">
+        <con:container label="globalSecondaryContentTop" bShowIfEmpty="false" lRules="ruleHandPicked" />
+
         <div class="sponsors">
            <a class="sponsor column medium-three">
                 <img src="/wsimages/TMA.png" alt="The Memphis Agency" />

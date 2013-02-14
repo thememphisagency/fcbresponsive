@@ -29,7 +29,6 @@ $screenXlarge: 1441px !default;
 //----------------------------------------------------------------------------------------------------
 $mainColor: #006fb6;
 $secondaryColor: #efefef;
-$highlightColor: #000;
 $white:#fff;
 $alertColor: #c60f13 !default;
 $successColor: #5da423 !default;
@@ -53,6 +52,7 @@ $largeBtnBase: $btnBase + 5 !default;
 // Form Settings (ONLY MODIFY DO NOT DELETE)
 //----------------------------------------------------------------------------------------------------
 $formSpacing: 12px !default;
+$formMarginBottom: 20px !default;
 $labelFontWeight: 500 !default;
 $labelFontColor: lighten(#000, 30%) !default;
 $labelBtmMargin: 3px !default;

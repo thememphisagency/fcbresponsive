@@ -8,6 +8,7 @@
 // @depends lib/appendAround.js
 // @depends lib/fastclick.js
 // @depends lib/galleria/galleria-1.2.9.min.js
+// @depends lib/jquery.validate.min.js
 
 
 $(document).ready(function() {	
@@ -71,7 +72,32 @@ $(document).ready(function() {
 
 		unmatch: function() {
 		}
-	})
-			   
+	})		   
 	.listen();
+
+
+	/* Contact Form validation */
+	var contactForm = $('.form-contact-us').validate({
+		rules: {
+			firstName: "required",
+			lastName: "required",
+			email: {"required": true, email: true},
+			comment: "required",
+			phone: {"required": true, number: true}
+		},
+		messages: {
+			firstName : 'Pleaser enter your first name.',
+			lastName : 'Pleaser enter your First name.',
+			email : 'Please enter a valid email address',
+			comment: 'Please enter a comment',
+			phone : 'Please enter your phone number in digits with no spaces between them.'
+		},		
+        errorElement: "small"		
+	});
+
+	/* Reset form on click */
+	$('.form-contact-us .button-reset').on("click", function(e){
+		e.preventDefault();
+		contactForm.resetForm();
+	});
 });
