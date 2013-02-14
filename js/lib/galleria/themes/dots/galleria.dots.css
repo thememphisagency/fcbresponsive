@@ -1,8 +1,8 @@
-.galleria-container{height:100% !important;position:relative;overflow:hidden;-moz-box-shadow:0 0 4px rgba(0,0,0,.1);-webkit-box-shadow:0 0 4px rgba(0,0,0,.1);}
+.galleria-container{height:100% !important;position:relative;background-color:#efefef !important;overflow:hidden;-moz-box-shadow:0 0 4px rgba(0,0,0,.1);-webkit-box-shadow:0 0 4px rgba(0,0,0,.1);}
 .galleria-stage{bottom:35px !important;top:-1px !important;right:0px !important;left:0px !important;position:absolute;overflow:hidden;}
 .galleria-thumbnails-container{height:20px !important;width:100% !important;bottom:5px !important; position:absolute;left:0 !important; right:0 !important; z-index:2;}
 .galleria-thumbnails-list{text-align:center;}
-.galleria-thumbnails .galleria-image{display:inline-block;zoom:1; *display: inline;width:12px !important;height:12px !important;background:url(dotOff.png) no-repeat 0px 0 !important;margin-right:5px !important;cursor:pointer; float:none  !important;}
+.galleria-thumbnails .galleria-image{display:inline-block;zoom:1; *display: inline;width:12px !important;height:12px !important;background:url(dotOff.png) no-repeat 0px 0 !important;margin-right:5px !important;cursor:pointer; float:none  !important; border:none !important;}
 .galleria-thumbnails .active{background:url(dot.png) no-repeat 0px 0 !important;}
 .galleria-counter{font:normal 11px/18px arial,sans-serif;z-index:2;color:#444;margin-top:6px;margin-right:12px;float:left;}
 .galleria-counter span{color:#888;}
