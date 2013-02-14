@@ -3,16 +3,16 @@
 @import "functions/all"; //Local functions folder
 
 @import "variables";
-
 @import "mixins/all";
-@import "components/all";
 
 // SMACSS
 @import "normalize";
 @import "base";
 @import "layout";
 @import "modules";
-@import "states"; 	
+@import "states";
+
+@import "components/all"; 	
 //@import "theme"
 
 

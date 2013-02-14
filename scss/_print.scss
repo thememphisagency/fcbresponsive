@@ -65,6 +65,43 @@ tr {
 page-break-inside : avoid; }
 
 // 5. ELEMENTS 				==============================
+footer, aside, nav, .menu {
+	display:none !important;
+}
+
+header.top {
+	background: none !important;
+	height: auto !important;
+}
+
+.logo {
+	background: none !important;
+	text-indent:0 !important;
+	font-size: 44px !important;
+	width: auto !important;
+	height: auto !important;
+	float: none !important;
+	margin: 15px !important;
+	padding: 20px 0 0 0 !important;
+	text-decoration: none !important;
+
+	&[href]:after {
+		content: "";
+	}
+}
+
+.teaser {
+	border-bottom: 2px solid #000 !important;
+}
+
+.wrapper .columns {
+	width:100% !important;
+}
+
+.header-search {
+	display: none !important;
+}
+
 // 6. LAYOUT 				==============================
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================

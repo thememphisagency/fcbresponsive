@@ -1,6 +1,6 @@
 <!--- Set up the application. --->	
-<cfset THIS.Name = "fandango" />
-<cfset THIS.displayName = "fandango" />
+<cfset THIS.Name = "fcbresponsive" />
+<cfset THIS.displayName = "fcbresponsive" />
 
 
 <cfset THIS.sessionmanagement = true  />

@@ -219,6 +219,7 @@
 	margin:0 -($columnGutter / 2);
 	padding: 0;
 	list-style-type: none;
+	@include clearfix;
 
 	.teaser {
 		background: $secondaryColor;
@@ -243,7 +244,7 @@
 }
 
 .result-search {
-	margin:0;
+	margin: 0;
 }
 
 .result-details {
@@ -254,11 +255,8 @@
 	}
 }
 
-.search {
-
-	form {
-		margin:0;
-	}
+.search form {
+	margin:0;
 }
 
 .option-bar {
@@ -270,17 +268,23 @@
 //-----------------------------------------------------------------------	
 #sitemapNav {
 	padding-left:0; 	
-
 	>li {
-		background: $secondaryColor;
-		margin: 5px 0 0;
-		list-style:none;
-		padding: 22px 63px 25px 20px;
+		border: none;
+		background: none;
+		margin: 0;
+		padding: 0;
+		zoom: 1;
+		list-style: none;
 	}
 
 	> li a {
+		background-color: $mainColor;
+		font-weight: bold;
+		display: block;
+		padding: 8px 7px 8px 12px;
 		text-decoration: none;
-		color:#333;
+		margin-bottom: 4px;
+		color:#fff;
 		@include font-size(18);
 		font-style: normal;
 	}
@@ -290,31 +294,56 @@
 	}
 
 	.lvl2 {
-		> li {
-			padding:10px;
+	 	padding:0;
+		
+
+		> li {						
 			list-style:none;
+			padding-left:5px;
+			background:url("/wsimages/siteMapLevel3Bullet.gif") 0px  13px  no-repeat;
 		}
 
 		> li a {
+			border-top:1px dotted #c3c3c3;
+			background-color: #fff;
+			color:#333;
 			@include font-size(16);
 		}
 
+		> li.first a {
+			border:none;
+		}
+
+		>li a:hover {
+			text-decoration: underline;
+		}
+
 		.lvl3 {
+			padding:0;
+
 			> li {
-				padding:10px;
+				padding-left:20px;
 				list-style:none;
+				background: url("/css/../wsimages/siteMapLevel4Bullet.gif") 12px 10px no-repeat
 			}
 			> li a {
 				@include font-size(14);
+				color:#ec007a;
+				padding:3px 7px 5px 10px;
 			}
 
 			.lvl4 {
+				padding:0;
+
 				> li {
-					padding:10px;
+					padding-left:30px;
+					background:url("/wsimages/siteMapLevel5Bullet.gif") 27px 10px no-repeat;
 					list-style:none;
 				}
 				> li a {
-					@include font-size(12);
+					color:#333;
+					@include font-size(14);
+					font-weight: normal;
 				}
 			}
 		}
@@ -339,36 +368,53 @@ footer {
 		background-color:#dedede;
 		text-align: center;
 	}
+	.footerlinks {			
 
-	.quicklinks {
-		padding:30px 0 30px 0;
-		list-style-type:disc;
-		> li{
-			@include font-size(16);
-			display:inline-block;
-			margin:0 0 10px 10px;
-			min-width:130px;
-			color:#666666;
-			text-align:left;
-			font: {
-				family:Lato;
-				weight:bold;
-				style:italic;
+		.morelink  {
+			@include font-size(12);
+			text-indent: 0;
+			line-height: 2em;
+			text-decoration:none;
+			color: #333;		
+			font:  {
+				family: Lato;
+				style:normal;
+				weight:normal;
 			}
 		}
-		> li::before{
-			padding:10px;
-			content: '\2022';
+
+		.morelink:hover {
+			color:#a6a6a6;
+		}
+
+		h4, h4 .morelink {
+				line-height:30px;				
+				font:  {
+					family: Lato;
+					weight: bold;
+					style: italic;
+				}
+
 		}
 	}
 }
 
 .copyright {
 	padding-top:20px;
+	@include font-size(12);
+    line-height: 16px;
+    color: #666666;
+    text-align: center;
 }
 
 .disclaimer {
 	padding:0px;
+	@include font-size(12);
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+
 	> li{
 		@include font-size(12);
 		display:inline-block;
@@ -405,4 +451,18 @@ footer {
 	> li a:hover {
 		color:#bababa;
 	}
+}
+
+.toTop {
+    // TODO - Make this colour a variable ?
+    text-decoration: none;
+
+    [data-icon] {
+        color: darken($secondaryColor,40%); //#8f938f
+        line-height: 60px;
+
+        &:before{
+            @include font-size(70);
+        }
+    }
 }
