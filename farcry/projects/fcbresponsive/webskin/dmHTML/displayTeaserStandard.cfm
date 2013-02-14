@@ -23,10 +23,9 @@
 		</cfif>
 		
 	<cfoutput>
-		#stObj.Teaser#
-		<skin:buildLink objectid="#stobj.objectID#" class="morelink">Learn More</skin:buildLink>
+		#stObj.Teaser#		
 	</p>
-	<span data-icon="&##8862;"></span>
+	<skin:buildLink objectid="#stobj.objectID#" class="morelink"><span data-icon="&##8862;"></span></skin:buildLink>
 </div><!-- END .teaser -->
 </cfoutput>
 

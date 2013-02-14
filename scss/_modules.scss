@@ -208,7 +208,10 @@
 /* Index and result teaser Styles */
 //-----------------------------------------------------------------------
 .index, .result {
-	margin:0 -($columnGutter / 2);
+	margin-right:-($columnGutter / 2);
+	margin-left:-($columnGutter / 2); 
+	margin-bottom:($columnGutter / 2);
+	margin-top:0;
 	padding: 0;
 	list-style-type: none;
 	@include clearfix;
