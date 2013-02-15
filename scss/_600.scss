@@ -88,18 +88,20 @@ nav[role=navigation] li a  {
 	margin: 0; /* reset margin as these elements will be confined to a row */
 }
 
-.thumbnail {
-	display:none;
-	display: inline-block;
-	margin:5px 10px 0 0;
-	width: 15%;
-}
 
-.teaserBody {
-	display: inline-block;
-	width:75%;
-	vertical-align: top;
-}
+		.thumbnail {
+			display:none;
+			display: inline-block;
+			margin:5px 10px 0 0;
+			width: 15%;
+		}
+
+		.teaserBody {
+			display: inline-block;
+			width:75%;
+			vertical-align: top;
+		}
+
 
 
 /* Footer */

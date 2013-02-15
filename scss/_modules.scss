@@ -225,6 +225,16 @@
 			margin: 0;
 		}		
 
+		.thumbnail {
+			display: inline-block;
+			margin:5px 10px 0 0;
+		}
+
+		.teaserBody {
+			display: inline-block;	
+			vertical-align: top;
+		}
+
 		.teaserBodyNoImg {
 			width:100%;
 		}
