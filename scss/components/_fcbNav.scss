@@ -16,7 +16,7 @@ nav[role=navigation] {
 		border-top: 1px solid lighten($mainColor, 10%);
 
 		.lvl2 {
-			display:none; /* This will need to be changed shortly to include the second navigation */
+			 /*display:none; This will need to be changed shortly to include the second navigation */
 		}
 	}
 
@@ -39,9 +39,8 @@ nav[role=navigation] {
 	.active {
 		max-height: 15em;
 	}
+	
 }
 
-.js nav[role=navigation] {
-	overflow: hidden;
-	max-height: 0;
-}
+
+

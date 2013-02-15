@@ -60,6 +60,54 @@ aside {
 	bottom:-217px;			
 }
 
+
+.pattern {
+	overflow: visible;
+}
+
+a#menu-link {
+   display: none;
+}
+
+.js #menu, .js #menu > ul ul {
+	max-height: none;
+	overflow: visible;
+	background: none;
+}
+.js #menu > ul ul {
+	
+	display: none;
+}
+
+.js #menu > ul li:hover > ul {
+	display: block;
+}
+
+#menu > ul > li {
+	display: inline-block;
+	position: relative;
+}
+#menu > ul ul {
+	position: absolute;
+	top: 0;
+	left: 12em;
+	width: 12em;
+}
+#menu > ul ul li {
+	position: relative;
+}
+#menu > ul ul.lvl2 {
+	top: 3em;
+	left: 0;
+}
+#menu li.parent > a:after {
+	content: '';
+
+}
+#menu li.parent > a.active:after {
+	content: "";
+}
+
 .js nav[role=navigation]  {
 	max-height:  55px;
 	position: relative;
