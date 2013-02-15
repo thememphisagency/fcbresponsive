@@ -88,8 +88,14 @@
 		<cfoutput>		
 		<div class="result-details">
 		 	<p>Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
-		 	<cfif structKeyExists(stPagination, "paginationHTML")>#stPagination.paginationHTML#</cfif>
-		 	<cfif structKeyExists(stPagination, "pagingHTML")>#stPagination.pagingHTML#</cfif>
+		 	<div class="row collapse">
+		 		<div class="column six">
+		 			<cfif structKeyExists(stPagination, "paginationHTML")>#stPagination.paginationHTML#</cfif>
+		 		</div>
+		 		<div class="column six">
+		 			<cfif structKeyExists(stPagination, "pagingHTML")>#stPagination.pagingHTML#</cfif>
+		 		</div>
+		 	</div>
 		</div>
 		
 		<ul class="result result-search">
@@ -102,8 +108,8 @@
 	        		
 		<cfoutput>
 		</ul>
-		<div class="paginationBottom result-details">
-			<p>Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
+		<div class="pagination-bottom result-details">
+			<p class="">Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
 			<cfif structKeyExists(stPagination, "pagingHTML")>#stPagination.pagingHTML#</cfif>
 		</div>
 		</cfoutput>
@@ -118,9 +124,7 @@
 	
 <cfelse>
 	<cfoutput>  
-		<div class="result-details">
-			<p>Please enter a search term in the box above.</p>
-		</div>
+		<div class="result-details"><p>Please enter a search term in the box above.</p></div>
 	</cfoutput>
 </cfif>
 

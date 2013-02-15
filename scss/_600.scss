@@ -228,6 +228,25 @@ ul.disclaimer {
 	}
 }
 
+/* Pagination */
+.pagination {
+	text-align: right;
+	height: 24px;
+
+	li {
+		height: 24px;
+
+		a, span {
+			@include font-size(14);
+			line-height: 22px;
+		}
+	}
+}
+
+.pagination-text {
+	text-align: left;
+}
+
 
 // 4. STATE 				==============================
 
