@@ -15,7 +15,7 @@ Use the comment-based directives to compress and minify all js files into one
 
 $(document).ready(function () {
 	$(".sponsors").appendAround();
-
+	
 	var $menu = $('#menu'),
     $menulink = $('.toggleBtn.menu');
 	$menulink.click(function() {

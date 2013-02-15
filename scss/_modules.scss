@@ -482,3 +482,29 @@ footer {
         }
     }
 }
+
+/* SubNav Styles */
+//-----------------------------------------------------------------------
+.subNav {	
+	list-style: none;
+	padding:0;
+}
+
+.subNav li {
+	background-color: $secondaryColor;
+	padding:10px 20px;
+	margin:0;
+	border-bottom:1px solid lighten($secondaryColor,40%);
+}
+
+.subNav li a {
+	@include font-size(16);
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.subNav li:hover {
+	background-color: darken($secondaryColor,30%);
+}
