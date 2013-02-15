@@ -4,21 +4,26 @@
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">
 
 <cfoutput>
-<article>
-	<cfif len(stobj.teaserImage)>
-		<skin:view objectid="#stobj.teaserImage#" typename="dmImage" template="displayThumbnailImage" r_html="teaserImageHTML" />
-		<cfoutput>
-			<skin:buildLink class="thumbnail" objectID="#stobj.objectid#" linktext="#teaserImageHTML#" />
-		</cfoutput>
-	</cfif>
-	<div class="teaser">
-		<h3><skin:buildLink objectid="#stobj.objectID#">#stObj.title#</skin:buildLink></h3>
-		<p class="byline">#dateformat(stObj.publishDate, "d mmmm yyyy")#</p>
-		<p>
-			#stObj.teaser# <skin:buildLink objectid="#stobj.objectID#" class="morelink">Read More &rarr;</skin:buildLink>
-		</p>
-	</div>
-</article>
-</cfoutput>
+<div class="teaser">
+	<h3>#stObj.Title#</h3>
+	<p>
+	</cfoutput>
 
-<cfsetting enablecfoutputonly="false">
+		<cfif len(stobj.teaserImage)>
+			
+			<cfoutput><div class="thumbnail"></cfoutput>
+			
+			<skin:buildLink objectID="#stobj.objectid#">
+				<skin:view objectid="#stobj.teaserImage#" typename="dmImage" template="displayThumbnailImage" />
+			</skin:buildLink>
+			
+			<cfoutput></div></cfoutput>
+			
+		</cfif>
+		
+	<cfoutput>
+		<div class="teaserBody <cfif NOT len(stobj.teaserImage)>teaserBodyNoImg</cfif>">#stObj.Teaser#</div>		
+	</p>
+	<skin:buildLink objectid="#stobj.objectID#" class="morelink"><span data-icon="&##8862;"></span></skin:buildLink>
+</div><!-- END .teaser -->
+</cfoutput>

@@ -1,4 +1,4 @@
-.galleria-container{height:100% !important;position:relative;background-color:#efefef !important;overflow:hidden;-moz-box-shadow:0 0 4px rgba(0,0,0,.1);-webkit-box-shadow:0 0 4px rgba(0,0,0,.1);}
+.galleria-container{height:100% !important;position:relative;background-color:#efefef !important;overflow:hidden;}
 .galleria-stage{bottom:35px !important;top:-1px !important;right:0px !important;left:0px !important;position:absolute;overflow:hidden;}
 .galleria-thumbnails-container{height:20px !important;width:100% !important;bottom:5px !important; position:absolute;left:0 !important; right:0 !important; z-index:2;}
 .galleria-thumbnails-list{text-align:center;}

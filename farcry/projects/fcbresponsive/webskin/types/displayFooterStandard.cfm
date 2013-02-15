@@ -18,9 +18,10 @@
     <cfoutput>
     <!-- Secondary Column -->
     <aside class="bottom row" data-set="asides">
-        <con:container label="globalSecondaryContentTop" bShowIfEmpty="false" lRules="ruleHandPicked" />
-
+      
         <div class="sponsors">
+            <con:container label="globalSecondaryContentTop" bShowIfEmpty="false" lRules="ruleHandPicked,ruleSubNavMenu" />
+            <con:container label="localSecondaryContentTop_#stObj.objectId#" bShowIfEmpty="false" lRules="ruleHandPicked,ruleSubNavMenu" />
            <a class="sponsor column medium-three">
                 <img src="/wsimages/TMA.png" alt="The Memphis Agency" />
             </a>
@@ -28,6 +29,9 @@
                 <img src="/wsimages/Farcry.png" alt="Farcry" />
             </a>
         </div>
+
+
+
     </aside>
     </cfoutput>
 </cfif>
@@ -38,6 +42,7 @@
     <!-- Footer --> 
     <footer>
         <div class="wrapper">
+
             <div class="footerlinks row">
                 <div class="three mobile-two columns">
                     <con:container label="ColumnOne" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
