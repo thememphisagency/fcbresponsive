@@ -464,3 +464,24 @@ footer {
         }
     }
 }
+
+
+/* Pagination */
+//-----------------------------------------------------------------------
+ul.pagination { display: block; height: 24px; margin-#{$defaultFloat}: -5px;
+
+    li { float: $defaultFloat; display: block; height: 24px; color: #999; margin-#{$defaultFloat}: 5px;
+
+      a,span { display: block; padding: 1px 7px 1px; color: #555; @include font-size(14); font-style: normal; line-height:22px; font-weight: 700; font-family: lato; }
+      &:hover a, a:focus { background: darken($white, 10%); }
+      &.unavailable a, span { cursor: default; color: #999; }
+      &.unavailable:hover a, &.unavailable a:focus { background: transparent; }
+      &.current { background: $mainColor; 
+      	span { font-weight: bold; cursor: default; color: $white; }
+    	}
+    }
+  }
+
+  div.pagination-centered { text-align: center; 
+    ul > li { float: none; display: inline-block; }
+  }

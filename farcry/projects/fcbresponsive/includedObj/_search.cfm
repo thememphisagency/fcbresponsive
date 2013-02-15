@@ -5,8 +5,8 @@
 <cfparam name="form.criteria" default="" />
 <cfparam name="categorySearchString" default="" />
 <cfparam name="thisCatLabel" default="" />
-<cfparam name="application.config.fcbwebsite.searchItemsPerPage" default = 10 />
-<cfparam name="url.currentPage" default="1">
+<cfparam name="application.config.fcbwebsite.searchItemsPerPage" default=10 />
+<cfparam name="url.currentPage" type="numeric" default=1>
 
 <cfimport taglib="/farcry/plugins/fcblib/tags/fcb/ui" prefix="ui" />
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin" />
@@ -41,10 +41,8 @@
 
 <cfoutput>
 	<div class="search">
-
 		<div class="option-bar">
-			<form name="quickSearch" id="quickSearch" method="post" action="#sLink#">				
-				<label for="criteria">Enter Keywords</label>
+			<form name="quickSearch" id="quickSearch" method="post" action="#sLink#">
 				<div class="row collapse">
 					<div class="column ten">
 						<input type="text" class="text" name="criteria" id="criteria" placeholder="#form.criteria#" value="#form.criteria#" />
@@ -56,46 +54,42 @@
 			</form>
 		</div>
 </cfoutput>
-
 <cfif len(trim(form.criteria)) AND (form.criteria NEQ "Enter Keywords...")>	
 	
 	<cfset qResults = oLucene.searchCollection(form.criteria) />
-	
-    <cfset numItems = application.config.fcbwebsite.searchItemsPerPage />
+	<cfset stPagination = structNew() />
+	<cfset numItems = application.config.fcbwebsite.searchItemsPerPage />
+	<cfset iTotal = qResults.recordCount />
 		
     <cfif isDefined("qResults") AND qResults.recordCount gt 0>
 	
-		<cfset iTotal = qResults.recordCount />
 		<cfif url.currentPage GT 1>
-			<cfset startRow = (url.currentPage -1) * numItems + 1 >
+			<cfset url.startRow = (url.currentPage -1) * numItems + 1 >
 		<cfelse>
-			<cfset startRow = 1 />	
+			<cfset url.startRow = 1 />	
 		</cfif>	
-		<cfset endRow = startRow + numItems - 1 />
+		<cfset url.endRow = url.startRow + numItems - 1 />
 
-		<cfset sPaginator = '' />
-		<cfsavecontent variable="sURL"><ui:buildLink objectid="#request.navid#" urlOnly="1" /></cfsavecontent>
+		<cfset sURL = "" />
+		<ui:buildLink objectid="#request.navid#" r_url="sURL" />
+
 		<cfif iTotal GT numItems>
-			<cfset oUtilities = createObject("component","farcry.plugins.fcblib.packages.custom.utility") />
-			<cfsavecontent variable="sPaginator">
-				<cfoutput>
-				<p class="pagination">
-					#oUtilities.renderPaging(currentPage=url.currentPage,
-												maxRows=application.config.fcbwebsite.searchItemsPerPage,
-												totalRecs=iTotal,
-												maxPaging=10,
-												url="#sURL#?criteria=#urlEncodedFormat(form.criteria)#",
-												anchor="##primary",
-												urlHasParam=1)#
-					</p>
-				</cfoutput>
-			</cfsavecontent>					
+			<cfset oUtilities = request.fcbObjectBucket.create(fullPath='farcry.plugins.fcblib.packages.custom.utility') />
+			<cfset stPagination = oUtilities.renderSmartPagination(
+											currentPage=url.currentPage,
+											itemsPerPage=numItems,
+											totalRecs=iTotal,
+											url="#sURL#?criteria=#urlEncodedFormat(form.criteria)#",
+											anchor="##primary",
+											urlHasParam=1) />
+									
 		</cfif>
 
 		<cfoutput>		
 		<div class="result-details">
 		 	<p>Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
-		 	#sPaginator#
+		 	<cfif structKeyExists(stPagination, "paginationHTML")>#stPagination.paginationHTML#</cfif>
+		 	<cfif structKeyExists(stPagination, "pagingHTML")>#stPagination.pagingHTML#</cfif>
 		</div>
 		
 		<ul class="result result-search">
@@ -110,7 +104,7 @@
 		</ul>
 		<div class="paginationBottom result-details">
 			<p>Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
-			#sPaginator#
+			<cfif structKeyExists(stPagination, "pagingHTML")>#stPagination.pagingHTML#</cfif>
 		</div>
 		</cfoutput>
 	
