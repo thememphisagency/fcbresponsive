@@ -22,18 +22,21 @@ $(document).ready(function () {
 		$menulink = $('#menu-link'),
 		$menuTrigger = $('.parent > a');
 
+	// This is setup to only show top level nav in mobile menu. 
+	// Script below will need more work	(e.preventdefault() stops the nav click event allowing sub menu to show)
 	$menulink.click(function(e) {		
-		e.preventDefault();
+		//e.preventDefault();
+		$('html,body').animate({scrollTop:0}, 500);	
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
 	});
 
 	$menuTrigger.click(function(e) {
-		e.preventDefault();
+		//e.preventDefault();
 		var $this = $(this);
 		$this.toggleClass('active').next('ul').toggleClass('active');
 	});
-	
+
 	jQuery(".toTop").click(function(event){		
 		event.preventDefault();	
 		$('html,body').animate({scrollTop:0}, 500);	
