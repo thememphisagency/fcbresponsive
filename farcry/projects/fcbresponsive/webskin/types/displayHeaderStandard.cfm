@@ -103,13 +103,13 @@
                     <span data-icon="&##128269;"></span>
                     <span class="hide">Search</span>
                 </a>
-                <form action="#application.fapi.getLink(alias='search',includeDomain=true)#" method="post" class="header-search-form">
+                <form action="/search" method="post" class="header-search-form">
                     <input type="text" class="search" placeholder="Search our website..." value="" />
                     <input type="submit" value="Submit">
                 </form>
             </div>
 
-            <a class="toggleBtn menu" href="##menu">
+            <a class="toggleBtn menu" href="##menu" id="menu-link">
                 <span data-icon="&##9776;"></span>
                 <span class="hide">Menu</span>
             </a>
@@ -117,7 +117,7 @@
 
             <ui:FcbNav navID="#application.navid.home#"
                 class="fcbNav"
-                depth="2"
+                depth="3"
                 bIncludeHome="true"
                 bFirstNodeInLevel="1" />
 
