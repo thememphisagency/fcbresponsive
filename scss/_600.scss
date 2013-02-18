@@ -142,10 +142,6 @@ nav[role=navigation] li a  {
 .banner {
 	height: 290px;
 }
-.sponsor, .sponsor:first-child {
-	margin: 0; /* reset margin as these elements will be confined to a row */
-}
-
 
 		.thumbnail {
 			display:none;
@@ -257,7 +253,6 @@ ul.disclaimer {
 .pagination-text {
 	text-align: left;
 }
-
 
 // 4. STATE 				==============================
 
