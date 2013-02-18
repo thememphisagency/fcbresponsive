@@ -64,7 +64,7 @@
         <meta property="fb:app_id" content="#application.config.fcbFBGraphApi.AppID#"/>
         </cfoutput>
     </cfif>
-    <cfoutput><link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" /><script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
+    <cfoutput><link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" /><link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/classic/galleria.classic.css"><script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
 </head>
 
 <body>
