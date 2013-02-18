@@ -366,7 +366,9 @@
 }
 
 .required-notify {
-	float:right;
+	position: absolute;
+	right: 0;
+	top:0;
 	color: $alertColor;
 	font-size: 10px;
 	margin:0;

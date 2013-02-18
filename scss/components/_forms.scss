@@ -14,7 +14,7 @@
     }
   }
 
-  label { font-size: ms(0); color: $labelFontColor; cursor: pointer; display: block; font-weight: $labelFontWeight; margin-bottom: $labelBtmMargin;
+  label { @include font-size(16); font-family: cabin; color: $labelFontColor; cursor: pointer; display: block; font-weight: $labelFontWeight; margin-bottom: $labelBtmMargin;
 
     &.right { float: none; text-align: right; }
     &.inline { line-height: (ms(0) + ($formSpacing * 1.5)); margin: 0 0 $formSpacing 0; }
