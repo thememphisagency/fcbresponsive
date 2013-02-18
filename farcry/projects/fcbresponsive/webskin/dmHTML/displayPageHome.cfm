@@ -19,7 +19,7 @@
             <h1>Responsive, in a Box.</h1>
             <p>An introductory paragraph is a great way to summarise the content before the reader really digs into the detail of your story. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis.</p>
             
-            <a class="button" href="##">Read more <span data-icon="&##59226;"></span>
+            <a class="button readMore" href="##"><span class="btnTxt">Read more</span> <span data-icon="&##59226;"></span>
             </a>
         </article>
         <aside class="columns four mobile-four right" data-set="asides"></aside>
