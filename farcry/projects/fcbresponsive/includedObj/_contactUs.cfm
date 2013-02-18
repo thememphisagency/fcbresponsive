@@ -112,7 +112,7 @@
 				<div class="row">
 					<div class="column six">	
 						<label for="firstName">First Name <span class="required">*</span></label>
-						<input class="text" type="text" name="firstName" value="#form.firstName#" />
+						<input class="text" type="text" name="firstName" id="firstName" value="#form.firstName#" />
 						<cfif structKeyExists(errors,'firstName')>
 							<small class="error">#errors.firstName#</small>
 						</cfif>
@@ -129,14 +129,14 @@
 				<div class="row">
 					<div class="column six">
 						<label for="phone">Phone Number <span class="required">*</span></label>
-						<input class="text" type="text" name="phone" value="#form.phone#" />
+						<input class="text" type="text" name="phone" id="phone" value="#form.phone#" />
 						<cfif structKeyExists(errors,'phone')>
 							<small class="error">#errors.phone#</small>
 						</cfif>
 					</div>
 					<div class="column six">		
 						<label for="email">Email Address <span class="required">*</span></label>
-						<input class="text" type="text" name="email" value="#form.email#" placeholder="jondoe@email.com" />
+						<input class="text" type="text" name="email" id="email" value="#form.email#" placeholder="jondoe@email.com" />
 						<cfif structKeyExists(errors,'email')>
 							<small class="error">#errors.email#</small>
 						</cfif>
@@ -144,14 +144,14 @@
 				</div>
 				
 				<label for="comment">Your Message <span class="required">*</span></label>
-				<textarea class="text" name="comment" placeholder="Enquiry message here">#form.comment#</textarea>
+				<textarea class="text" name="comment"  id="comment" placeholder="Enquiry message here">#form.comment#</textarea>
 				<cfif structKeyExists(errors,'comment')>
 					<small class="error">#errors.comment#</small>
 				</cfif>
 				
 				<div class="row">
 					<div class="column six">
-						<a href="##" class="button button-reset" name="reset">Reset<a/>
+						<a href="##" class="button button-reset" name="reset">Reset</a>
 					</div>
 					<div class="column six rtl">
 						<input type="submit" class="button" name="submitForm" value="Submit Enquiry" />
