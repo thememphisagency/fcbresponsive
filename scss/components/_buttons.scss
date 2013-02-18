@@ -43,6 +43,7 @@
 //----------------------------------------------------------------
 .button-reset {
 	background: desaturate($mainColor, 90);
+	margin: 0 0 15px 0;
 
 	&:hover, &:focus {
 		background: lighten( desaturate($mainColor, 90), 5%);
