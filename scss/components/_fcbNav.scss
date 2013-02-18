@@ -30,14 +30,17 @@ nav[role=navigation] {
 			style:normal;
 		};
 
+		
+
 		&:hover {
 			background-color:lighten($mainColor,10%);
 		}
 	}
 
-	.active {
+	ul.lvl1 li.active > a{
 		max-height: 15em;
-	}
+		background-color:lighten($mainColor,10%);
+		}
 
 	.indicator {
 	display:none;
