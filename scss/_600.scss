@@ -191,6 +191,7 @@ ul.disclaimer {
 		a, span {
 			@include font-size(14);
 			line-height: 22px;
+			padding: 1px 10px 1px;
 		}
 	}
 }
