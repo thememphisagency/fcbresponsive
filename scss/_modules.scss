@@ -360,11 +360,20 @@
 
 /* Contact Styles */
 //-----------------------------------------------------------------------
+.form-contact-us {
+	position:relative;
+}
+
 .required-notify {
 	float:right;
 	color: $alertColor;
 	font-size: 10px;
-	margin:0 0 10px;
+	margin:0;
+	@include font-size(12);
+	font-family: lato;
+	font-weight: 700;
+	font-style: italic;
+	line-height: 1em;
 }
 
 .contact-details {

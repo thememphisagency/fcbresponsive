@@ -103,11 +103,12 @@
 	</cfif>
 
 	<form id="mainContactForm" name="contactForm" class="form-contact-us" method="post" action="#sURL###contactForm">
-		<p class="required-notify"><span class="required">*</span> Required Fields</p>			
+					
 		<fieldset title="Contact Details" class="contact-details">
+			<span class="required-notify"><span class="required">*</span> Required Fields</span>
 			<div class="row">
 				<div class="column six">	
-					<label for="firstName">First Name <span class="required">*</span></label>
+					<label for="firstName">First Name <span class="required">*</span></label>	
 					<input class="text" type="text" name="firstName" id="firstName" value="#form.firstName#" />
 					<cfif structKeyExists(errors,'firstName')>
 						<small class="error">#errors.firstName#</small>
