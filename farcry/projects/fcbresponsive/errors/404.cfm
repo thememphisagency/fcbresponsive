@@ -1,3 +1,4 @@
+<cfheader statuscode="404" statustext="Not Found" />
 <cfsetting enablecfoutputonly="yes">
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin" />
 
