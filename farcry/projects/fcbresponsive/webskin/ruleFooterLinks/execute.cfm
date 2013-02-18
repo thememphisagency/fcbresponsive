@@ -10,13 +10,23 @@
 	<cfif arrayLen(stobj.aPickedObjects)>
 
 		<cfset request.iRuleTotalItems = arrayLen(stobj.aPickedObjects) />
+		<cfset ulShown= false />
 		<cfif arrayLen(stobj.aPickedObjects) GT 0>
-			<ul>
-			<cfloop from="1" to="#arrayLen(stobj.aPickedObjects)#" index="i">				
-				<cfset typenameObj = application.fapi.getContentObject(objectid=stobj.aPickedObjects[i].data) />
-				<li><ui:buildLink objectid="#stobj.aPickedObjects[i].data#" class="morelink" linkText="#typenameObj.label#" /></li>			
+			<cfloop from="1" to="#arrayLen(stobj.aPickedObjects)#" index="i">	
+				<cfif stobj.aPickedObjects[i].typename EQ 'fcbContact'>							
+					<skin:view typename="#stobj.aPickedObjects[i].typename#" objectid="#stobj.aPickedObjects[i].data#" webskin="displayTeaserStandard"/>
+				<cfelse>			
+					<cfif NOT ulShown>
+						<cfoutput><ul></cfoutput>
+						<cfset ulShown = true />
+					</cfif>				
+					<cfset typenameObj = application.fapi.getContentObject(objectid=stobj.aPickedObjects[i].data) />
+					<li><ui:buildLink objectid="#stobj.aPickedObjects[i].data#" class="morelink" linkText="#typenameObj.label#" /></li>							
+				</cfif>
 			</cfloop>
-			</ul>
+			<cfif ulShown>
+				<cfoutput></ul></cfoutput>
+			</cfif>			
 		</cfif>
 		
 	</cfif>

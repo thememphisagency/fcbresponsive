@@ -45,16 +45,16 @@
 
             <div class="footerlinks row">
                 <div class="three mobile-two columns">
-                    <con:container label="ColumnOne" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
+                    <con:container label="ColumnOne" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>
                 <div class="three mobile-two columns">                   
-                    <con:container label="ColumnTwo" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
+                    <con:container label="ColumnTwo" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>                
                 <div class="three mobile-two columns">
-                    <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
+                    <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>               
                 <div class="three mobile-two columns">
-                    <con:container label="ColumnFour" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />                   
+                    <con:container label="ColumnFour" bShowIfEmpty="false" lRules="ruleFooterLinks" />                   
                 </div>              
             </div>
 
