@@ -6,7 +6,7 @@
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin" />
 
 
-<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayHeaderStandard" columns="2" layoutclass="home">
+<skin:view objectid="#stobj.objectid#" typename="#stobj.typename#" webskin="displayHeaderStandard" columns="2" layoutclass="home" breadcrumb="false">
 
 <cfoutput>
 <!-- Banner -->
