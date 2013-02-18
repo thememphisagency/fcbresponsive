@@ -37,19 +37,19 @@
 
 	<!--- Build Image slideshow settings --->
 	<cfoutput>			
-		<link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/classic/galleria.classic.css">
+
 		<div class="bannerRotator">
 			<script>
 			window.onload = function() {
 
-		    	var imageData = #SerializeJSON(aImageData)#;				    	
-			 	Galleria.loadTheme('#application.url.webroot#/js/lib/galleria/themes/dots/galleria.dots.js');
+		    	var imageData = #SerializeJSON(aImageData)#;	
+		    	var r = (jQuery.browser.msie)? "?r=" + Math.random(10000) : "";			    	
+			 	Galleria.loadTheme('#application.url.webroot#/js/lib/galleria/themes/dots/galleria.dots.js', r);
 			    Galleria.run('.banner',
 			    {
 			    	responsive:true,
 			    	lightbox: false,
 			    	showInfo: false,
-			    	debug: true,
 			    	showCounter: false,
 			    	dataSource: imageData
 			    });
