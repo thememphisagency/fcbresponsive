@@ -104,7 +104,7 @@
                     <span class="hide">Search</span>
                 </a>
                 <form action="/search" method="post" class="header-search-form">
-                    <input type="text" class="search" placeholder="Search our website..." value="" />
+                    <input type="text" class="search" placeholder="Search our website..." value="" name="criteria" />
                     <input type="submit" value="Submit">
                 </form>
             </div>
