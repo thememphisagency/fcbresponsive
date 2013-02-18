@@ -17,7 +17,7 @@
 
     <cfoutput>
     <!-- Secondary Column -->
-    <aside class="bottom row" data-set="asides">
+    <aside class="bottom row column" data-set="asides">
       
         <div class="sponsors">
             <con:container label="globalSecondaryContentTop" bShowIfEmpty="false" />
