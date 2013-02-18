@@ -83,14 +83,6 @@ a#menu-link {
 	display: block;
 }
 
-#menu ul {
-	margin:  0 0 0 -0.25em;
-}
-
-#menu ul.lvl1 {
-	margin:0;
-}
-
 #menu > ul > li {
 	display: inline-block;
 	position: relative;
@@ -137,7 +129,7 @@ nav[role=navigation] ul  {
 }
 nav[role=navigation]  li  {
 	display:  inline-block;
-	margin:  0 0.25em;
+	margin:  0;
 	background-color: darken($mainColor, 10%);
 }
 nav[role=navigation] li a  {
