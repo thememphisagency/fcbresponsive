@@ -99,7 +99,7 @@
 	<div class="row">
 		<h2>Send us an enquiry</h2>
 		<cfif len(sNotice) GT 0>
-			<div class="alert alert-success">#sNotice#<a class="close">&##10060;</a></div>
+			<div class="alert alert-success">#sNotice#</div>
 		</cfif>
 
 		<form id="mainContactForm" name="contactForm" class="form-contact-us" method="post" action="#sURL###contactForm">
