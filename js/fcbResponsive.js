@@ -117,4 +117,7 @@ $(document).ready(function () {
 
 	// Enable fit vids to
 	$('.wrapper').fitVids();
+
+	// Allow all close buttons to close the parent
+	$('.close').parent().remove();
 });

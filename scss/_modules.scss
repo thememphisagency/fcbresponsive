@@ -273,27 +273,6 @@
 	@include clearfix;
 }
 
-/* Pagination */
-//-----------------------------------------------------------------------
-.pagination { display: block; height: 40px; margin:0 0 20px; padding:0; text-align: center; font-size: 0;
-
-	li { float: none; display: inline-block; height: 40px; color: #999; margin-#{$defaultFloat}: 5px;
-
-		a,span { display: block; padding: 1px 15px 1px; color: $white; @include font-size(18); font-style: normal; line-height:40px; font-weight: 700; font-family: lato; background: $mainColor; text-decoration: none; }
-		&:hover a, a:focus { background: darken($mainColor, 10%); }
-		&.prev a, &.next a, &.prev span, &.next span { background: none; color:#555; }
-		&.prev { margin-left: 0; }
-		&.unavailable a, &.unavailable span { cursor: default; color: #999; }
-		&.unavailable:hover a, &.unavailable a:focus { background: transparent; }
-		&.current span { font-weight: bold; cursor: default; color: #555; background: none; }
-	}
-}
-
-.pagination-text {
-	margin:0 0 10px;
-	text-align: center;
-}
-
 
 /* Sitemap Styles */
 //-----------------------------------------------------------------------	

@@ -62,8 +62,7 @@
 		<utils:mail 
 				from="#recipient#" 
 				to="#application.config.fcbForms.enquiryRecipient#" 
-				subject="#subject#" 
-				failto="#application.config.fcbShop.failMailNoticationAddress#"
+				subject="#subject#"
 				mailContent="#mailContent#" 
 				type="text" />
 
@@ -87,13 +86,6 @@
 <div id="contactForm">
 </cfoutput>
 
-<cfif len(sNotice) GT 0>
-	<cfoutput>
-		<div class="alert alert-success">#sNotice#</div>
-	</cfoutput>
-</cfif>
-
-
 <!--- Begin out of form--->
 
 <cfsavecontent variable="sURL"><ui:buildLink objectid="#request.navid#" urlOnly="1" /></cfsavecontent>
@@ -106,6 +98,12 @@
 <cfoutput>
 	<div class="row">
 		<h2>Send us an enquiry</h2>
+		<cfif len(sNotice) GT 0>
+			<cfoutput>
+				<div class="alert alert-success">#sNotice#<a class="close">&##10060;</a></div>
+			</cfoutput>
+		</cfif>
+
 		<form id="mainContactForm" name="contactForm" class="form-contact-us" method="post" action="#sURL###contactForm">
 			<p class="required-notify"><span class="required">*</span> Required Fields</p>			
 			<fieldset title="Contact Details" class="contact-details">
