@@ -119,5 +119,7 @@ $(document).ready(function () {
 	$('.wrapper').fitVids();
 
 	// Allow all close buttons to close the parent
-	$('.close').parent().remove();
+	$('.close').on("click", function(){
+		$(this).parent().remove();	
+	})
 });
