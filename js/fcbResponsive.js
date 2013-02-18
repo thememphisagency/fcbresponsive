@@ -35,7 +35,8 @@ $(document).ready(function () {
 	$menuTrigger.click(function(e) {
 		//e.preventDefault();
 		var $this = $(this);
-		$this.toggleClass('active').next('ul').toggleClass('active');
+		//$this.toggleClass('active').next('ul').toggleClass('active');
+		//$this.toggleClass('active').next('ul').toggleClass('active');
 	});
 
 	jQuery(".toTop").click(function(event){		
