@@ -20,8 +20,8 @@
     <aside class="bottom row" data-set="asides">
       
         <div class="sponsors">
-            <con:container label="globalSecondaryContentTop" bShowIfEmpty="false" lRules="ruleHandPicked,ruleSubNavMenu" />
-            <con:container label="localSecondaryContentTop_#stObj.objectId#" bShowIfEmpty="false" lRules="ruleHandPicked,ruleSubNavMenu" />
+            <con:container label="globalSecondaryContentTop" bShowIfEmpty="false" />
+            <con:container label="localSecondaryContentTop_#stObj.objectId#" bShowIfEmpty="false" />
            <a class="sponsor column medium-three">
                 <img src="/wsimages/TMA.png" alt="The Memphis Agency" />
             </a>
@@ -45,16 +45,16 @@
 
             <div class="footerlinks row">
                 <div class="three mobile-two columns">
-                    <con:container label="ColumnOne" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
+                    <con:container label="ColumnOne" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>
                 <div class="three mobile-two columns">                   
-                    <con:container label="ColumnTwo" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
+                    <con:container label="ColumnTwo" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>                
                 <div class="three mobile-two columns">
-                    <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />
+                    <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>               
                 <div class="three mobile-two columns">
-                    <con:container label="ColumnFour" bShowIfEmpty="false" lRules="ruleFooterLinks,ruleContactUs" />                   
+                    <con:container label="ColumnFour" bShowIfEmpty="false" lRules="ruleFooterLinks" />                   
                 </div>              
             </div>
 

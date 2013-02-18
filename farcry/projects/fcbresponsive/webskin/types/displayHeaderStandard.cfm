@@ -18,38 +18,28 @@
 <cfcontent reset="true">
 <cfoutput><!DOCTYPE HTML>
 <html class="no-js">
-
 <head>
 	<meta charset="utf-8">
-
 	<title>#sSeoTitle#</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </cfoutput>
-
-    <!--- 
-        Output required meta data for SEO 
-    ---->
     <cfif findNocase('enpresiv.com', CGI.SERVER_NAME) GT 0 OR findNocase('local', CGI.SERVER_NAME) GT 0>
-        <cfoutput>
-        <meta name="robots" content="noindex, nofollow, noarchive" />
+        <cfoutput><meta name="robots" content="noindex, nofollow, noarchive" />
         <meta name="googlebot" content="noindex, nofollow, noarchive" />
         </cfoutput>
     </cfif>
-
     <cfif structKeyExists(stObj, "extendedMetaData") AND len(trim(stObj.extendedMetaData))>
         <cfoutput><meta name="description" content="#trim(stObj.extendedMetaData)#" /></cfoutput>
     <cfelse>
         <cfoutput><meta name="description" content="#trim(application.config.fcbWebsite.metaDescription)#" /></cfoutput>        
     </cfif> 
-
     <cfif structKeyExists(stObj, "metaKeywords") AND len(trim(stObj.metaKeywords))>
         <cfoutput><meta name="keywords" content="#trim(stObj.metaKeywords)#" /></cfoutput>
     <cfelse>
         <cfoutput><meta name="keywords" content="#trim(application.config.fcbWebsite.metaKeywords)#" /></cfoutput>      
     </cfif>
-
     <!-- facebook open graph meta data -->
     <cfif application.config.fcbWebsite.enableSocial>
         <!--- Get meta data for facebook open graph --->
@@ -64,7 +54,6 @@
         <cfif structKeyExists(stObj, 'teaserImage') AND isValid('uuid', stObj.teaserImage)>
             <skin:view objectid="#stObj.teaserImage#" typename="dmImage" template="displayFacebookSourceImageURL" r_html="sTeaserImage" />  
         </cfif>
-
         <cfoutput>
         <meta property="og:title" content="#trim(REReplace(stObj.label, '[^a-zA-Z0-9-_\s]', '', 'all'))#"/>
         <meta property="og:type" content="product"/>
@@ -75,10 +64,7 @@
         <meta property="fb:app_id" content="#application.config.fcbFBGraphApi.AppID#"/>
         </cfoutput>
     </cfif>
-
-    <cfoutput>
-	<link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" />
-	<script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
+    <cfoutput><link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" /><script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
 </head>
 
 <body>
