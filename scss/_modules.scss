@@ -182,14 +182,14 @@
 	text-align:center;
 	display: inline-block;
 	width: 100%;
-	margin: 25px 0 0 0;
+	margin: 0 0 25px;
 	line-height:0;
-
-	&:first-child {
-		margin: 0;
-	}
 }
 
+
+.subNavigation {
+	padding-bottom: 25px;
+}
 
 /* Generic Teaser Styles */
 //-----------------------------------------------------------------------	
@@ -491,25 +491,32 @@ footer {
 .subNav {	
 	list-style: none;
 	padding:0;
-}
 
-.subNav li {
-	background-color: $secondaryColor;
-	padding:10px 20px;
-	margin:0;
-	border-bottom:1px solid lighten($secondaryColor,40%);
-}
+	li {
+		background: $mainColor;
+		margin:0;
+		border-bottom:1px solid lighten($mainColor,10%);
 
-.subNav li a {
-	@include font-size(16);
-	font-weight: normal;
-	font-style: normal;
-	text-decoration: none;
-	text-transform: uppercase;
-}
+		&:hover {
+			background-color: lighten($mainColor,5%);
+		}
 
-.subNav li:hover {
-	background-color: darken($secondaryColor,30%);
+		&.active {
+			background-color: darken($mainColor,5%);
+		}
+
+		a {
+			@include font-size(14);
+			font-weight: normal;
+			font-style: normal;
+			text-decoration: none;
+			text-transform: uppercase;
+			padding: 10px 20px;
+			display: block;
+			color: #fff;
+			font-weight: 700;
+		}
+	}
 }
 
 
