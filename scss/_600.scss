@@ -83,6 +83,14 @@ a#menu-link {
 	display: block;
 }
 
+#menu ul {
+	margin:  0 0 0 -0.25em;
+}
+
+#menu ul.lvl1 {
+	margin:0;
+}
+
 #menu > ul > li {
 	display: inline-block;
 	position: relative;
@@ -98,7 +106,7 @@ a#menu-link {
 }
 #menu > ul ul.lvl2 {
 	top: 3.1em;
-	left: 0;
+	left: 0;	
 }
 
 #menu > ul ul.lvl2  li {
@@ -123,7 +131,7 @@ a#menu-link {
 	top: 16px;
 }
 nav[role=navigation] ul  {
-	margin:  0 0 0 -0.25em;
+	margin:0;
 	border:  0;
 	background-color: darken($mainColor, 5%);	
 }
@@ -135,7 +143,7 @@ nav[role=navigation]  li  {
 nav[role=navigation] li a  {
 	border:  0;
 	background-color: darken($mainColor, 5%);
-	padding: 0.969em 0.8em;
+	padding: 0.95em 0.8em;
 	@include font-size(16);
 }
 

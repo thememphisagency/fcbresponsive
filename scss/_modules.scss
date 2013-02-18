@@ -36,6 +36,9 @@
 	&:hover {
 		color: #fff;
 	}
+	&:active {
+		color: #fff;	
+	}
 
 	&.menu {
 		background-color: darken($mainColor, 5%);
