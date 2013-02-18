@@ -109,7 +109,7 @@
                 </form>
             </div>
 
-            <a class="toggleBtn menu" href="##menu">
+            <a class="toggleBtn menu" href="##menu" id="menu-link">
                 <span data-icon="&##9776;"></span>
                 <span class="hide">Menu</span>
             </a>
@@ -117,7 +117,7 @@
 
             <ui:FcbNav navID="#application.navid.home#"
                 class="fcbNav"
-                depth="2"
+                depth="3"
                 bIncludeHome="true"
                 bFirstNodeInLevel="1" />
 

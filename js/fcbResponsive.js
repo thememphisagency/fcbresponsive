@@ -15,17 +15,28 @@ Use the comment-based directives to compress and minify all js files into one
 
 $(document).ready(function () {
 	$(".sponsors").appendAround();
-	
+
+	$('body').addClass('js');
+
 	var $menu = $('#menu'),
-    $menulink = $('.toggleBtn.menu');
-	$menulink.click(function() {
-		
+		$menulink = $('#menu-link'),
+		$menuTrigger = $('.parent > a');
+
+	// This is setup to only show top level nav in mobile menu. 
+	// Script below will need more work	(e.preventdefault() stops the nav click event allowing sub menu to show)
+	$menulink.click(function(e) {		
+		//e.preventDefault();
+		$('html,body').animate({scrollTop:0}, 500);	
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
-		return false;
 	});
 
-	
+	$menuTrigger.click(function(e) {
+		//e.preventDefault();
+		var $this = $(this);
+		$this.toggleClass('active').next('ul').toggleClass('active');
+	});
+
 	jQuery(".toTop").click(function(event){		
 		event.preventDefault();	
 		$('html,body').animate({scrollTop:0}, 500);	
