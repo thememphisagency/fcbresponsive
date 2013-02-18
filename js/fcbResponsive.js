@@ -12,6 +12,7 @@ Use the comment-based directives to compress and minify all js files into one
 // @depends lib/fastclick.js
 // @depends lib/galleria/galleria-1.2.9.min.js
 // @depends lib/jquery.validate.min.js
+// @depends lib/jquery.fitvids.min.js
 
 $(document).ready(function () {
 	$(".sponsors").appendAround();
@@ -89,7 +90,7 @@ $(document).ready(function () {
 	.listen();
 
 
-	/* Contact Form validation */
+	// Contact Form validation
 	var contactForm = $('.form-contact-us').validate({
 		rules: {
 			firstName: "required",
@@ -108,9 +109,12 @@ $(document).ready(function () {
         errorElement: "small"		
 	});
 
-	/* Reset form on click */
+	// Reset contact us form on click 
 	$('.form-contact-us .button-reset').on("click", function(e){
 		e.preventDefault();
 		contactForm.resetForm();
 	});
+
+	// Enable fit vids to
+	$('.wrapper').fitVids();
 });
