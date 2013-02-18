@@ -12,13 +12,13 @@
 		<cfoutput>
 		<ul class="contact">
 			<cfif len(stObj.phone)>
-				 <li><div data-icon="&##128222;"><span>#stObj.phone#<span></div></li>         
+				 <li><div data-icon="&##128222;"><span>#stObj.phone#</span></div></li>         
 			</cfif>
 			<cfif len(stObj.fax)>
-				 <li><div data-icon="&##59158;"><span>#stObj.fax#<span></div></li>
+				 <li><div data-icon="&##59158;"><span>#stObj.fax#</span></div></li>
 			</cfif>
 			<cfif len(stObj.email) AND isValid('email', stObj.email)>
-				 <li><div data-icon="&##9993;"><span><a href="mailto:#stObj.email#">#stObj.email#</a><span></div></li>
+				 <li><div data-icon="&##9993;"><span><a href="mailto:#stObj.email#">#stObj.email#</a></span></div></li>
 			</cfif>
 			<cfif len(stObj.address)>
 				<li><div data-icon="&##59172;"><span>#stObj.address#<cfif len(stObj.address2)><br />#stObj.address2#</cfif></span></div></li>  
