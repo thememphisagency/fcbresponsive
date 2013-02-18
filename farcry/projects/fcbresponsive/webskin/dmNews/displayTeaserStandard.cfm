@@ -6,7 +6,6 @@
 <cfoutput>
 <div class="teaser">
 	<h3>#stObj.Title#</h3>
-	<p>
 	</cfoutput>
 
 		<cfif len(stobj.teaserImage)>
@@ -22,8 +21,7 @@
 		</cfif>
 		
 	<cfoutput>
-		<div class="teaserBody <cfif NOT len(stobj.teaserImage)>teaserBodyNoImg</cfif>">#stObj.Teaser#</div>		
-	</p>
+		<div class="teaserBody <cfif NOT len(stobj.teaserImage)>teaserBodyNoImg</cfif>"><p>#stObj.Teaser#</p></div>		
 	<skin:buildLink objectid="#stobj.objectID#" class="morelink"><span data-icon="&##8862;"></span></skin:buildLink>
 </div><!-- END .teaser -->
 </cfoutput>

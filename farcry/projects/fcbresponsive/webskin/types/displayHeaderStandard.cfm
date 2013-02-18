@@ -123,7 +123,7 @@
     </div>
     </cfif>
 
-    <div class="wrapper clearfix">
+    <div class="row">
 
 </cfoutput>
 

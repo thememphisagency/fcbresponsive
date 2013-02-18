@@ -12,26 +12,25 @@
 
 <cfif stParam.multiplecol >
     <cfif stParam.layoutClass NEQ "home">
-        <cfoutput><aside class="four columns mobile-four right" data-set="asides"></aside></cfoutput>
+        <cfoutput><aside class="right columns four mobile-four" data-set="asides"></aside></cfoutput>
     </cfif>  
 
     <cfoutput>
     <!-- Secondary Column -->
-    <aside class="bottom row column" data-set="asides">
-      
-        <div class="sponsors">
+    <aside class="bottom row" data-set="asides">
+        <div class="append-around">
             <con:container label="globalSecondaryContentTop" bShowIfEmpty="false" />
             <con:container label="localSecondaryContentTop_#stObj.objectId#" bShowIfEmpty="false" />
-           <a class="sponsor column medium-three">
-                <img src="/wsimages/TMA.png" alt="The Memphis Agency" />
-            </a>
-            <a class="sponsor column medium-three">
-                <img src="/wsimages/Farcry.png" alt="Farcry" />
-            </a>
+
+            <div class="row collapse sponsors">
+                <a class="sponsor column medium-three">
+                    <img src="/wsimages/TMA.png" alt="The Memphis Agency" />
+                </a>
+                <a class="sponsor column medium-three">
+                    <img src="/wsimages/Farcry.png" alt="Farcry" />
+                </a>
+            </div>
         </div>
-
-
-
     </aside>
     </cfoutput>
 </cfif>

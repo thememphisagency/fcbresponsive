@@ -16,10 +16,11 @@
 	margin: 0 auto;	
 }
 
+
 aside.right {
 	display: block;
-	width: 300px;
-	float:right;
+	/*width: 300px;
+	float:right; */
 	margin-top:35px;
 }
 
@@ -56,6 +57,18 @@ aside.bottom{
 
 	input[type="submit"] {
 		display:none;
+	}
+}
+
+.index, .result {
+	margin-right: 0; 
+}
+
+.sponsor {
+	margin: 0 0 25px;
+
+	& img {
+		width: 100%;
 	}
 }
 

@@ -15,7 +15,7 @@ Use the comment-based directives to compress and minify all js files into one
 // @depends lib/jquery.fitvids.min.js
 
 $(document).ready(function () {
-	$(".sponsors").appendAround();
+	$(".append-around").appendAround();
 
 	$('body').addClass('js');
 

@@ -96,68 +96,67 @@
 </cfif>
 
 <cfoutput>
-	<div class="row">
-		<h2>Send us an enquiry</h2>
-		<cfif len(sNotice) GT 0>
-			<div class="alert alert-success">#sNotice#<a class="close">&##10060;</a></div>
-		</cfif>
 
-		<form id="mainContactForm" name="contactForm" class="form-contact-us" method="post" action="#sURL###contactForm">
-			<p class="required-notify"><span class="required">*</span> Required Fields</p>			
-			<fieldset title="Contact Details" class="contact-details">
-				<div class="row">
-					<div class="column six">	
-						<label for="firstName">First Name <span class="required">*</span></label>
-						<input class="text" type="text" name="firstName" id="firstName" value="#form.firstName#" />
-						<cfif structKeyExists(errors,'firstName')>
-							<small class="error">#errors.firstName#</small>
-						</cfif>
-					</div>
-					<div class="column six">	
-						<label for="lastName">Last Name <span class="required">*</span></label>
-						<input class="text" type="text" name="lastName" id="lastName" value="#form.lastName#" />
-						<cfif structKeyExists(errors,'lastName')>
-							<small class="error">#errors.lastName#</small>
-						</cfif>
-					</div>
-				</div>
+	<p>Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. </p>
+	<cfif len(sNotice) GT 0>
+		<div class="alert alert-success">#sNotice#<a class="close">&##10060;</a></div>
+	</cfif>
 
-				<div class="row">
-					<div class="column six">
-						<label for="phone">Phone Number <span class="required">*</span></label>
-						<input class="text" type="text" name="phone" id="phone" value="#form.phone#" />
-						<cfif structKeyExists(errors,'phone')>
-							<small class="error">#errors.phone#</small>
-						</cfif>
-					</div>
-					<div class="column six">		
-						<label for="email">Email Address <span class="required">*</span></label>
-						<input class="text" type="text" name="email" id="email" value="#form.email#" placeholder="jondoe@email.com" />
-						<cfif structKeyExists(errors,'email')>
-							<small class="error">#errors.email#</small>
-						</cfif>
-					</div>
+	<form id="mainContactForm" name="contactForm" class="form-contact-us" method="post" action="#sURL###contactForm">
+		<p class="required-notify"><span class="required">*</span> Required Fields</p>			
+		<fieldset title="Contact Details" class="contact-details">
+			<div class="row">
+				<div class="column six">	
+					<label for="firstName">First Name <span class="required">*</span></label>
+					<input class="text" type="text" name="firstName" id="firstName" value="#form.firstName#" />
+					<cfif structKeyExists(errors,'firstName')>
+						<small class="error">#errors.firstName#</small>
+					</cfif>
 				</div>
-				
-				<label for="comment">Your Message <span class="required">*</span></label>
-				<textarea class="text" name="comment"  id="comment" placeholder="Enquiry message here">#form.comment#</textarea>
-				<cfif structKeyExists(errors,'comment')>
-					<small class="error">#errors.comment#</small>
-				</cfif>
-				
-				<div class="row">
-					<div class="column six">
-						<a href="##" class="button button-reset">Reset</a>
-					</div>
-					<div class="column six rtl">
-						<input type="submit" class="button" name="submitForm" value="Submit Enquiry" />
-					</div>
+				<div class="column six">	
+					<label for="lastName">Last Name <span class="required">*</span></label>
+					<input class="text" type="text" name="lastName" id="lastName" value="#form.lastName#" />
+					<cfif structKeyExists(errors,'lastName')>
+						<small class="error">#errors.lastName#</small>
+					</cfif>
 				</div>
+			</div>
 
-				<input type="hidden" name="submitForm" />
-			</fieldset>
-		</form>
-	</div>
+			<div class="row">
+				<div class="column six">
+					<label for="phone">Phone Number <span class="required">*</span></label>
+					<input class="text" type="text" name="phone" id="phone" value="#form.phone#" />
+					<cfif structKeyExists(errors,'phone')>
+						<small class="error">#errors.phone#</small>
+					</cfif>
+				</div>
+				<div class="column six">		
+					<label for="email">Email Address <span class="required">*</span></label>
+					<input class="text" type="text" name="email" id="email" value="#form.email#" placeholder="jondoe@email.com" />
+					<cfif structKeyExists(errors,'email')>
+						<small class="error">#errors.email#</small>
+					</cfif>
+				</div>
+			</div>
+			
+			<label for="comment">Your Message <span class="required">*</span></label>
+			<textarea class="text" name="comment"  id="comment" placeholder="Enquiry message here">#form.comment#</textarea>
+			<cfif structKeyExists(errors,'comment')>
+				<small class="error">#errors.comment#</small>
+			</cfif>
+			
+			<div class="row">
+				<div class="column six">
+					<a href="##" class="button button-reset">Reset</a>
+				</div>
+				<div class="column six rtl">
+					<input type="submit" class="button" name="submitForm" value="Submit Enquiry" />
+				</div>
+			</div>
+
+			<input type="hidden" name="submitForm" />
+		</fieldset>
+	</form>
 </cfoutput>
 
 
