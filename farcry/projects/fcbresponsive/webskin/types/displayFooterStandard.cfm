@@ -12,12 +12,12 @@
 
 <cfif stParam.multiplecol >
     <cfif stParam.layoutClass NEQ "home">
-        <cfoutput><aside class="right columns four mobile-four" data-set="asides"></aside></cfoutput>
+        <cfoutput><aside class="right columns four" data-set="asides"></aside></cfoutput>
     </cfif>  
 
     <cfoutput>
     <!-- Secondary Column -->
-    <aside class="bottom row" data-set="asides">
+    <aside class="bottom columns four medium-six mobile-four" data-set="asides">
         <div class="append-around">
             <con:container label="globalSecondaryContentTop" bShowIfEmpty="false" />
             <con:container label="localSecondaryContentTop_#stObj.objectId#" bShowIfEmpty="false" />
