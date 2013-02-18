@@ -146,10 +146,7 @@
 				</cfif>
 				
 				<div class="row">
-					<div class="column six">
-						<a href="##" class="button button-reset">Reset</a>
-					</div>
-					<div class="column six rtl">
+					<div class="column twelve rtl">
 						<input type="submit" class="button" name="submitForm" value="Submit Enquiry" />
 					</div>
 				</div>
