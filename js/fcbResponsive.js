@@ -26,9 +26,9 @@ $(document).ready(function () {
 	// Script below will need more work	(e.preventdefault() stops the nav click event allowing sub menu to show)
 	$menulink.click(function(e) {		
 		//e.preventDefault();
-		$('html,body').animate({scrollTop:0}, 500);	
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
+		$('html,body').animate({scrollTop:0}, 500);	
 	});
 
 	$menuTrigger.click(function(e) {
