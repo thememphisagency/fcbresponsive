@@ -146,7 +146,7 @@
 			</cfif>
 			
 			<div class="row">
-				<div class="column twelve rtl">
+					<div class="column twelve rtl">
 					<input type="submit" class="button" name="submitForm" value="Submit Enquiry" />
 				</div>
 			</div>
