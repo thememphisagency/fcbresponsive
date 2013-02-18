@@ -92,6 +92,14 @@ header.top {
 
 .teaser {
 	border-bottom: 2px solid #000 !important;
+
+	a:after {
+		content: "" !important;
+	}
+}
+
+.thumbnail { 
+	width: auto !important;
 }
 
 .wrapper .columns {

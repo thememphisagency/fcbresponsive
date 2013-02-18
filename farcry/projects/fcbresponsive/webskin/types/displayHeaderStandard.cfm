@@ -10,12 +10,17 @@
 <cfparam name="stParam.title" default="#stobj.label#">
 <cfparam name="stParam.pageTitle" default="#stobj.label#" />
 
+<cfset sSeoTitle = stObj.label />
+<cfif structKeyExists(stObj,'seoTitle') AND len(stObj.seoTitle) GT 0>
+    <cfset sSeoTitle = stObj.seoTitle />
+</cfif>
+
 <cfcontent reset="true">
 <cfoutput><!DOCTYPE HTML>
 <html class="no-js">
 <head>
 	<meta charset="utf-8">
-	<title>#application.config.fcbWebsite.pageTitlePrefix# #stParam.pageTitle#: #application.config.general.sitetitle# #application.config.fcbWebsite.pageTitleSuffix#</title>
+	<title>#sSeoTitle#</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +95,7 @@
                     <span class="hide">Search</span>
                 </a>
                 <form action="/search" method="post" class="header-search-form">
-                    <input type="text" class="search" placeholder="Search our website..." value="" />
+                    <input type="text" class="search" placeholder="Search our website..." value="" name="criteria" />
                     <input type="submit" value="Submit">
                 </form>
             </div>
