@@ -57,7 +57,7 @@
 			    Galleria.configure({
 			    	imageCrop: #stobj.imageCrop#,
 			    	transition: '#stobj.transition#',
-			    	dummy: '#application.url.webroot#/wsimages/defaultBanner.jpg'
+			    	dummy: '#application.url.webroot#/wsimages/defaultBanner.png'
 				}); 
 			}
 			</script>
