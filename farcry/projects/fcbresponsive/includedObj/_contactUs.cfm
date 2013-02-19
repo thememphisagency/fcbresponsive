@@ -139,6 +139,23 @@
 					</cfif>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="column six">
+					<label for="phone">Type of Enquiry <span class="required">*</span></label>
+					<input class="text" type="text" name="phone" id="phone" value="#form.phone#" placeholder="numbers only, no spaces..." />
+					<cfif structKeyExists(errors,'phone')>
+						<small class="error">#errors.phone#</small>
+					</cfif>
+				</div>
+				<div class="column six">		
+					<label for="email">Preffered Method of Contact <span class="required">*</span></label>
+					<input class="text" type="text" name="email" id="email" value="#form.email#" placeholder="enter a valid email address..." />
+					<cfif structKeyExists(errors,'email')>
+						<small class="error">#errors.email#</small>
+					</cfif>
+				</div>
+			</div>
 			
 			<label for="comment">Your Message <span class="required">*</span></label>
 			<textarea class="text" name="comment"  id="comment" placeholder="Enquiry message here" placeholder="Enter your message here...">#form.comment#</textarea>
