@@ -73,7 +73,7 @@
   }
 
   /* Fieldsets */
-  fieldset { @include border-radius($fieldsetBorderRadius); padding: 21px; margin: 18px 0; background: #EFEFEF; border: none;
+  fieldset { @include border-radius($fieldsetBorderRadius); padding: 21px ($columnGutter / 2); margin: 18px 0; background: #EFEFEF; border: none;
 
     legend { font-weight: bold; background: $white; padding: 0 3px; margin: 0; margin-#{$defaultFloat}: -3px; }
   }
