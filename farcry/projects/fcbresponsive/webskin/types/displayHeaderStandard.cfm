@@ -126,7 +126,7 @@
     </div>
     </cfif>
 
-    <div class="row">
+    <div class="row wrapper">
 
 </cfoutput>
 
