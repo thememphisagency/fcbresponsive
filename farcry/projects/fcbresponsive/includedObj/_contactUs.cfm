@@ -97,7 +97,7 @@
 
 <cfoutput>
 
-	<p>Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. </p>
+	<p class="intro">Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. </p>
 	<cfif len(sNotice) GT 0>
 			<div class="alert alert-success">#sNotice#</div>
 	</cfif>

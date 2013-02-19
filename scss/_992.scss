@@ -60,8 +60,10 @@ aside.bottom{
 	}
 }
 
-.index, .result {
-	margin-right: 0; 
+/* Teaser and result styles */
+.result-info {
+	padding: 0 ($columnGutter / 2) 15px;
+	margin: 0 (-$columnGutter / 2) 15px;
 }
 
 .services {

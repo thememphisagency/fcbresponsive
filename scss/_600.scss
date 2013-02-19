@@ -247,7 +247,11 @@ ul.disclaimer {
 .pagination {
 	text-align: right;
 	height: 24px;
-
+	
+	&:first-child {
+		display:block;
+	}
+	
 	li {
 		height: 24px;
 
@@ -257,6 +261,10 @@ ul.disclaimer {
 			padding: 1px 10px 1px;
 		}
 	}
+}
+
+.pagination-bottom .pagination-text {
+	display: block;
 }
 
 .pagination-text {

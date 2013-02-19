@@ -13,6 +13,20 @@
       .column, .columns { padding: 0; }
     }
   }
+  
+  /* Style placeholder text */
+  ::-webkit-input-placeholder {
+   color: #999999;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #999999;  
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: #999999;  
+  }
+  :-ms-input-placeholder {  
+   color: #999999;  
+  }
 
   input:focus, textarea:focus, select:focus {
     outline: 1px solid $mainColor;
@@ -24,19 +38,17 @@
     &.inline { line-height: (ms(0) + ($formSpacing * 1.5)); margin: 0 0 $formSpacing 0; }
 
     &.label-radio { @include font-size(16); color: darken($inputFontColor,40%); font-weight:400; float: left; padding:0 25px 0 0; margin:0 0 20px; }
-    &.info { font-weight: 400;}
+    &.info { font-weight: 400; color: #555555; }
   }
 
-  .prefix, .postfix { display: block; position: relative; z-index: 2; text-align: center; width: 100%; padding-top: 0; padding-bottom: 0; height: (ms(0) + ($formSpacing * 1.5)); line-height: (ms(0) + ($formSpacing * 1.5)) - 1; }
+  .prefix, .postfix { display: block; position: relative; z-index: 2; text-align: center; width: 100%; padding-top: 0; padding-bottom: 0; height: 41px; line-height: (ms(0) + ($formSpacing * 1.5)) - 1; }
   a.button.prefix, a.button.postfix { padding-#{$defaultFloat}: 0; padding-#{$defaultOpposite}: 0; text-align: center; }
   span.prefix, span.postfix { background: darken($white, 5%); border: 1px solid darken($white, 20%); }
 
   .prefix, .prefix.button { #{$defaultFloat}: 2px; @include border-radius($inputBorderRadius 0 0 $inputBorderRadius); overflow:hidden; }
   .postfix, .postfix.button { #{$defaultOpposite}: 2px; @include border-radius(0 $inputBorderRadius $inputBorderRadius 0); }
 
-  input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea { background-color: $inputBgColor; font-family: inherit; border: $inputBorderWidth $inputBorderStyle $inputBorderColor; @include border-radius($inputBorderRadius); @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.1)); color: $inputFontColor; display: block; @include font-size($inputFontSize); margin: 0 0 $formMarginBottom 0; padding: ($formSpacing / 2); height: 41px; width: 100%; @include transition(all 0.15s linear); @include single-box-shadow(#d0d0d0, 1px, 2px, 6px, false, inset);
-
-    &.oversize { font-size: ms(1); padding: (($formSpacing - 4) / 2) ($formSpacing / 2); }
+  input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea { background-color: $inputBgColor; font-family: inherit; border: $inputBorderWidth $inputBorderStyle $inputBorderColor; @include border-radius($inputBorderRadius); @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.1)); color: $inputFontColor; display: block; @include font-size($inputFontSize); margin: 0 0 $formMarginBottom 0; padding: 6px ($formSpacing / 2); height: 41px; width: 100%; @include transition(all 0.15s linear); @include single-box-shadow(#d0d0d0, 1px, 2px, 6px, false, inset);
 
     &:focus { background: $inputFocusBgColor; border-color: $inputFocusBorderColor; }
     &[disabled] { background-color: #ddd; }
