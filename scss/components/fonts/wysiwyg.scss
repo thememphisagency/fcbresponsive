@@ -39,12 +39,12 @@ h1 {
 
 
 h2 {
-    @include font-size(22);
+    @include font-size(26);
     line-height: 30px;
     font-style: normal;
     font-weight: 400;
     font-family: Lato;
-    margin-bottom: 25px;
+    margin-bottom: 4px;
     color: rgba(51,51,51,1);
 }
 
@@ -107,7 +107,7 @@ p {
     font-style: normal;
     font-weight: 400;
     font-family: Lato;
-    @include font-size(16);
+    @include font-size(18);
     line-height: 26px;
     color: rgba(51,51,51,1);
 }
