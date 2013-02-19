@@ -72,23 +72,24 @@ $(document).ready(function () {
 	*********************************************/	
 	enquire.register("screen and (min-width:320px) and (max-width:991px)", {
 		match: function() {
-			$('.toggleBtn.search').on("click", function(){
-				$('.header-search-form').toggleClass('active');
+			$('.toggleBtn.search').on("click", function(e){
+
+				e.preventDefault();
+				
+				var sForm = $('.header-search-form');
+				var sInput = $('.header-search-form .search');
+
+				sForm.toggleClass('active');
+
+				if(sForm.hasClass('active')) 
+					sInput.focus();
 			});
 		},
 
 		unmatch: function() {
 			$('.toggleBtn.search').off("click");
 		}
-	})
-	.register("screen and (min-width:992px)",{
-		match: function() {
-			//Turn the searchToggle button into a search submit
-		},
-
-		unmatch: function() {
-		}
-	})		   
+	})	   
 	.listen();
 
 
