@@ -13,6 +13,7 @@ Use the comment-based directives to compress and minify all js files into one
 // @depends lib/galleria/galleria-1.2.9.min.js
 // @depends lib/jquery.validate.min.js
 // @depends lib/jquery.fitvids.min.js
+// @depends lib/jquery.foundation.forms.js
 
 $(document).ready(function () {
 	$(".append-around").appendAround();
@@ -122,5 +123,5 @@ $(document).ready(function () {
 	// Allow all close buttons to close the parent
 	$('.close').on("click", function(){
 		$(this).parent().remove();	
-	})
+	});
 });

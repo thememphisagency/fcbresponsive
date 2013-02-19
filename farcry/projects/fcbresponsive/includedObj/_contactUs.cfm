@@ -142,18 +142,21 @@
 
 			<div class="row">
 				<div class="column six">
-					<label for="phone">Type of Enquiry <span class="required">*</span></label>
-					<input class="text" type="text" name="phone" id="phone" value="#form.phone#" placeholder="numbers only, no spaces..." />
+					<label for="methodOfContact">Type of Enquiry</label>
+					<select name="methodOfContact">
+						<option value="">Please select one</option>
+						<option value="general">General Enquiry</option>
+						<option value="option2">Option 2</option>
+						<option value="option3">Option 3</option>
+					</select>
 					<cfif structKeyExists(errors,'phone')>
 						<small class="error">#errors.phone#</small>
 					</cfif>
 				</div>
 				<div class="column six">		
-					<label for="email">Preffered Method of Contact <span class="required">*</span></label>
-					<input class="text" type="text" name="email" id="email" value="#form.email#" placeholder="enter a valid email address..." />
-					<cfif structKeyExists(errors,'email')>
-						<small class="error">#errors.email#</small>
-					</cfif>
+					<label>Preferred Method of Contact</label>
+					<label class="label-radio"><input type="radio" name="contact_type" value="phone" checked="checked"><span class="custom radio checked"></span> Phone</label>
+					<label class="label-radio"><input type="radio" name="contact_type" value="Email"><span class="custom radio"></span> Email</label>
 				</div>
 			</div>
 			
@@ -162,9 +165,12 @@
 			<cfif structKeyExists(errors,'comment')>
 				<small class="error">#errors.comment#</small>
 			</cfif>
-			
+
 			<div class="row">
-				<div class="column twelve rtl">
+				<div class="column six">
+					<label class="info"><input type="checkbox" checked="checked" name="recieveUpdate" value="true" /> Yes, I would like to receive news and updates from FCB.</label>
+				</div>
+				<div class="column six rtl">
 					<input type="submit" class="button" name="submitForm" value="Submit Enquiry" />
 				</div>
 			</div>
