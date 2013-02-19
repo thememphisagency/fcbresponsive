@@ -247,17 +247,25 @@ ul.disclaimer {
 /* Pagination */
 .pagination {
 	text-align: right;
-	height: 24px;
-
+	height: 28px;
+	
+	&:first-child {
+		display:block;
+	}
+	
 	li {
-		height: 24px;
+		height: 28px;
 
 		a, span {
 			@include font-size(14);
-			line-height: 22px;
-			padding: 1px 10px 1px;
+			line-height: 28px;
+			padding: 1px 11px 1px;
 		}
 	}
+}
+
+.pagination-bottom .pagination-text {
+	display: block;
 }
 
 .pagination-text {

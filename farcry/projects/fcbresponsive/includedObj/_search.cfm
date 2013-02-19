@@ -41,18 +41,18 @@
 
 <cfoutput>
 	<div class="search">
-		<div class="option-bar">
+		<fieldset class="option-bar">
 			<form name="quickSearch" id="quickSearch" method="post" action="#sLink#">
 				<div class="row collapse">
-					<div class="column ten">
+					<div class="column ten mobile-three">
 						<input type="text" class="text" name="criteria" id="criteria" placeholder="#form.criteria#" value="#form.criteria#" />
 					</div>
-					<div class="column two">
+					<div class="column two mobile-one">
 						<input type="submit" class="button expand postfix" id="quickSearchSubmit" name="quickSearchSubmit" value="search" />
 					</div>
 				</div>
 			</form>
-		</div>
+		</fieldset>
 </cfoutput>
 <cfif len(trim(form.criteria)) AND (form.criteria NEQ "Enter Keywords...")>	
 	
@@ -86,9 +86,9 @@
 		</cfif>
 
 		<cfoutput>		
-		<div class="result-details">
-		 	<p>Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
-		 	<div class="row collapse">
+		<div class="result-details pagination-top">
+		 	<p class="result-info">Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
+		 	<div class="row">
 		 		<div class="column six">
 		 			<cfif structKeyExists(stPagination, "paginationHTML")>#stPagination.paginationHTML#</cfif>
 		 		</div>
@@ -109,8 +109,14 @@
 		<cfoutput>
 		</ul>
 		<div class="pagination-bottom result-details">
-			<p class="">Your search for <span class="criteria">#form.criteria#</span> returned <span class="criteria">#iTotal#</span> results across our site.</p>
-			<cfif structKeyExists(stPagination, "pagingHTML")>#stPagination.pagingHTML#</cfif>
+			<div class="row">
+		 		<div class="column six">
+		 			<cfif structKeyExists(stPagination, "paginationHTML")>#stPagination.paginationHTML#</cfif>
+		 		</div>
+		 		<div class="column six">
+		 			<cfif structKeyExists(stPagination, "pagingHTML")>#stPagination.pagingHTML#</cfif>
+		 		</div>
+		 	</div>
 		</div>
 		</cfoutput>
 	
