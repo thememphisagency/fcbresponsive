@@ -1,9 +1,17 @@
 /* Module Rules */
 /* Header */
 //-----------------------------------------------------------------------
+.button {
+	width: 200px;
+}
+
+.button-reset {
+	margin:0;
+}
+
 .top {
 	position: relative;
-	height: 55px;
+	height: 148px;
 	background: $mainColor;
 }
 
@@ -11,11 +19,12 @@
 	display: block;
 	float:left;
 	margin: 14px 0 0 $outerPadding;
-	width: 140px;
-	height: 28px;
 	background: url('/wsimages/logo.png') no-repeat;
-	background-size: 121px;
 	text-indent: -9999em;
+	width:  190px;
+	height: 68px;
+	background-size: 120px;
+	background-position: 12px 30px;
 }
 
 .toggleBtn {
@@ -26,7 +35,7 @@
 	color: #fff;
 	text-decoration: none;
 	height: 55px;
-	line-height: 63px;
+	line-height: 57px;
 	text-align: center;
 
 	[data-icon]:before {
@@ -42,9 +51,31 @@
 
 	&.menu {
 		background-color: darken($mainColor, 5%);
+		display:  none;
+	}
+	&.search {
+		height: 50px;
+		width: 50px;
+		position: relative;
+		top: 98px;
+		z-index: 99;
 	}
 
 }
+
+.pattern {
+	overflow: visible;
+}
+
+a#menu-link {
+   display: none;
+}
+
+
+
+
+
+
 
 //Seach Nav
 //-----------------------------------------------------------------------
@@ -55,32 +86,38 @@
 
 .header-search-form {
 	margin: 0;
-	position: absolute;
-	bottom:-124px;
+	bottom:-217px;	
 	left:-4000px;
 	width: 100%;
-	background: darken($mainColor, 10%);
-	text-align: right;
-	padding: 1.7rem;
 	font-size:0;
 	-webkit-transition: all 0.2s ease-out;  
 	-moz-transition: all 0.2s ease-out;
 	-ms-transition: all 0.2s ease-out;
 	-o-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
+	position: static;
+	background: transparent;
+	text-align: left;
+	padding:0;
 
 	input[type="text"] {
-		display: inline-block;
+		top:98px;
+		z-index:100;
+		float:right;
+		display: block;
+		height:50px;
 		padding: 0.9rem;
 		font-size: 16px;
-		width: 75%;
+		width: 180px;
 		border: 0;
-		color: #999999;
-		background: #fff;
+		background: darken($mainColor, 10%);
+		color: #fff;
 		margin: 0;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 		@include font-size(16);
+		@include border-radius(0);
+		@include single-box-shadow(none);
 
 		outline: none;
 		font: {
@@ -100,9 +137,12 @@
 		font-style: italic;
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
+		display:none;
 	}
 }
-
+.index, .result {
+	margin-right: 0; 
+}
 
 //Bread Crumbs
 //-----------------------------------------------------------------------
@@ -135,26 +175,42 @@
 }
 
 .banner {
-	height:140px;
+	height: 370px;
 	background-color:#ddd;
 	width: 100%;
 	margin-bottom:10px;
+	height: 290px;
+}
+
+
+.thumbnail {
+	display:none;
+	display: inline-block;
+	margin:5px 10px 0 0;
+	width: 15%;
+}
+
+.teaserBody {
+	display: inline-block;
+	width:75%;
+	vertical-align: top;
 }
 
 
 
 .services {
-	margin-top: 30px;
-	padding: 15px 0;
+	margin: 20px 0 0 0;
+	padding: 26px 0;
 	background-color: $secondaryColor;
 	
 	> li{
-		@include font-size(14);
+		@include font-size(18);
 		list-style-type:none;
 		text-align:center;
 		font-weight:700;
 		font-family:Lato;
 		margin-bottom: 8px;
+		padding:0 10px 0 0;
 	}
 	
 	.label {
@@ -166,9 +222,9 @@
 		&:before {
 			color:$mainColor;
 			font-weight:normal;
-			@include font-size(70);
+			@include font-size(75);
 			position: relative;
-			top: 13px;
+			top: 9px;
 		}
 	}
 
@@ -183,8 +239,16 @@
 	text-align:center;
 	display: inline-block;
 	width: 100%;
-	margin: 0;
+	margin: 0 0 18px;
 	line-height:0;
+	margin: 0 0 18px;
+	& img {
+		width: 100%;
+	}
+}
+
+.content-block h2 {
+	margin-bottom:4px;
 }
 
 /* Generic Teaser Styles */
@@ -200,6 +264,7 @@
 	p {
 		margin: 0;
 		padding: 0 0 12px;
+		@include font-size(14);
 	}
 }
 
@@ -209,8 +274,8 @@
 .index, .result {
 	margin-right:-($columnGutter / 2); 
 	margin-left:-($columnGutter / 2); 
-	margin-bottom:($columnGutter / 2);
-	margin-top:0;
+	margin-bottom:0;
+	margin-top:45px;
 	padding: 0;
 	list-style-type: none;
 	@include clearfix;
@@ -236,6 +301,10 @@
 
 		.teaserBodyNoImg {
 			width:100%;
+		}
+
+		p {
+			padding:0;
 		}
 
 		[data-icon] {
@@ -361,12 +430,22 @@
 
 /* Contact Styles */
 //-----------------------------------------------------------------------
+.required {
+	font-family: cabin;
+	font-weight: 600;
+	color: $alertColor;
+	@include font-size(18);
+}
+
 .form-contact-us {
 	position:relative;
+	margin: 0 (-$columnGutter / 2) 30px;
 }
 
 .required-notify {
-	float:right;
+	position: absolute;
+	right: 23px;
+	top: 26px;
 	color: $alertColor;
 	font-size: 10px;
 	margin:0;
@@ -375,6 +454,10 @@
 	font-weight: 700;
 	font-style: italic;
 	line-height: 1em;
+
+	.required {
+		@include font-size(12);
+	}
 }
 
 .contact-details {
@@ -391,10 +474,16 @@ footer {
 	
 	.siteinfo {
 		background-color:#dedede;
-		text-align: center;
+		height: 60px;
+		margin-top: 10px;
+		text-align: left;
 	}
 	.footerlinks {			
-
+		margin-left:0;
+		padding-top: 10px;
+		.col{
+			width:25%;
+		}
 		.morelink  {
 			@include font-size(12);
 			text-indent: 0;
@@ -419,27 +508,68 @@ footer {
 					weight: 700;
 					style: italic;
 				}
+				display:block;
+				margin:32px 0 15px 0;
+				@include font-size(18);
+				color:#000;
 
 		}
+		ul {
+			padding: 0 0 0 1.1em;
+			li {
+				@include font-size(12);
+				text-indent: 0;
+				line-height: 2em;
+				font:  {
+					family: Lato;
+				}
+			}
+		}
+		ul.contact {
+			list-style-type: none;
+			text-indent: 0;
+			padding: 0;
+			.icon {
+				@include font-size(36);
+				text-align: left;
+				text-indent: 0;
+				display: inline-block;
+				line-height: 0.4em;
+				vertical-align:  40%;
+				padding-left: 0;
+			}
+			li div {
+				position:relative;
+			}
+			li span {
+				left: 30px;
+				position:absolute;
+			}
+		}
+
 	}
 }
 
-.copyright {
+p.copyright {
 	padding-top:20px;
 	@include font-size(12);
     line-height: 16px;
     color: #666666;
     text-align: center;
+   	float: left;
+	margin: 0;
+	display: inline-block;
 }
 
-.disclaimer {
+ul.disclaimer {
 	padding:0px;
 	@include font-size(12);
     text-align: center;
     font-weight: 700;
     font-style: normal;
     color: #000000;
-
+	margin: 21px 183px 0;	
+	display: inline-block;
 	> li{
 		@include font-size(12);
 		display:inline-block;
@@ -481,11 +611,12 @@ footer {
 .toTop {
     // TODO - Make this colour a variable ?
     text-decoration: none;
-
+	float: right;
     [data-icon] {
         color: darken($secondaryColor,40%); //#8f938f
         line-height: 60px;
-
+		top: 14px;
+		right: 15px;
         &:before{
             @include font-size(70);
         }
@@ -496,6 +627,13 @@ footer {
 //-----------------------------------------------------------------------
 .subNavigation {
 	margin: 0 0 20px;
+	padding:0 6px 0 10px;
+
+	h2 {
+		@include font-size(28);
+		margin-bottom:20px;
+		font-weight:700;
+	}
 }
 
 .subNav {	
@@ -507,7 +645,9 @@ footer {
 
 	li {
 		margin:0;
+		padding-left:15px;
 		border-bottom:1px solid lighten($mainColor,4%);
+		background: url(/wsimages/dot.png) no-repeat 15px center;
 
 		&:last-child {
 			border-bottom: none;
@@ -535,6 +675,7 @@ footer {
 			font-style: normal;
 			text-decoration: none;
 			text-transform: uppercase;
+			list-style: circle;
 			padding: 10px 20px;
 			display: block;
 			color: #fff;
@@ -542,34 +683,32 @@ footer {
 		}
 	}
 }
+/* Pagination */
+.pagination {
+	text-align: right;
+	height: 24px;
+
+	li {
+		height: 24px;
+
+		a, span {
+			@include font-size(14);
+			line-height: 22px;
+			padding: 1px 10px 1px;
+		}
+	}
+}
+
+.pagination-text {
+	text-align: left;
+}
+
+.bottom .sponsor {
+	margin:0;
+}
 
 
-#menu, #menu > ul ul {
-	clear: both;
-	-webkit-transition: all 0.3s ease-out;  
-	-moz-transition: all 0.3s ease-out;
-	-ms-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
-}
-#menu.active, .js #menu > ul ul.active {
-	max-height: 55em;
-}
-.js #menu, .js #menu > ul ul {
-	overflow: hidden;
-	max-height: 0;
-	background: rgba(0,0,0,0.1);
-}
-#menu.active, .js #menu > ul ul.active {
-	max-height: 55em;
-}
-#menu > ul {
-	
-}
-#menu li a {
-	display: block;
-	position: relative;
-}
+
 // Use for mobile menu allowing showing of sub pages
 // #menu li.parent > a:after {
 // 	content: '+';

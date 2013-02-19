@@ -13,9 +13,9 @@
 	padding: 9px 12px;
 	position: relative;
 	text-decoration: none;
-	width: 100%;
+	width: 200px;
 	border:none;
-	text-align: center;
+	text-align: left;
 		
 	&:hover, &:focus {
 		color: #fff;
@@ -31,7 +31,7 @@
 	/* Icons */
 	& [data-icon] {
 		float: right;
-
+		font-size:32px;
 		:before {
 			color: lighten($mainColor, 50%);
 			opacity: 0.5;

@@ -13,6 +13,11 @@
 
 
 //----------------------------------------------------------------------------------------------------
+/* Header */
+.toggleMenu {
+	display: none;
+}
+
 .hidden {
 	display:none;
 }
@@ -22,7 +27,7 @@
 }
 
 .footerlinks ul {
-	display: none;
+	display: block;
 }
 
 .footerlinks h4 {
@@ -49,4 +54,7 @@
 	width:65%;		
 }	
 
+.search{
+	display:block
+}
 
