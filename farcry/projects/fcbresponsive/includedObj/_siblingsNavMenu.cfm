@@ -8,6 +8,7 @@
 	<cfset parentid =application.factory.oTree.getParentID(request.navid).parentID[1] />
 	<cfif len(parentid) AND isValid('uuid', parentid)>		
 	<div class="subNavigation">
+		<h2>Quick Links</h2>
 		<ui:GenericNav navID="#parentid#"
 		id="subNav"
 		depth="1"
