@@ -1,7 +1,7 @@
 /* Layout Rules */
 .wrap-left {
 	float: left;
-	margin: 0 $outerPadding $outerPadding 0;
+	margin: $outerPadding $outerPadding $outerPadding 0;
 }
 
 .wrap-right {

@@ -142,19 +142,19 @@
 }
 
 
-
 .services {
-	margin-top: 30px;
-	padding: 15px 0;
+	margin: 20px 20px 0 0;
+	padding: 26px 0;
 	background-color: $secondaryColor;
 	
 	> li{
-		@include font-size(14);
+		@include font-size(18);
 		list-style-type:none;
 		text-align:center;
 		font-weight:700;
 		font-family:Lato;
 		margin-bottom: 8px;
+		padding:0 10px 0 0;
 	}
 	
 	.label {
@@ -166,9 +166,9 @@
 		&:before {
 			color:$mainColor;
 			font-weight:normal;
-			@include font-size(70);
+			@include font-size(75);
 			position: relative;
-			top: 13px;
+			top: 9px;
 		}
 	}
 
@@ -200,6 +200,7 @@
 	p {
 		margin: 0;
 		padding: 0 0 12px;
+		@include font-size(14);
 	}
 }
 

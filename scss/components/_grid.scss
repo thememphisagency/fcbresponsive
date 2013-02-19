@@ -3,12 +3,18 @@
   .row { width: $rowWidth; max-width: 100%; min-width: $screenSmall; margin: 0 auto;
     .row { width: auto; max-width: none; min-width: 0; margin: 0 (-($columnGutter/2)); }
 
+
     &.collapse {
       .column, .columns { padding: 0 6px 0 10px; }
     }
     .row { width: auto; max-width: none; min-width: 0; margin: 0 (-($columnGutter/2));
       &.collapse { margin: 0; }
     }
+
+     .content-block {
+      margin-top:40px;
+    }
+    
   }
 
   .column, .columns { float: $defaultFloat; min-height: 1px; padding: 0 ($columnGutter/2); position: relative;
