@@ -50,12 +50,13 @@
 			    	responsive:true,
 			    	lightbox: false,
 			    	showInfo: false,
+			    	debug: #stobj.debugMode#,
 			    	showCounter: false,
 			    	dataSource: imageData
 			    });
 			    Galleria.configure({
-			    	imageCrop: true,
-			    	transition: 'fade',
+			    	imageCrop: #stobj.imageCrop#,
+			    	transition: '#stobj.transition#',
 			    	dummy: '#application.url.webroot#/wsimages/defaultBanner.jpg'
 				}); 
 			}
