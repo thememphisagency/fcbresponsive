@@ -78,10 +78,8 @@
 		color: #999999;
 		background: #fff;
 		margin: 0;
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
+		border-radius:5px 0 0 5px;	
 		@include font-size(16);
-		@include border-radius(0);
 		@include single-box-shadow(none);
 
 		outline: none;
@@ -93,15 +91,18 @@
 	input[type="submit"] {
 		font-size: 16px;
 		width:25%;
-		padding: 0.8rem;
+		padding:12px 0 10px 0;
 		border: none;
 		background: darken($mainColor, 5%);
 		color: #fff;
 		font-family: cabin;
 		font-weight: 600;
 		font-style: italic;
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
+		border-radius:0 5px 5px 0;	
+	}
+
+	input[type="submit"]:hover {
+		background: lighten($mainColor, 5%);
 	}
 }
 
