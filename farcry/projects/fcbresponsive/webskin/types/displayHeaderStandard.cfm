@@ -65,8 +65,21 @@
         </cfoutput>
     </cfif>
     <cfoutput>
-        <link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" />
-        <link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/classic/galleria.classic.css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Cabin:400,500,600,400italic,600italic" rel="stylesheet" type="text/css">
+        <!--[if IE]>
+        <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:700italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Cabin:400" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Cabin:400italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Cabin:500" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Cabin:600italic" rel="stylesheet" type="text/css">
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" /><link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/classic/galleria.classic.css">
         <script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
 </head>
 
