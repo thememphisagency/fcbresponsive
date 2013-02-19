@@ -104,8 +104,12 @@
 	input[type="submit"]:hover {
 		background: lighten($mainColor, 5%);
 	}
-}
 
+	
+}
+.toggleBtn {
+		border:none;
+	}
 
 //Bread Crumbs
 //-----------------------------------------------------------------------

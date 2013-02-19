@@ -71,9 +71,8 @@ $(document).ready(function () {
 		Should be included here
 	*********************************************/	
 	enquire.register("screen and (min-width:320px) and (max-width:991px)", {
-		match: function() {
+		match: function() {			
 			$('.toggleBtn.search').on("click", function(e){
-
 				e.preventDefault();
 				
 				var sForm = $('.header-search-form');
@@ -87,7 +86,10 @@ $(document).ready(function () {
 		},
 
 		unmatch: function() {
-			$('.toggleBtn.search').off("click");
+			$('.toggleBtn.search').on("click", function(e){
+				var sForm = $('.header-search-form');
+				sForm.submit();
+			});
 		}
 	})	   
 	.listen();
