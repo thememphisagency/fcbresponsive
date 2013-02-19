@@ -18,6 +18,10 @@ section article {
 	margin: 0 auto;	
 }
 
+label.label-radio {
+	padding-top:12px;
+}
+
 .row.content-block  .teaser.medium-three:last-child {
 	float: left; /* override last child float:right as there are only three blocks */
 }
