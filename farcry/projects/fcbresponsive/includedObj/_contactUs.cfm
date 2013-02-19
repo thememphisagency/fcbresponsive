@@ -142,16 +142,13 @@
 
 			<div class="row">
 				<div class="column six">
-					<label for="methodOfContact">Type of Enquiry</label>
-					<select name="methodOfContact">
+					<label for="typeofEnquiry">Type of Enquiry</label>
+					<select name="typeofEnquiry">
 						<option value="">Please select one</option>
 						<option value="general">General Enquiry</option>
 						<option value="option2">Option 2</option>
 						<option value="option3">Option 3</option>
 					</select>
-					<cfif structKeyExists(errors,'phone')>
-						<small class="error">#errors.phone#</small>
-					</cfif>
 				</div>
 				<div class="column six">		
 					<label>Preferred Method of Contact</label>
