@@ -167,10 +167,10 @@
 			</cfif>
 
 			<div class="row">
-				<div class="column six">
+				<div class="column eight">
 					<label class="info"><input type="checkbox" checked="checked" name="recieveUpdate" value="true" /> Yes, I would like to receive news and updates from FCB.</label>
 				</div>
-				<div class="column six rtl">
+				<div class="column four rtl">
 					<input type="submit" class="button" name="submitForm" value="Submit Enquiry" />
 				</div>
 			</div>

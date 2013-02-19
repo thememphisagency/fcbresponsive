@@ -65,7 +65,7 @@ $inputFontSize: 14px !default;
 $inputBgColor: #fff !default;
 $inputFocusBgColor: darken(#fff, 2%) !default;
 $inputBorderColor: darken(#fff, 20%) !default;
-$inputFocusBorderColor: darken(#fff, 30%) !default;
+$inputFocusBorderColor: $mainColor !default;
 $inputBorderStyle: solid !default;
 $inputBorderWidth: 1px !default;
 $inputBorderRadius: 5px !default;
