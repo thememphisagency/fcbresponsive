@@ -198,6 +198,9 @@
 	margin-bottom:4px;
 }
 
+.content-block p {
+	line-height:21px;
+}
 /* Generic Teaser Styles */
 //-----------------------------------------------------------------------	
 .teaser {
@@ -477,7 +480,7 @@ footer {
 		}
 
 		.morelink:hover {
-			color:#a6a6a6;
+			color:#006fb6;
 		}
 
 		h4, h4 .morelink {
@@ -558,7 +561,15 @@ footer {
             @include font-size(70);
         }
     }
+
+   
 }
+
+ .toTop:hover {
+    	[data-icon] {
+	        color: darken($secondaryColor,60%);
+	    }
+    }
 
 /* SubNav Styles */
 //-----------------------------------------------------------------------
