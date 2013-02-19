@@ -93,11 +93,11 @@
             <a class="logo" href="/" title="#application.config.general.sitetitle#">#application.config.general.sitetitle#</a>
             
             <div class="header-search">
-                <a class="toggleBtn search" href="##">
+                <button class="toggleBtn search">
                     <span data-icon="&##128269;"></span>
-                    <span class="hide">Search</span>
-                </a>
-                <form action="/search" method="post" class="header-search-form">
+                    <span class="hide">Search</span>         
+                </button>
+                  <form action="/search" method="post" class="header-search-form">
                     <input type="text" class="search" placeholder="Search our website..." value="" name="criteria" />
                     <input type="submit" value="Submit">
                 </form>
@@ -126,7 +126,7 @@
     </div>
     </cfif>
 
-    <div class="row">
+    <div class="row wrapper">
 
 </cfoutput>
 
