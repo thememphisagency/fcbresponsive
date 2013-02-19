@@ -103,19 +103,20 @@
 	</cfif>
 
 	<form id="mainContactForm" name="contactForm" class="form-contact-us" method="post" action="#sURL###contactForm">
-		<p class="required-notify"><span class="required">*</span> Required Fields</p>			
+					
 		<fieldset title="Contact Details" class="contact-details">
+			<span class="required-notify"><span class="required">*</span> Required Fields</span>
 			<div class="row">
 				<div class="column six">	
-					<label for="firstName">First Name <span class="required">*</span></label>
-					<input class="text" type="text" name="firstName" id="firstName" value="#form.firstName#" />
+					<label for="firstName">First Name <span class="required">*</span></label>	
+					<input class="text" type="text" name="firstName" id="firstName" value="#form.firstName#" placeholder="Enter your first name..." />
 					<cfif structKeyExists(errors,'firstName')>
 						<small class="error">#errors.firstName#</small>
 					</cfif>
 				</div>
 				<div class="column six">	
 					<label for="lastName">Last Name <span class="required">*</span></label>
-					<input class="text" type="text" name="lastName" id="lastName" value="#form.lastName#" />
+					<input class="text" type="text" name="lastName" id="lastName" value="#form.lastName#" placeholder="Enter your last name..." />
 					<cfif structKeyExists(errors,'lastName')>
 						<small class="error">#errors.lastName#</small>
 					</cfif>
@@ -125,14 +126,31 @@
 			<div class="row">
 				<div class="column six">
 					<label for="phone">Phone Number <span class="required">*</span></label>
-					<input class="text" type="text" name="phone" id="phone" value="#form.phone#" />
+					<input class="text" type="text" name="phone" id="phone" value="#form.phone#" placeholder="numbers only, no spaces..." />
 					<cfif structKeyExists(errors,'phone')>
 						<small class="error">#errors.phone#</small>
 					</cfif>
 				</div>
 				<div class="column six">		
 					<label for="email">Email Address <span class="required">*</span></label>
-					<input class="text" type="text" name="email" id="email" value="#form.email#" placeholder="jondoe@email.com" />
+					<input class="text" type="text" name="email" id="email" value="#form.email#" placeholder="enter a valid email address..." />
+					<cfif structKeyExists(errors,'email')>
+						<small class="error">#errors.email#</small>
+					</cfif>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column six">
+					<label for="phone">Type of Enquiry <span class="required">*</span></label>
+					<input class="text" type="text" name="phone" id="phone" value="#form.phone#" placeholder="numbers only, no spaces..." />
+					<cfif structKeyExists(errors,'phone')>
+						<small class="error">#errors.phone#</small>
+					</cfif>
+				</div>
+				<div class="column six">		
+					<label for="email">Preffered Method of Contact <span class="required">*</span></label>
+					<input class="text" type="text" name="email" id="email" value="#form.email#" placeholder="enter a valid email address..." />
 					<cfif structKeyExists(errors,'email')>
 						<small class="error">#errors.email#</small>
 					</cfif>
@@ -140,7 +158,7 @@
 			</div>
 			
 			<label for="comment">Your Message <span class="required">*</span></label>
-			<textarea class="text" name="comment"  id="comment" placeholder="Enquiry message here">#form.comment#</textarea>
+			<textarea class="text" name="comment"  id="comment" placeholder="Enquiry message here" placeholder="Enter your message here...">#form.comment#</textarea>
 			<cfif structKeyExists(errors,'comment')>
 				<small class="error">#errors.comment#</small>
 			</cfif>

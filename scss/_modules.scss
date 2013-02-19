@@ -81,6 +81,8 @@
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 		@include font-size(16);
+		@include border-radius(0);
+		@include single-box-shadow(none);
 
 		outline: none;
 		font: {
@@ -138,6 +140,7 @@
 	height:140px;
 	background-color:#ddd;
 	width: 100%;
+	margin-bottom:10px;
 }
 
 
@@ -360,11 +363,34 @@
 
 /* Contact Styles */
 //-----------------------------------------------------------------------
+.required {
+	font-family: cabin;
+	font-weight: 600;
+	color: $alertColor;
+	@include font-size(18);
+}
+
+.form-contact-us {
+	position:relative;
+	margin: 0 0 30px;
+}
+
 .required-notify {
-	float:right;
+	position: absolute;
+	right: 23px;
+	top: 26px;
 	color: $alertColor;
 	font-size: 10px;
-	margin:0 0 10px;
+	margin:0;
+	@include font-size(12);
+	font-family: lato;
+	font-weight: 700;
+	font-style: italic;
+	line-height: 1em;
+
+	.required {
+		@include font-size(12);
+	}
 }
 
 .contact-details {
