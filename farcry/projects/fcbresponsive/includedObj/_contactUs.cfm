@@ -143,7 +143,7 @@
 			<div class="row">
 				<div class="column six">
 					<label for="typeofEnquiry">Type of Enquiry</label>
-					<select name="typeofEnquiry">
+					<select name="typeofEnquiry" id="typeofEnquiry">
 						<option value="">Please select one</option>
 						<option value="general">General Enquiry</option>
 						<option value="option2">Option 2</option>
@@ -158,7 +158,7 @@
 			</div>
 			
 			<label for="comment">Your Message <span class="required">*</span></label>
-			<textarea class="text" name="comment"  id="comment" placeholder="Enquiry message here" placeholder="Enter your message here...">#form.comment#</textarea>
+			<textarea class="text" name="comment"  id="comment" placeholder="Enter your message here...">#form.comment#</textarea>
 			<cfif structKeyExists(errors,'comment')>
 				<small class="error">#errors.comment#</small>
 			</cfif>
