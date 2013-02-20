@@ -101,6 +101,7 @@ a#menu-link {
 	padding:0;
 
 	input[type="text"] {
+		position:relative;
 		top:98px;
 		z-index:100;
 		float:right;
@@ -179,7 +180,6 @@ a#menu-link {
 	background-color:#ddd;
 	width: 100%;
 	margin-bottom:10px;
-	height: 290px;
 }
 
 
