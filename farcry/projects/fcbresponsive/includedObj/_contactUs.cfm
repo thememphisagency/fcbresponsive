@@ -168,7 +168,8 @@
 					<label class="info"><input type="checkbox" checked="checked" name="recieveUpdate" value="true" /> Yes, I would like to receive news and updates from FCB.</label>
 				</div>
 				<div class="column four rtl">
-					<input type="submit" class="button button-with-icon" name="submitForm" value="Submit Enquiry" />
+					<a href="##" class="button button-submit">Submit Enquiry<i class="icon-right-circled"></i></a>
+					<input type="submit" class="button button-with-icon" name="submitForm" value="Submit Enquiry" style="display:none" />
 				</div>
 			</div>
 

@@ -461,9 +461,11 @@ footer {
 		text-align: center;
 		padding: 0 0 19px 0;
 	}
+	
 	.footerlinks {			
 
 		.morelink  {
+			word-wrap: break-word;
 			@include font-size(12);
 			text-indent: 0;
 			line-height: 2em;
@@ -481,13 +483,12 @@ footer {
 		}
 
 		h4, h4 .morelink {
-				line-height:30px;				
-				font:  {
-					family: Lato;
-					weight: 700;
-					style: italic;
-				}
-
+			line-height:30px;				
+			font:  {
+				family: Lato;
+				weight: 700;
+				style: italic;
+			}
 		}
 	}
 }
@@ -537,7 +538,6 @@ footer {
 		color:#333;
 		font: {
 			family:Lato;
-
 		}
 	}
 
@@ -554,15 +554,13 @@ footer {
         color: darken($secondaryColor,40%); //#8f938f
         @include font-size(35);
     }
-
-   
+	
+	&:hover {
+    	[class^="icon-"]:before {
+			color: darken($secondaryColor,60%);
+   		}
+   	}
 }
-
- .toTop:hover {
-    	[data-icon] {
-	        color: darken($secondaryColor,60%);
-	    }
-    }
 
 /* SubNav Styles */
 //-----------------------------------------------------------------------

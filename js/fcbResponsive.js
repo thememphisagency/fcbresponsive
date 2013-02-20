@@ -137,10 +137,13 @@ $(document).ready(function () {
         errorElement: "small"		
 	});
 
-	// Reset contact us form on click 
-	$('.form-contact-us .button-reset').on("click", function(e){
+	// Submit contact form using custom button
+	$('.form-contact-us .button-submit').on("click", function(e){
 		e.preventDefault();
-		contactForm.resetForm();
+
+		if( $('.form-contact-us').valid() ) {
+			$('.form-contact-us').submit();
+		}
 	});
 
 	// Enable fit vids to

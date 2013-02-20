@@ -17,7 +17,7 @@
 			 <li><i class="icon-print"></i><span>#stObj.fax#</span></li>
 		</cfif>
 		<cfif len(stObj.email) AND isValid('email', stObj.email)>
-			 <li><i class="icon-mail"></i><a href="mailto:#stObj.email#" class="morelink">#stObj.email#</a></span></li>
+			 <li><i class="icon-mail"></i><span><a href="mailto:#stObj.email#" class="morelink">#stObj.email#</a></span></li>
 		</cfif>
 		<cfif len(sLocationAddress)>
 			<li><i class="icon-location"></i><span>#sLocationAddress#</span></li>

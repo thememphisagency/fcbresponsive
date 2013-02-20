@@ -12,5 +12,30 @@
 // 1. BASE 					==============================
 // 2. LAYOUT				==============================
 // 3. MODULE 				==============================
+
+.footerlinks ul.contact {
+
+	[class^="icon-"]:before {
+		display: inline-block;
+		@include font-size(18);
+		text-align: left;
+		text-indent: 0;
+		display: inline-block;
+		line-height: 0.4em;
+		vertical-align:  40%;
+		padding-left: 0;
+	}
+
+	li div {
+		position:relative;
+	}
+
+	li span {
+		left: 53px;
+		position:absolute;
+	}
+
+}
+
 // 4. STATE 				==============================
 // 5. THEME 				==============================

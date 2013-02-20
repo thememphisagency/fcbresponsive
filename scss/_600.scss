@@ -175,6 +175,7 @@ nav[role=navigation] li a  {
 .footerlinks {
 	margin-left:0;
 	padding-top: 10px;
+
 	.col{
 		width:25%;
 	}
@@ -203,20 +204,7 @@ nav[role=navigation] li a  {
 		padding: 0;
 
 		[class^="icon-"]:before {
-			@include font-size(18);
-			text-align: left;
-			text-indent: 0;
-			display: inline-block;
-			line-height: 0.4em;
-			vertical-align:  40%;
-			padding-left: 0;
-		}
-		li div {
-			position:relative;
-		}
-		li span {
-			left: 30px;
-			position:absolute;
+			display: none;
 		}
 	}
 	
@@ -239,6 +227,7 @@ ul.disclaimer {
 
 .toTop {
 	float: right;
+	margin: 10px 20px 0 0;
 
 	[class^="icon-"]:before {
 		top: 14px;
