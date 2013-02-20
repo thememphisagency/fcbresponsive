@@ -91,11 +91,10 @@ $(document).ready(function () {
 	})	   
 	.listen();
 
-	enquire.register("screen and (min-width:800px)", {
+	enquire.register("screen and (min-width:992px)", {
 		match: function() {			
 			$('.toggleBtn.search').on("click", function(e){
-				e.preventDefault();
-				
+				e.preventDefault();				
 				var sForm = $('.header-search-form');
 				sForm.submit();
 			});
