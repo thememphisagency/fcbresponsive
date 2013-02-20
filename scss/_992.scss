@@ -51,6 +51,7 @@ aside.bottom{
 		float: right;
 		background: darken($mainColor, 10%);
 		color: #fff;
+		padding-left: 18px;
 		@include border-radius(0);
 	}
 

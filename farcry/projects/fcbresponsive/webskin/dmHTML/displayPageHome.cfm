@@ -15,7 +15,7 @@
 <div class="columns twelve">
     <!-- Feature Box -->
     <div class="row">
-        <article class="columns eight medium-six">
+        <article class="columns eight medium-six headline">
             <h1>Responsive, in a Box.</h1>
             <p>An introductory paragraph is a great way to summarise the content before the reader really digs into the detail of your story. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis.</p>
             
