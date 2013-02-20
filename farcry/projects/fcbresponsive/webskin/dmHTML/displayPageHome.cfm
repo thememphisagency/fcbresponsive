@@ -19,8 +19,7 @@
             <h1>Responsive, in a Box.</h1>
             <p>An introductory paragraph is a great way to summarise the content before the reader really digs into the detail of your story. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis.</p>
             
-            <a class="button readMore" href="##"><span class="btnTxt">Read more</span> <span data-icon="&##59226;"></span>
-            </a>
+            <a class="button button-with-icon" href="##">Read more</span><i class="icon-right-circled"></i></a>
         </article>
         <aside class="columns four mobile-four right" data-set="asides"></aside>
     </div>
@@ -28,12 +27,12 @@
     <!-- Services -->
     <div class="row">
         <ul class="services clearfix">
-            <li class="two mobile-two medium-two columns"><span data-icon="&##128241;"></span><span class="label">Mobile First</span></li>
-            <li class="two mobile-two medium-two columns"><span data-icon="&##128202;"></span><span class="label">Scalable Solution</span></li>
-            <li class="two mobile-two medium-two columns"><span data-icon="&##128319;"></span><span class="label">Future-Friendly</span></li>
-            <li class="two mobile-two medium-two columns"><span data-icon="&##62977;"></span><span class="label">Adaptive Website</span></li>
-            <li class="two mobile-two medium-two columns"><span data-icon="&##59214;"></span><span class="label">Responsive UI</span></li>
-            <li class="two mobile-two medium-two columns"><span data-icon="&##9874;"></span><span class="label">CMS Integrated</span></li>
+            <li class="two mobile-two medium-two columns"><i class="icon-mobile"></i><span class="label">Mobile First</span></li>
+            <li class="two mobile-two medium-two columns"><i class="icon-chart-bar"></i><span class="label">Scalable Solution</span></li>
+            <li class="two mobile-two medium-two columns"><i class="icon-paper-plane"></i><span class="label">Future-Friendly</span></li>
+            <li class="two mobile-two medium-two columns"><i class="icon-sweden"></i><span class="label">Adaptive Website</span></li>
+            <li class="two mobile-two medium-two columns"><i class="icon-window"></i><span class="label">Responsive UI</span></li>
+            <li class="two mobile-two medium-two columns"><i class="icon-tools"></i><span class="label">CMS Integrated</span></li>
         </ul>
     </div>
 

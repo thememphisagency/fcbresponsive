@@ -19,8 +19,6 @@
 
 aside.right {
 	display: block;
-	/*width: 300px;
-	float:right; */
 	margin-top:35px;
 }
 
@@ -53,6 +51,7 @@ aside.bottom{
 		float: right;
 		background: darken($mainColor, 10%);
 		color: #fff;
+		@include border-radius(0);
 	}
 
 	input[type="submit"] {

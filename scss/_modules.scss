@@ -26,11 +26,11 @@
 	color: #fff;
 	text-decoration: none;
 	height: 55px;
-	line-height: 63px;
+	line-height: 57px;
 	text-align: center;
 
-	[data-icon]:before {
-		@include font-size(50);
+	[class^="icon-"]:before {
+		@include font-size(24);
 	}
 
 	&:hover {
@@ -166,17 +166,16 @@
 	
 	.label {
 		display: block;
+		margin:10px 0 0 0;
 	}
 
-	span[data-icon] {
+	[class^="icon-"]:before {
 		line-height: 50px;
-		&:before {
-			color:$mainColor;
-			font-weight:normal;
-			@include font-size(75);
-			position: relative;
-			top: 9px;
-		}
+		color:$mainColor;
+		font-weight:normal;
+		@include font-size(37);
+		position: relative;
+		top: 9px;
 	}
 
 }
@@ -270,15 +269,12 @@
 			padding:0;
 		}
 
-		[data-icon] {
+		[class^="icon-"]:before {
 			position: absolute;
 			right:20px;
 			bottom:25px;
-
-			&:before {
-				color:#00a502;
-				@include font-size(58);
-			}
+			color:#00a502;
+			@include font-size(29);
 		}
 	}
 }
@@ -471,6 +467,7 @@ footer {
 	.siteinfo {
 		background-color:#dedede;
 		text-align: center;
+		padding: 0 0 19px 0;
 	}
 	.footerlinks {			
 
@@ -558,16 +555,12 @@ footer {
 }
 
 .toTop {
-    // TODO - Make this colour a variable ?
     text-decoration: none;
+    display: inline-block;
 
-    [data-icon] {
+   	[class^="icon-"]:before {
         color: darken($secondaryColor,40%); //#8f938f
-        line-height: 60px;
-
-        &:before{
-            @include font-size(70);
-        }
+        @include font-size(35);
     }
 
    

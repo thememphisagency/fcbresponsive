@@ -6,7 +6,7 @@
 	cursor: pointer;
 	display: inline-block;
 	font-family: Cabin;
-	font-weight: 600;
+	font-weight: 400;
 	font-style: italic;
 	font-size: 18px;
 	line-height: 1em;
@@ -30,18 +30,22 @@
 	}
 
 	/* Icons */
-	& [data-icon] {
+	& [class^="icon-"]:before {
+		font-size: 27px;
 		float: right;
-
-		:before {
-			color: lighten($mainColor, 50%);
-			opacity: 0.5;
-		}
+		color: lighten($mainColor, 50%);
+		opacity: 0.5;
 	}	
 }
 
 // Button Styles
 //----------------------------------------------------------------
+.button-with-icon {
+	text-align: left;
+	padding: 9px 4px 8px 13px;
+	line-height: 28px;
+}
+
 .button-reset {
 	background: desaturate($mainColor, 90);
 	margin: 0 0 15px 0;
