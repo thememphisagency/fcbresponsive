@@ -23,7 +23,7 @@
 		
 	<cfoutput>
 		<div class="teaserBody <cfif NOT len(stobj.teaserImage)>teaserBodyNoImg</cfif>"><p>#stObj.Teaser#</p></div>
-	<skin:buildLink objectid="#stobj.objectID#" class="morelink"><span data-icon="&##8862;"></span></skin:buildLink>
+	<skin:buildLink objectid="#stobj.objectID#" class="morelink"><i class="icon-plus-squared"></i></skin:buildLink>
 </div><!-- END .teaser -->
 </cfoutput>
 

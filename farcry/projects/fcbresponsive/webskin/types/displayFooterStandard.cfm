@@ -68,7 +68,7 @@
                     class="disclaimer">
             
                 <a class="toTop" href="##">
-                    <span data-icon="&##59227;"></span>
+                    <i class="icon-up-circled"></i>
                     <span class="hide">Go to Top</span>
                 </a>
             </div>

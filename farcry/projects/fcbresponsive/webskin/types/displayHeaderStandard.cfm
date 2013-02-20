@@ -107,7 +107,7 @@
             
             <div class="header-search">
                 <button class="toggleBtn search">
-                    <span data-icon="&##128269;"></span>
+                    <i class="icon-search"></i>
                     <span class="hide">Search</span>         
                 </button>
                   <form action="/search" method="post" class="header-search-form">
@@ -117,7 +117,7 @@
             </div>
 
             <a class="toggleBtn menu" href="##menu" id="menu-link">
-                <span data-icon="&##9776;"></span>
+                <i class="icon-menu"></i>
                 <span class="hide">Menu</span>
             </a>
             </cfoutput>
