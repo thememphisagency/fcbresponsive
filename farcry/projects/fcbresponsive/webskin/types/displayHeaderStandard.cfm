@@ -80,6 +80,7 @@
         <link href="http://fonts.googleapis.com/css?family=Cabin:600italic" rel="stylesheet" type="text/css">
         <![endif]-->
         <link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/classic/galleria.classic.css">
+        <link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/dots/galleria.dots.css">
         <link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" />
         <script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
 </head>
