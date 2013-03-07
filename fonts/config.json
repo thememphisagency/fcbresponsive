@@ -1,0 +1,389 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "search": [
+        "plus",
+        "expand"
+      ],
+      "code": 8862,
+      "uid": "9e1c33b6849ceb08db8acfaf02188b7d",
+      "css": "plus-squared",
+      "orig_css": "plus-squared",
+      "orig_code": 8862,
+      "src": "entypo",
+      "from": 8862
+    },
+    {
+      "search": [
+        "menu",
+        "list"
+      ],
+      "code": 9776,
+      "uid": "2cfb3f2b46b34a1790aec0aa846297b6",
+      "css": "menu",
+      "orig_css": "menu",
+      "orig_code": 9776,
+      "src": "entypo",
+      "from": 9776
+    },
+    {
+      "search": [
+        "tools"
+      ],
+      "code": 9874,
+      "uid": "6a7b9d4863bb7e6c79e9457a72d689b6",
+      "css": "tools",
+      "orig_css": "tools",
+      "orig_code": 9874,
+      "src": "entypo",
+      "from": 9874
+    },
+    {
+      "search": [
+        "mail",
+        "email"
+      ],
+      "code": 9993,
+      "uid": "e335adbc2d898c7d85d40c507796e7b4",
+      "css": "mail",
+      "orig_css": "mail",
+      "orig_code": 9993,
+      "src": "entypo",
+      "from": 9993
+    },
+    {
+      "search": [
+        "ok",
+        true,
+        "check",
+        "mark"
+      ],
+      "code": 10003,
+      "uid": "14017aae737730faeda4a6fd8fb3a5f0",
+      "css": "check",
+      "orig_css": "check",
+      "orig_code": 10003,
+      "src": "entypo",
+      "from": 10003
+    },
+    {
+      "search": [
+        "close",
+        "cancel",
+        "reject"
+      ],
+      "code": 10005,
+      "from": 10005,
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel",
+      "orig_css": "cancel",
+      "orig_code": 10005,
+      "src": "entypo"
+    },
+    {
+      "search": [
+        "close",
+        "cancel",
+        "reject"
+      ],
+      "code": 10006,
+      "uid": "c759418c008e9562944080fee617fc76",
+      "css": "cancel-circled",
+      "orig_css": "cancel-circled",
+      "orig_code": 10006,
+      "src": "entypo",
+      "from": 10006
+    },
+    {
+      "search": [
+        "close",
+        "cancel",
+        "reject"
+      ],
+      "code": 10062,
+      "uid": "bf45c39702763f1803b550c36a0ceb12",
+      "css": "cancel-squared",
+      "orig_css": "cancel-squared",
+      "orig_code": 10062,
+      "src": "entypo",
+      "from": 10062
+    },
+    {
+      "search": [
+        "plus"
+      ],
+      "code": 10133,
+      "from": 10133,
+      "uid": "a66cdc7278e6b33b8bd44a141f5e1a8d",
+      "css": "plus-circled",
+      "orig_css": "plus-circled",
+      "orig_code": 10133,
+      "src": "entypo"
+    },
+    {
+      "search": [
+        "direction"
+      ],
+      "code": 10146,
+      "uid": "f8513213799b244e66b2836aeee88531",
+      "css": "direction",
+      "orig_css": "direction",
+      "orig_code": 10146,
+      "src": "entypo",
+      "from": 10146
+    },
+    {
+      "search": [
+        "print"
+      ],
+      "code": 59158,
+      "uid": "28f124a10127a47b9d9472699193d75a",
+      "css": "print",
+      "orig_css": "print",
+      "orig_code": 59158,
+      "src": "entypo",
+      "from": 59158
+    },
+    {
+      "search": [
+        "location",
+        "mark",
+        "marker"
+      ],
+      "code": 59172,
+      "uid": "a42b598e4298f3319b25a2702a02e7ff",
+      "css": "location",
+      "orig_css": "location",
+      "orig_code": 59172,
+      "src": "entypo",
+      "from": 59172
+    },
+    {
+      "search": [
+        "window"
+      ],
+      "code": 59214,
+      "uid": "744a71fe4b5ab7c4f4b7cd598e9bf75a",
+      "css": "window",
+      "orig_css": "window",
+      "orig_code": 59214,
+      "src": "entypo",
+      "from": 59214
+    },
+    {
+      "search": [
+        "arrow",
+        "down",
+        "download"
+      ],
+      "code": 59224,
+      "uid": "40ef3542646bed70cb63f1290c9d98c9",
+      "css": "down-circled",
+      "orig_css": "down-circled",
+      "orig_code": 59224,
+      "src": "entypo",
+      "from": 59224
+    },
+    {
+      "search": [
+        "arrow",
+        "left"
+      ],
+      "code": 59225,
+      "uid": "0db0310883e0bdacfd1bb2d394238e8a",
+      "css": "left-circled",
+      "orig_css": "left-circled",
+      "orig_code": 59225,
+      "src": "entypo",
+      "from": 59225
+    },
+    {
+      "search": [
+        "arrow",
+        "right"
+      ],
+      "code": 59226,
+      "uid": "52725ff4d4042964bd3a60609bf3695b",
+      "css": "right-circled",
+      "orig_css": "right-circled",
+      "orig_code": 59226,
+      "src": "entypo",
+      "from": 59226
+    },
+    {
+      "search": [
+        "arrow",
+        "up",
+        "upload"
+      ],
+      "code": 59227,
+      "uid": "64691230b90991883f94c6dfb2afc90a",
+      "css": "up-circled",
+      "orig_css": "up-circled",
+      "orig_code": 59227,
+      "src": "entypo",
+      "from": 59227
+    },
+    {
+      "search": [
+        "arrow",
+        "down"
+      ],
+      "code": 59228,
+      "uid": "8704cd847a47b64265b8bb110c8b4d62",
+      "css": "down-open",
+      "orig_css": "down-open",
+      "orig_code": 59228,
+      "src": "entypo",
+      "from": 59228
+    },
+    {
+      "search": [
+        "arrow",
+        "left"
+      ],
+      "code": 59229,
+      "uid": "c311c48d79488965b0fab7f9cd12b6b5",
+      "css": "left-open",
+      "orig_css": "left-open",
+      "orig_code": 59229,
+      "src": "entypo",
+      "from": 59229
+    },
+    {
+      "search": [
+        "arrow",
+        "right"
+      ],
+      "code": 59230,
+      "uid": "749e7d90a9182938180f1d2d8c33584e",
+      "css": "right-open",
+      "orig_css": "right-open",
+      "orig_code": 59230,
+      "src": "entypo",
+      "from": 59230
+    },
+    {
+      "search": [
+        "arrow",
+        "up"
+      ],
+      "code": 59231,
+      "uid": "9c7ff134960bb5a82404e4aeaab366d9",
+      "css": "up-open",
+      "orig_css": "up-open",
+      "orig_code": 59231,
+      "src": "entypo",
+      "from": 59231
+    },
+    {
+      "search": [
+        "paper",
+        "plane",
+        "fly"
+      ],
+      "code": 59291,
+      "from": 59291,
+      "uid": "db112402805d9dadc01ce009fbfdb914",
+      "css": "paper-plane",
+      "orig_css": "paper-plane",
+      "orig_code": 59291,
+      "src": "entypo"
+    },
+    {
+      "search": [
+        "sweden"
+      ],
+      "code": 62977,
+      "uid": "c22c5fa36d200793ad39b984fb5c8610",
+      "css": "sweden",
+      "orig_css": "sweden",
+      "orig_code": 62977,
+      "src": "entypo",
+      "from": 62977
+    },
+    {
+      "search": [
+        "attention",
+        "warning",
+        "alert"
+      ],
+      "code": 128165,
+      "uid": "39a5a0d7ce8342d149373b2ce219503a",
+      "css": "alert",
+      "orig_css": "alert",
+      "orig_code": 128165,
+      "src": "entypo",
+      "from": 128165
+    },
+    {
+      "search": [
+        "tv",
+        "screen",
+        "monitor"
+      ],
+      "code": 128187,
+      "uid": "b7a336095aa4535c3689cb557edf23db",
+      "css": "monitor",
+      "orig_css": "monitor",
+      "orig_code": 128187,
+      "src": "entypo",
+      "from": 128187
+    },
+    {
+      "search": [
+        "chart",
+        "bar",
+        "diagram"
+      ],
+      "code": 128202,
+      "uid": "7d90b6cb3f3783170a96b09e5f0de6d5",
+      "css": "chart-bar",
+      "orig_css": "chart-bar",
+      "orig_code": 128202,
+      "src": "entypo",
+      "from": 128202
+    },
+    {
+      "search": [
+        "phone",
+        "telephone",
+        "call"
+      ],
+      "code": 128222,
+      "uid": "5854855e963044f93b15738a5bb27a29",
+      "css": "phone",
+      "orig_css": "phone",
+      "orig_code": 128222,
+      "src": "entypo",
+      "from": 128222
+    },
+    {
+      "search": [
+        "mobile",
+        "iphone"
+      ],
+      "code": 128241,
+      "uid": "767fede84586366cd7d6c835be745454",
+      "css": "mobile",
+      "orig_css": "mobile",
+      "orig_code": 128241,
+      "src": "entypo",
+      "from": 128241
+    },
+    {
+      "search": [
+        "search",
+        "find"
+      ],
+      "code": 128269,
+      "uid": "7222571caa5c15f83dcfd447c58d68d9",
+      "css": "search",
+      "orig_css": "search",
+      "orig_code": 128269,
+      "src": "entypo",
+      "from": 128269
+    }
+  ]
+}
