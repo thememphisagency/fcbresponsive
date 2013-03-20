@@ -36,29 +36,8 @@
         </ul>
     </div>
 
-    <div class="row content-block">
-        <!-- Content Blocks -->
-        <article class="four columns medium-three teaser">
-            <h2>Content Block One</h2>
-            <img src="/wsimages/thumb.png" alt="Content Block Teaser Image" class="wrap-left" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna.</p>
-            <a href="##">Read more</a>
-        </article>
-        <article class="four columns medium-three teaser">
-            <h2>Content Block Two</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud.</p>
-            <a href="##">Read more</a>
-        </article>
-        <article class="four columns medium-three teaser">
-            <h2>Content Block Three</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud.</p>
-            <a href="##">Read more</a>
-        </article>
+    <div class="row content-block home-news">
+        <con:container label="#stobj.objectID#_newsSection" />
     </div>
 
 </div>  
