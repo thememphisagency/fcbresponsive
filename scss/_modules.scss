@@ -279,17 +279,35 @@
 	}
 }
 
-.home-news {
+.news-search {
+
 	.index {
+		margin-top:0;
+		margin-bottom:23px;
+	}
+
+	form {
 		margin:0;
-		.teaser {
-			&:first-child {
-				margin:0 15px 25px 15px;
-			}		
-			background:$white;
-			margin:0 15px 25px 15px;
-			padding:0 0 25px 0;
-		}
+	}
+
+	select {
+		margin:0;
+		height:auto;
+	}
+
+	.sort {
+		margin-top:15px;
+	}
+
+	.sortSelect {
+		display:inline-block;
+	}
+
+	.sortText {
+		color:#555555;
+		@include font-size(14);
+		display: inline-block;
+		width:40px;
 	}
 }
 
