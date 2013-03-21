@@ -18,7 +18,11 @@
 	</cfif>
 	<div class="teaserBody <cfif NOT len(stobj.teaserImage)>teaserBodyNoImg</cfif>">
 	<h3>#stObj.Title#</h3>
-	<div class="newsDate">#DateFormat(stObj.publishDate, "dd mmmm yyyy")#</div>
+	<div class="newsDate">#dateformat(stObj.startDate, "dd mmm yyy")# 
+		<cfif showFarcryDate(stobj.endDate)>
+			until #dateformat(stObj.endDate, "dd mmm yyy")#
+		</cfif>
+	</div>
 	</cfoutput>
 
 	

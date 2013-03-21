@@ -1,5 +1,5 @@
 <cfsetting enablecfoutputonly="true" />
-<!--- @@displayname: Latest News with Search and ordering --->
+<!--- @@displayname: Events with Search and ordering --->
 <!--- @@author: Kate York --->
 
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin" />
@@ -12,10 +12,10 @@
 
 <cfparam name="request.mode.lValidStatus" default="approved">
 <cfset oHTML = request.fcbObjectBucket.create(typename="dmHTML") />
-<cfset sNews = oHTML.getObjectIDByAlias("dmNews")/>
+<cfset sNews = oHTML.getObjectIDByAlias("dmEvent")/>
 <cfset sURL = trim(application.fAPI.getLink(objectid=request.navid)) />
 <cfset sRuleId = "r#replaceNoCase(stObj.objectid, '-','', 'all')#" />
-<cfset sTypename = 'dmNews' />
+<cfset sTypename = 'dmEvent' />
 <cfset maximumRows = 500 />
 <cfset numItems = stObj.numItems />
 <cfset paginate= false/>
@@ -33,7 +33,7 @@
 
     <cfset oCat = createObject("component", "farcry.core.packages.types.category") />
     <cfset q = oCat.getDataQuery(lCategoryIDs="#stObj.metadata#"
-        ,typename="dmNews"
+        ,typename="dmEvent"
         ,maxRows="#maximumRows#"
         ,bMatchAll="#stobj.bMatchAllKeywords#"
         ,sqlWhere="publishdate <= #now()# AND (expirydate >= #now()# OR expirydate is NULL)"
@@ -41,7 +41,7 @@
 
 <cfelse>
     <!--- don't filter on categories --->
-    <cfset q=application.fapi.getContentObjects(typename="dmNews", publishdate_lte=now(), expirydate_gte=now(), orderby="publishDate DESC, label ASC")>
+    <cfset q=application.fapi.getContentObjects(typename="dmEvent", publishdate_lte=now(), expirydate_gte=now(), orderby="publishDate DESC, label ASC")>
 </cfif>
 <cfset stPaginator = setPaginatorValues(currentPage=url.currentPage,numItems=numItems,objectId=stObj.objectId,ruleId=url.ruleId,iTotal=iTotal) />
 
@@ -107,7 +107,7 @@
 <cfoutput><div class="index"></cfoutput>
 	 <cfloop from="#stPaginator.startRow#" to="#stPaginator.endRow#" index="i">
         <cfset request.i = i />                 
-        <skin:view objectID="#aObjectIds[i]#" typename="dmNews" webskin="#stObj.displaymethod#" alternateHTML="<p>WEBSKIN NOT AVAILABLE</p>" /> 
+        <skin:view objectID="#aObjectIds[i]#" typename="dmEvent" webskin="#stObj.displaymethod#" alternateHTML="<p>WEBSKIN NOT AVAILABLE</p>" /> 
     </cfloop>   
 <cfoutput></div>
 <div class="pagination-bottom result-details">

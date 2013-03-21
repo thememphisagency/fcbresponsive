@@ -253,11 +253,19 @@
 
 		.teaserBody {
 			display: inline-block;	
-			vertical-align: top;
+			vertical-align: top;	
 		}
 
 		.teaserBodyNoImg {
 			width:100%;
+		}
+		.thumbnail {
+			display:none;
+			
+		}
+
+		h3 {
+			line-height: 1.2em;
 		}
 
 		h3 a {
@@ -267,6 +275,8 @@
 
 		p {
 			padding:0;
+			line-height: 1.5em;
+			margin-bottom:15px;
 		}
 
 		[class^="icon-"]:before {
@@ -276,6 +286,16 @@
 			color:#00a502;
 			@include font-size(29);
 		}
+	}
+}
+
+.teaser {
+	img {				
+		@include border-radius(5px);
+	}
+
+	.wrap-left {	
+		margin-right: 12px;
 	}
 }
 
@@ -309,6 +329,12 @@
 		display: inline-block;
 		width:40px;
 	}
+}
+
+.newsDate {
+	color:#2b2b2b;
+	@include font-size(14);
+	margin: 15px 0;
 }
 
 .result-search {
