@@ -1,0 +1,102 @@
+/* Nviagion override */
+//-----------------------------------------------------------------------
+.js #menu, .js #menu > ul ul {
+	max-height: none;
+	overflow: visible;
+	background-color: darken($mainColor, 5%);
+	//width: 100%;
+}
+
+#menu, #menu > ul ul {
+	clear: both;
+	-webkit-transition: none;  
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+nav[role=navigation]  {
+    transition: none;
+	height: 35px;
+	position: relative;
+	padding: 0px 10px; // we dont need the extra padding here
+	position: absolute;
+	top: 99px;
+	left: 0;
+
+	ul  {
+		@include clearfix;
+		margin:0px auto;
+		border:  0;
+		width:auto;
+		text-align: justify;
+		-ms-text-justify: newspaper; // fix crappy ie justify text rendering
+		font-size: 0;
+
+		li ul {
+			display: none;
+			width: auto;
+			position: absolute;
+			top: 0;
+			left: 12em;
+
+			li {
+				text-align:left; //override first lvel font style
+				position: relative;
+				width: 100%;
+				border-bottom: 1px solid #39486d;
+
+				&:first-child {
+					border-top: 1px solid #39486d;
+				}
+
+				a {
+					@include font-size(13);
+					padding: 16px 20px 17px 20px; // overide first level padding
+					height: auto;
+				}
+			}
+		}
+
+		&.lvl2 {
+			top: 35px;
+			left: 0;
+			width: auto;
+		}
+
+		&.lvl3 {
+			top:-1px;
+		}
+	}
+
+	li {
+		position: relative;
+		display: inline-block;
+		margin: 0;
+		background-color: darken($mainColor, 10%);
+
+		a {
+			height: 35px;
+			border:  0;
+			background-color: darken($mainColor, 5%);
+			padding: 0.95em 0 0;
+			@include font-size(12);
+		}
+
+		&.filler {
+			content: '';
+			width: 100%;
+			display: inline-block;
+			font-size: 0;
+		}
+
+		ul {
+			display: none;
+		}
+
+		&:hover ul {
+			display: block;
+		}	
+	}	
+}

@@ -23,7 +23,7 @@ a {
 	color: $linkGreen;
 	text-decoration: underline; 
 	line-height: inherit;
-	font-family: Lato;
+	font-family: $mainFont;
 	font-weight: 700;
 	font-style: italic;
     @include font-size(14);

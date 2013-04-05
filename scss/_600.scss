@@ -193,9 +193,7 @@ nav[role=navigation] li a  {
 			@include font-size(12);
 			text-indent: 0;
 			line-height: 2em;
-			font:  {
-				family: Lato;
-			}
+			font-family: $mainFont;
 		}
 	}
 	ul.contact {

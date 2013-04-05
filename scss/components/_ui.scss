@@ -4,7 +4,7 @@
 
 	li { float: none; display: inline-block; height: 40px; color: #d4d4d4; margin-#{$defaultFloat}: 5px;
 
-		a,span { display: block; padding: 1px 16px 1px; color: $white; @include font-size(18); font-style: normal; line-height:40px; font-weight: 700; font-family: lato; background: $mainColor; text-decoration: none; @include border-radius(6px); }
+		a,span { display: block; padding: 1px 16px 1px; color: $white; @include font-size(18); font-style: normal; line-height:40px; font-weight: 700; font-family: $mainFont; background: $mainColor; text-decoration: none; @include border-radius(6px); }
 		&:hover a, a:focus { background: darken($mainColor, 10%); }
 		&.prev a, &.next a, &.prev span, &.next span { background: none; color:$mainColor; }
 		&.prev { margin-left: 0; }

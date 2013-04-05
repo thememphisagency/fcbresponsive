@@ -1,0 +1,107 @@
+//Main Navigation
+//-----------------------------------------------------------------------
+nav[role=navigation] {
+	@include clearfix;
+	// @include single-transition(all,0.3s,ease-out);
+	position: relative;
+	z-index: 10;
+	width: $rowWidth;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		border-top: 1px solid lighten($mainColor, 10%);
+
+		&.lvl1 li.active > a {
+			max-height: 15em;
+			background:#06133A;
+			@include background-image(linear-gradient(#06133a, #051134 10%, #06133a 90%));
+		}
+	}
+
+	li {
+		
+		a {
+			display: block;
+			padding: 0.8em;
+			border-bottom: 1px solid #39486d;
+			background-color:$mainColor;
+			color:#fff;
+			text-decoration:none;
+			font-style: normal;
+			font-family: "VAG Rounded W02 Black";
+			text-transform: uppercase;
+			
+			&:hover {
+				background:#06133A;
+				@include background-image(linear-gradient(#06133a, #051134 10%, #06133a 90%));
+			}
+		}
+
+		&.filler {
+			display: none;
+		}
+	}
+
+	.indicator {
+		display:none;
+	}
+
+	ul ul.lvl2  {
+		display:none;
+	}	
+}
+
+
+#menu.active, .js #menu > ul ul.active {
+	max-height: 55em;
+}
+
+.js #menu, .js #menu > ul ul {
+	overflow: hidden;
+	max-height: 0;
+	background: rgba(0,0,0,0.1);
+}
+
+#menu.active, .js #menu > ul ul.active {
+	max-height: 55em;
+}
+
+#menu li a {
+	display: block;
+	position: relative;
+}
+
+// Use for mobile menu allowing showing of sub pages
+// #menu li.parent > a:after {
+// 	content: '+';
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	display: block;
+// 	font-size: 1.5em;
+// 	padding: 0.25em 0.5em;
+// }
+
+// #menu li.parent > a.active:after {
+// 	content: "-";
+// }
+
+
+// 600px
+@media only screen and (min-width: 740px) {
+    @import "740-nav";
+}
+
+// 768px
+@media only screen and (min-width: 768px) {
+    @import "768-nav";
+}
+
+// 600px
+@media only screen and (min-width: 992px) {
+    @import "992-nav";
+}
+
+
+

@@ -95,7 +95,7 @@
 		border: none;
 		background: darken($mainColor, 5%);
 		color: #fff;
-		font-family: cabin;
+		font-family: $secondaryFont;
 		font-weight: 600;
 		font-style: italic;
 		border-radius:0 5px 5px 0;	
@@ -118,7 +118,7 @@
 	background: $secondaryColor;
 	@include font-size(12);
 	font: {
-		family:Lato;
+		family: $mainFont;
 		weight:400;
 		style:italic;
 	}
@@ -159,7 +159,7 @@
 		list-style-type:none;
 		text-align:center;
 		font-weight:700;
-		font-family:Lato;
+		font-family: $mainFont;
 		margin-bottom: 8px;
 		padding:0 10px 0 0;
 	}
@@ -481,7 +481,7 @@
 /* Contact Styles */
 //-----------------------------------------------------------------------
 .required {
-	font-family: cabin;
+	font-family: $secondaryFont;
 	font-weight: 600;
 	color: $alertColor;
 	@include font-size(18);
@@ -500,7 +500,7 @@
 	font-size: 10px;
 	margin:0;
 	@include font-size(12);
-	font-family: lato;
+	font-family: $mainFont;
 	font-weight: 700;
 	font-style: italic;
 	line-height: 1em;
@@ -538,7 +538,7 @@ footer {
 			text-decoration:none;
 			color: #333;		
 			font:  {
-				family: Lato;
+				family: $mainFont;
 				style:normal;
 				weight:normal;
 			}
@@ -551,7 +551,7 @@ footer {
 		h4, h4 .morelink {
 			line-height:30px;				
 			font:  {
-				family: Lato;
+				family: $mainFont;
 				weight: 700;
 				style: italic;
 			}

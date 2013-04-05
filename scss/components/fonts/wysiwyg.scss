@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    font-family: lato, arial;
+    font-family: $mainFont, arial;
     font-style: normal;
     font-weight: normal;
     color: #333333;
@@ -34,7 +34,7 @@ h1 {
     font-weight: 600;
     letter-spacing: -1px;
     color: rgba(0,0,0,1);
-    font-family: Cabin;
+    font-family: $secondaryFont;
 }
 
 
@@ -43,7 +43,7 @@ h2 {
     line-height: 30px;
     font-style: normal;
     font-weight: 400;
-    font-family: Lato;
+    font-family: $mainFont;
     margin-bottom:25px;
     color: rgba(51,51,51,1);
 }
@@ -52,7 +52,7 @@ h2 {
 h3 {
     font-style: normal;
     font-weight: 600;
-    font-family: Cabin;
+    font-family: $secondaryFont;
     @include font-size(20);
     line-height: 28px;
     margin-bottom: 20px;
@@ -63,7 +63,7 @@ h3 {
 h4 {
     font-style: normal;
     font-weight: 600;
-    font-family: Cabin;
+    font-family: $secondaryFont;
     @include font-size(22);
     line-height: 30px;
     color: rgba(0,0,0,1);
@@ -73,7 +73,7 @@ h4 {
 h5 {
     font-style: italic;
     font-weight: 600;
-    font-family: Cabin;
+    font-family: $secondaryFont;
     line-height: 28px;
     @include font-size(20);
     color: rgba(90,143,177,1);
@@ -84,7 +84,7 @@ h5 {
 h6 {
     font-style: normal;
     font-weight: 600;
-    font-family: Cabin;
+    font-family: $secondaryFont;
     @include font-size(20);
     line-height: 28px;
     color: rgba(119,119,119,1);
@@ -106,7 +106,7 @@ p {
     margin-bottom: 25px;
     font-style: normal;
     font-weight: 400;
-    font-family: Lato;
+    font-family: $mainFont;
     @include font-size(18);
     line-height: 26px;
     color: rgba(51,51,51,1);
@@ -116,7 +116,7 @@ blockquote {
     text-indent: 0px;
     font-style: normal;
     font-weight: 600;
-    font-family: Cabin;
+    font-family: $secondaryFont;
     @include font-size(20);
     line-height: 28px;
     margin-bottom: 30px;
@@ -130,7 +130,7 @@ p.intro {
     @include font-size(18);
     font-style: normal;
     font-weight: 400;
-    font-family: Lato;
+    font-family: $mainFont;
     line-height: 27px;
     color: #555555;
     margin-top: 0px;
