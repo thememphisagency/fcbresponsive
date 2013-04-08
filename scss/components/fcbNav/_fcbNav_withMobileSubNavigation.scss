@@ -1,4 +1,5 @@
-//Main Navigation
+
+// Main Navigation with mobile expanding sub navigation styles
 //-----------------------------------------------------------------------
 
 nav[role=navigation] {
@@ -76,24 +77,6 @@ nav[role=navigation] {
 }
 
 
-//Unncoment this part to show Use for mobile menu allowing showing of sub pages
-//-----------------------------------------------------------------------
-/*
-#menu li.parent > a:after {
-	content: '+';
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: block;
-	font-size: 1.5em;
-	padding: 0.25em 0.5em;
-}
-
-#menu li.parent > a.active:after {
-	content: "-";
-} */
-
-
 //	786 media styles
 //-----------------------------------------------------------------------
 @media only screen and (min-width: 768px) {
@@ -101,11 +84,11 @@ nav[role=navigation] {
 	nav[role=navigation]  {
 	    @include single-transition(none);
 		overflow: visible;
-		height: 40px;
+		height: 44px;
 		position: relative;
 		padding: 0px 10px; // we dont need the extra padding here
 		position: absolute;
-		top: 108px;
+		top: 104px;
 		left: 0;
 		background: #005e9a;
 	}
@@ -117,8 +100,8 @@ nav[role=navigation] {
 		font-size: 0;
 
 		a {
-			@include font-size(12);
-			height: 40px;
+			@include font-size(14);
+			height: 44px;
 			border:  0;
 			background-color: darken($mainColor, 5%);
 			padding: 0.95em 0 0;
@@ -208,7 +191,7 @@ nav[role=navigation] {
 
     nav[role=navigation]  {
 		height: 52px;
-		top:106px;
+		top: 96px;
 		padding: 0px; // we dont need the extra padding here
 		background: none;
 	}
@@ -228,6 +211,3 @@ nav[role=navigation] {
 		}
 	}
 }
-
-
-

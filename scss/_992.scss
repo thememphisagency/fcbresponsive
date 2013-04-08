@@ -35,31 +35,6 @@ aside.bottom{
 	height: 370px;
 }
 
-.header-search-form {
-	position: static;
-	background: transparent;
-	text-align: left;
-	padding:0;
-
-	input[type="text"] {
-		display:block;
-		height: 50px;
-		width:180px;
-		position: relative;
-		top: 98px;
-		z-index: 100;
-		float: right;
-		background: darken($mainColor, 10%);
-		color: #fff;
-		padding-left: 18px;
-		@include border-radius(0);
-	}
-
-	input[type="submit"] {
-		display:none;
-	}
-}
-
 /* Teaser and result styles */
 .result-info {
 	padding: 0 ($columnGutter / 2) 15px;

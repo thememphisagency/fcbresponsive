@@ -20,26 +20,6 @@ $(document).ready(function () {
 
 	$('body').addClass('js');
 
-	var $menu = $('#menu'),
-		$menulink = $('#menu-link'),
-		$menuTrigger = $('.parent > a');
-
-	$menulink.click(function(e) {		
-		e.preventDefault();
-		$menulink.toggleClass('active');
-		$menu.toggleClass('active');
-		
-	});
-	
-	// This is setup to only show top level nav in mobile menu. 
-	// Script below will need more work	(e.preventdefault() stops the nav click event allowing sub menu to show)
-	$menuTrigger.click(function(e) {
-		//e.preventDefault();
-		var $this = $(this);
-		//$this.toggleClass('active').next('ul').toggleClass('active');
-		//$this.toggleClass('active').next('ul').toggleClass('active');
-	});
-
 	jQuery(".toTop").click(function(event){		
 		event.preventDefault();	
 		$('html,body').animate({scrollTop:0}, 500);	
@@ -70,28 +50,20 @@ $(document).ready(function () {
 		- All functionality that requires responsive     
 		Should be included here
 	*********************************************/	
-	enquire.register("screen and (min-width:320px) and (max-width:991px)", {
-		match: function() {			
-			$('.toggleBtn.search').on("click", function(e){
-				e.preventDefault();
-				
-				var sForm = $('.header-search-form');
-				var sInput = $('.header-search-form .search');
-
-				sForm.toggleClass('active');
-
-				if(sForm.hasClass('active')) 
-					sInput.focus();
-			});
+	enquire.register("screen and (min-width:320px) and (max-width:739px)", {
+		match: function() {
+			activateMobileMenu();
+			activateMobileSearch();
 		},
 
 		unmatch: function() {
-			$('.toggleBtn.search').off('click');
+			$('#menu-link').off('click');
+			$('.parent > a').off('click');
 		}
 	})	   
 	.listen();
 
-	enquire.register("screen and (min-width:992px)", {
+	enquire.register("screen and (min-width:740px)", {
 		match: function() {			
 			$('.toggleBtn.search').on("click", function(e){
 				e.preventDefault();				
@@ -101,18 +73,7 @@ $(document).ready(function () {
 		},
 
 		unmatch: function() {
-			$('.toggleBtn.search').on("click", function(e){
-				e.preventDefault();
-				
-				var sForm = $('.header-search-form');
-				var sInput = $('.header-search-form .search');
-
-				sForm.toggleClass('active');
-
-				if(sForm.hasClass('active')) 
-					sInput.focus();
-			});
-			
+			$('.toggleBtn.search').off('click');
 		}
 	})	   
 	.listen();
@@ -154,3 +115,56 @@ $(document).ready(function () {
 		$(this).parent().remove();	
 	});
 });
+
+
+
+function activateMobileSearch() {
+	/* toogle button for search */			
+	$('.toggleBtn.search').on("click", function(e){
+		e.preventDefault();
+		
+		var sForm = $('.header-search-form');
+		var sInput = $('.header-search-form .search');
+
+		sForm.toggleClass('active');
+		if(sForm.hasClass('active')) { 
+			sInput.focus();
+			
+			if( $('.toggleBtn.menu').hasClass('active') ) {
+				$('.toggleBtn.menu').removeClass('active');
+				$('#menu').removeClass('active');
+			}
+		}
+	});
+
+	$('.icon-cancel-circled').on('click', function(e) {
+		e.preventDefault();
+		$('.search-wrap').children('.search').val('');
+	});
+}
+
+function activateMobileMenu() {
+	/* Toggle button for menu */
+	var $menu = $('#menu'),
+	$menulink = $('#menu-link'),
+	$menuTrigger = $('.parent > a');
+
+	$menulink.on("click", function(e) {		
+		e.preventDefault();
+		$menulink.toggleClass('active');
+		$menu.toggleClass('active');
+
+		if( $('.header-search-form').hasClass('active') ) {
+			$('.header-search-form').removeClass('active');
+		}
+	});
+
+	// This is setup to only show top level nav in mobile menu. 
+	// Script below will need more work	(e.preventdefault() stops the nav click event allowing sub menu to show)
+	$menuTrigger.on("click", function(e) {
+		//e.preventDefault();
+		var $this = $(this);
+		//$this.toggleClass('active').next('ul').toggleClass('active');
+		//$this.toggleClass('active').next('ul').toggleClass('active');
+	});
+}
