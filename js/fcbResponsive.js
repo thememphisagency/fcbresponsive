@@ -136,11 +136,6 @@ function activateMobileSearch() {
 			}
 		}
 	});
-
-	$('.icon-cancel-circled').on('click', function(e) {
-		e.preventDefault();
-		$('.search-wrap').children('.search').val('');
-	});
 }
 
 function activateMobileMenu() {
