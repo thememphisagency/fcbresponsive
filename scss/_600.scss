@@ -41,133 +41,26 @@ aside {
 }
 
 /* Header */
-.top {
-	height: 148px;
-}
-.logo {
-	width:  190px;
-	height: 68px;
-	background-size: 120px;
-	background-position: 12px 30px;
-}
-
-.toggleBtn  {
-	line-height: 51px;
-	border: none;
-	text-align: left;
-
-	&.search {
-		height: 50px;
-		width: 50px;
-		position: relative;
-		top: 98px;
-		z-index: 99;
-	}
-
-	&.menu {
-		display:  none;
-	}
-}
-
-.header-search-form {
-	bottom:-217px;			
-}
-
-
 .pattern {
 	overflow: visible;
-}
-
-a#menu-link {
-   display: none;
-}
-
-.js #menu, .js #menu > ul ul {
-	max-height: none;
-	overflow: visible;
-	background: none;
-}
-.js #menu > ul ul {
-	
-	display: none;
-}
-
-.js #menu > ul li:hover > ul {
-	display: block;
-}
-
-#menu > ul > li {
-	display: inline-block;
-	position: relative;
-}
-#menu > ul ul {
-	position: absolute;
-	top: 0;
-	left: 12em;
-	width: 12em;
-}
-#menu > ul ul li {
-	position: relative;
-}
-#menu > ul ul.lvl2 {
-	top: 3.1em;
-	left: 0;	
-}
-
-#menu > ul ul.lvl2  li {
-	width: 100%;
-	border-top: 1px solid lighten($mainColor, 10%);
-}
-#menu li.parent > a:after {
-	content: '';
-
-}
-#menu li.parent > a.active:after {
-	content: "";
-}
-
-#menu > ul ul.lvl3  {
-	top:-1px;
-}
-
-.js nav[role=navigation]  {
-	max-height:  55px;
-	position: relative;
-	top: 16px;
-}
-nav[role=navigation] ul  {
-	margin:0;
-	border:  0;
-	background-color: darken($mainColor, 5%);	
-}
-nav[role=navigation]  li  {
-	display:  inline-block;
-	margin:  0;
-	background-color: darken($mainColor, 10%);
-}
-nav[role=navigation] li a  {
-	border:  0;
-	background-color: darken($mainColor, 5%);
-	padding: 0.95em 0.8em;
-	@include font-size(16);
 }
 
 .banner {
 	height: 290px;
 }
 
-		.thumbnail {
-			display:none;
-			display: inline-block;
-			margin:5px 10px 0 0;
-			width: 15%;
-		}
+.thumbnail {
+	display:none;
+	display: inline-block;
+	margin:5px 10px 0 0;
+	width: 15%;
+}
 
-		.teaserBody {
-			display: inline-block;
-			width:75%;
-			vertical-align: top;
-		}
+.teaserBody {
+	display: inline-block;
+	width:75%;
+	vertical-align: top;
+}
 
 
 

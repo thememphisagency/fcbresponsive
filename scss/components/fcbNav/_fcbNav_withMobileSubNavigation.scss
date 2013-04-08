@@ -1,0 +1,233 @@
+//Main Navigation
+//-----------------------------------------------------------------------
+
+nav[role=navigation] {
+	@include clearfix;
+	@include single-transition(all,0.3s,ease-out);
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	overflow: hidden;
+}
+
+.fcbNav {
+	margin: 0;
+	padding: 0;
+
+	a {
+		display: block;
+		position: relative;
+		padding: 0.8em;
+		background-color: #005F9D;
+		color: #fff;
+		text-decoration: none;
+		font-style: normal;
+		font-family: $mainFont;
+
+		&:hover {
+			background: darken($mainColor,10%);
+		}
+	}
+
+	li {
+
+		&.filler {
+			display: none;
+		}
+	}
+
+	&.lvl1 {
+		
+		li {
+			border-top: 1px solid #0068ab;
+			border-bottom: 1px solid #004571;
+			
+			&:first-child {
+				border-top: none;
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}	
+		}
+
+		li.active > a {
+			background: darken($mainColor,10%);
+		}
+	}
+
+	.lvl2  {
+		display:none; //mobile navigation does not need to display the secondary level
+	}
+
+	.indicator {
+		display:none;
+	}
+}
+
+//	To show and hide the navigation in mobile view
+//-----------------------------------------------------------------------
+#menu.active, #menu > ul ul.active {
+	max-height: 55em;
+}
+
+#menu, #menu > ul ul {
+	max-height: 0;
+}
+
+
+//Unncoment this part to show Use for mobile menu allowing showing of sub pages
+//-----------------------------------------------------------------------
+/*
+#menu li.parent > a:after {
+	content: '+';
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	font-size: 1.5em;
+	padding: 0.25em 0.5em;
+}
+
+#menu li.parent > a.active:after {
+	content: "-";
+} */
+
+
+//	786 media styles
+//-----------------------------------------------------------------------
+@media only screen and (min-width: 768px) {
+
+	nav[role=navigation]  {
+	    @include single-transition(none);
+		overflow: visible;
+		height: 40px;
+		position: relative;
+		padding: 0px 10px; // we dont need the extra padding here
+		position: absolute;
+		top: 108px;
+		left: 0;
+		background: #005e9a;
+	}
+
+	.fcbNav {
+		@include clearfix;
+		margin: 0 auto;
+		padding: 0;
+		font-size: 0;
+
+		a {
+			@include font-size(12);
+			height: 40px;
+			border:  0;
+			background-color: darken($mainColor, 5%);
+			padding: 0.95em 0 0;
+		}
+
+		ul  {
+			@include clearfix;
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			text-align: left;
+			position: relative;
+			margin: 0;
+			background-color: darken($mainColor, 10%);
+
+			&:hover ul {
+				display: block;
+			}
+		}
+
+		li ul {
+			display: none;
+			width: auto;
+			position: absolute;
+			top: 0;
+			left: 12em;
+
+			li {
+				position: relative;
+				width: 100%;
+				border-bottom: 1px solid #39486d;
+
+				&:first-child {
+					border-top: 1px solid #39486d;
+				}
+
+				a {
+					@include font-size(13);
+					padding: 16px 20px 17px 20px; // overide first level padding
+					height: auto;
+				}
+			}
+		}
+
+		&.lvl1 {
+			text-align: justify;
+			-ms-text-justify: newspaper; // fix crappy ie justify text rendering
+
+			li {
+				display: inline-block;
+				border: none;
+
+				&.filler {
+					content: '';
+					width: 100%;
+					display: inline-block;
+					font-size: 0;
+				}
+			}
+		}
+
+		.lvl2 {
+			top: 35px;
+			left: 0;
+			width: auto;
+		}
+
+		.lvl3 {
+			top:-1px;
+		}
+	}
+
+	//	disable mobile show hide styles
+	//-----------------------------------------------------------------------
+	#menu, #menu > ul ul {
+		max-height: none;
+	}
+
+}
+
+//	992 media styles
+//-----------------------------------------------------------------------
+@media only screen and (min-width: 992px) {
+	
+
+    nav[role=navigation]  {
+		height: 52px;
+		top:106px;
+		padding: 0px; // we dont need the extra padding here
+		background: none;
+	}
+
+	.fcbNav {
+		background: #005e9a;
+		width: $rowWidth;
+
+		a {
+			height: 52px;
+			@include font-size(16);
+			padding: 0.95em 18px;
+		}
+
+		.lvl2 {
+			top: 52px;
+		}
+	}
+}
+
+
+

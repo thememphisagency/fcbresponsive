@@ -11,12 +11,36 @@
 
 // 1. BASE 					==============================
 // 2. LAYOUT				==============================
-
 // 3. MODULE 				==============================
-nav[role=navigation] li a  {
-	padding: 0.95em 24px;
+
+
+/* Header */
+.top {
+	height: 148px;
 }
 
+.logo {
+	width:  190px;
+	height: 68px;
+	background-size: 120px;
+	background-position: 12px 30px;
+}
+
+.toggleBtn  {
+	line-height: 51px;
+	border: none;
+	text-align: center;
+
+	&.search {
+		display: none;
+	}
+
+	&.menu {
+		display: none;
+	}
+}
+
+/* footer */
 .footerlinks ul.contact {
 
 	[class^="icon-"]:before {
