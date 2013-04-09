@@ -21,7 +21,7 @@
         <div class="append-around">
             <con:container label="globalSecondaryContentTop" bShowIfEmpty="false" />
             <con:container label="localSecondaryContentTop_#stObj.objectId#" bShowIfEmpty="false" />
-            <div class="row collapse sponsors">
+            <div class="row sponsors">
                 <a class="sponsor column medium-three">
                     <img src="/wsimages/TMA.png" alt="The Memphis Agency" />
                 </a>

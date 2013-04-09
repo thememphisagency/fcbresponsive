@@ -628,3 +628,40 @@ footer {
    	}
 }
 
+/* Right Hand side navigation */
+//-----------------------------------------------------------------------
+
+aside.right{
+	display:none;
+}
+
+aside.bottom{
+	display:block;
+	margin:26px 0 0;
+	overflow: hidden;
+}
+
+
+
+
+/* Add this style fixes */
+//-----------------------------------------------------------------------
+.add-this {
+	@include box-sizing(content-box);
+	
+	a {
+		font-style: normal;
+		@include box-sizing(content-box);
+	}
+}
+
+#at20mc  * {
+	@include box-sizing(content-box);	
+	
+	a {
+		font-style: normal;
+		@include box-sizing(content-box);
+	}
+}
+
+
