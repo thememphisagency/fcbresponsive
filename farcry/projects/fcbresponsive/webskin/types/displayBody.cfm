@@ -16,6 +16,8 @@
 	<skin:breadcrumb separator=" / " includeSelf="true">
 </cfif>
 
+<con:container label="#stObj.objectID#_Body_Top" />
+
 <cfif structKeyExists(stObj, "body") AND len(stObj.body)>
 	<cfoutput>#stObj.body#</cfoutput>
 </cfif>

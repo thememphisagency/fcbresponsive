@@ -17,26 +17,6 @@
 	display:none;
 }
 
-.footerlinks {
-	padding:0 0 25px 0;
-}
-
-.footerlinks ul {
-	display: none;
-}
-
-.footerlinks h4 {
-	display:list-item;
-	margin:25px 0 0 20px;
-	color:#666666;
-	@include font-size(16);
-}
-
-.footerlinks h4 .morelink {
-	color:#666666;
-	@include font-size(16);
-}
-
 .header-search-form.active {
 	left: 0;
 }

@@ -16,6 +16,8 @@
 	<skin:breadcrumb separator=" / " includeSelf="true">
 </cfif>
 
+<con:container label="#stObj.objectID#_Body_Top" />
+
 <cfif structKeyExists(stobj, "webskinTypename") AND structKeyExists(stobj, "webskin") AND len(stobj.webskinTypename) AND len(stobj.webskin)>	
 	<skin:view typename="#stobj.webskinTypename#" webskin="#stobj.webskin#" stInclude="#stobj#" />
 <cfelseif len(stobj.include)>

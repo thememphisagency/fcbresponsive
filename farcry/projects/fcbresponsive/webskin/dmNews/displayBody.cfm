@@ -9,6 +9,8 @@
 	<p class="byline">#dateformat(stObj.publishDate, "d mmmm yyyy")#</p>
 </cfoutput>
 
+<con:container label="#stObj.objectID#_Body_Top" />
+
 <cfif structKeyExists(stObj, "body") AND len(stObj.body)>
 	<cfoutput>#stObj.body#</cfoutput>
 </cfif>

@@ -18,6 +18,8 @@
 	<h1>#stObj.title#</h1>
 </cfoutput>
 
+<con:container label="#stObj.objectID#_Body_Top" />
+
 <cfif structKeyExists(stObj, "body") AND len(stObj.body)>
 	<cfoutput>#stObj.body#</cfoutput>
 </cfif>
