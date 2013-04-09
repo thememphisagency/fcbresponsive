@@ -81,9 +81,7 @@
 
     </cfoutput>
     <!--- Only output the tracking code when user is not a logged in admin --->
-    <cfif NOT structKeyExists(session, 'dmSec') 
-          OR (  structKeyExists(session, 'dmSec') AND structKeyExists(session.dmSec, 'authentication') 
-                AND structKeyExists(session.dmSec.authentication, 'bAdmin') AND session.dmSec.authentication.bAdmin IS 0)>
+    <cfif NOT application.fapi.checkPermission("Admin")>
         <net:GoogleAnalytics>
     </cfif>
     <cfoutput>

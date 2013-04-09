@@ -9,7 +9,7 @@
 
 .logo {
 	display: block;
-	float:left;
+	float: left;
 	margin: 14px 0 0 $outerPadding;
 	width: 140px;
 	height: 28px;
@@ -19,6 +19,7 @@
 }
 
 .toggleBtn {
+	border: none;
 	display: inline-block;
 	float: right;
 	width: 55px;
@@ -28,16 +29,15 @@
 	height: 55px;
 	line-height: 57px;
 	text-align: center;
+	outline: none;
 
 	[class^="icon-"]:before {
 		@include font-size(24);
 	}
 
-	&:hover {
+	&:hover, &:active, &:visited, &:focus {
 		color: #fff;
-	}
-	&:active {
-		color: #fff;	
+		outline: 0;
 	}
 
 	&.menu {
@@ -103,13 +103,8 @@
 
 	input[type="submit"]:hover {
 		background: lighten($mainColor, 5%);
-	}
-
-	
+	}	
 }
-.toggleBtn {
-		border:none;
-	}
 
 //Bread Crumbs
 //-----------------------------------------------------------------------
