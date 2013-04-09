@@ -52,28 +52,35 @@ $(document).ready(function () {
 	*********************************************/	
 	enquire.register("screen and (min-width:320px) and (max-width:739px)", {
 		match: function() {
+			/*
+			First de register all events in mobile view (This should be called in the unmatch function for enquire.register but there currently is a bug 
+			which does not preserve the order of unmatch then match when changing to the different media queries ).
+			This will be resolved in V2 as stated here https://github.com/WickyNilliams/enquire.js/issues/29
+			*/
+			$('.toggleBtn.search').off('click');
+
 			activateMobileMenu();
 			activateMobileSearch();
-		},
-
-		unmatch: function() {
-			$('#menu-link').off('click');
-			$('.parent > a').off('click');
 		}
 	})	   
 	.listen();
 
 	enquire.register("screen and (min-width:740px)", {
-		match: function() {			
+
+		match: function() {
+			/*
+			First de register all events in mobile view (This should be called in the unmatch function for enquire.register but there currently is a bug 
+			which does not preserve the order of unmatch then match when changing to the different media queries ).
+			This will be resolved in V2 as stated here https://github.com/WickyNilliams/enquire.js/issues/29
+			*/
+			$('#menu-link').off('click');
+			$('.parent > a').off('click');
+
 			$('.toggleBtn.search').on("click", function(e){
 				e.preventDefault();				
 				var sForm = $('.header-search-form');
 				sForm.submit();
 			});
-		},
-
-		unmatch: function() {
-			$('.toggleBtn.search').off('click');
 		}
 	})	   
 	.listen();
