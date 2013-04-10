@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <webtop>
-	<section id="fandango" label="FCB Responsive">
-		<subsection id="fandangosub" label="Content">
-			<menu id="fandangocontent" label="Content">
-				<menuitem sequence="1" label="Carousel Items" link="/admin/customadmin.cfm?module=basic/basicadmin.cfm&amp;contenttype=dmCarouselItem" />
-<!--
-				<menuitem sequence="2" label="HTML Pages" link="/admin/customadmin.cfm?module=basic/basicadmin.cfm&amp;contenttype=dmHTML" />
- -->
- 				<menuitem id="slideShow" sequence="81" label="Slide Show" link="/admin/customadmin.cfm?module=customlists/fcbSlideShow.cfm" icon="dmarchive" /> 
+	<section mergeType="merge" id="content">
+		<subsection id="farcrycmssubsection" mergeType="merge" sequence="5" label="CMS Content">	
+			<menu id="farcrycmsmenu" mergeType="merge" sequence="10" label="Content Types">
+				<menuitem id="slideShow" sequence="60" label="Slide Show" link="/admin/customadmin.cfm?module=customlists/fcbSlideShow.cfm" icon="dmarchive" /> 
+			</menu>
+		</subsection>
+	</section>
+
+	<section id="admin">
+		<subsection id="general" mergeType="merge" sidebar="custom/sidebar.cfm" label="General Admin">
+			<menu label="Google Tools ">
+				<menuitem label="Google Analytics" link="/admin/customadmin.cfm?module=googleAnalytics/analytics.cfm" />
+				<menuitem id="googleAPIKeys" label="Google API Keys" labelType="text" link="/admin/customadmin.cfm?module=customlists/fcbGoogleMapAPIKeys.cfm" />
 			</menu>
 		</subsection>
 	</section>	
