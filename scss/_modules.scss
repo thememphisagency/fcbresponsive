@@ -484,7 +484,7 @@
 
 .form-contact-us {
 	position:relative;
-	margin: 0 (-$columnGutter / 2) 30px;
+	margin: 0 (-$columnGutter / 2) 40px;
 }
 
 .required-notify {
@@ -673,4 +673,22 @@ aside.bottom{
 	}
 }
 
+/* AddThis style fixes */
+//-----------------------------------------------------------------------
 
+.contact{
+	.googlemap{
+		width: 100%;
+		height: 180px;
+	}
+	.contacts{
+		span{
+			color: $mainColor;
+			font-weight: bold;
+			padding-right: 10px;
+		}
+	}
+	.address{
+		margin-bottom: 10px;
+	}
+}
