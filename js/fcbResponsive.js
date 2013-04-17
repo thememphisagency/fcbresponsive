@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global $, jQuery, Modernizr, FastClick, enquire */
+/*global $, $, Modernizr, FastClick, enquire */
 
 /* 
 Use the comment-based directives to compress and minify all js files into one 
@@ -16,11 +16,19 @@ Use the comment-based directives to compress and minify all js files into one
 // @depends lib/jquery.foundation.forms.js
 
 $(document).ready(function () {
+
+	//fcbNav function
+	justifiedMenu($('nav#menu'));
+
+	$(window).resize(function(){
+		justifiedMenu($('nav#menu'));
+	});
+
 	$(".append-around").appendAround();
 
 	$('body').addClass('js');
 
-	jQuery(".toTop").click(function(event){		
+	$(".toTop").click(function(event){		
 		event.preventDefault();	
 		$('html,body').animate({scrollTop:0}, 500);	
 	});
@@ -168,5 +176,34 @@ function activateMobileMenu() {
 		var $this = $(this);
 		//$this.toggleClass('active').next('ul').toggleClass('active');
 		//$this.toggleClass('active').next('ul').toggleClass('active');
+	});
+}
+
+function justifiedMenu(queryObj){
+	var nav = queryObj.children('ul');
+	var navWidth = nav.outerWidth();
+	var totalWidth = 0;
+	var navChildrens = nav.children('li');
+	var navAnchors = navChildrens.children('a');
+	var numOfNavChildrens = navChildrens.length;
+	var navULs = nav.find('ul');
+
+	navChildrens.each(function(i) {
+		totalWidth += $(this).outerWidth(true);
+	});	
+
+	totalExpand = (navWidth - totalWidth) / numOfNavChildrens;
+	roundedExpand =  parseInt(totalExpand);
+	remainder = Math.floor((totalExpand - roundedExpand) * numOfNavChildrens);	
+
+	navAnchors.each(function(i) {
+
+		width = roundedExpand + $(this).outerWidth(true);
+
+		if(i === (numOfNavChildrens-1)) {
+			width += remainder;
+		}
+		$(this).css({ width:width + "px" });
+
 	});
 }

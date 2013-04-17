@@ -14,6 +14,7 @@ nav[role=navigation] {
 .fcbNav {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 	
 	// Global level styles
 	//-----------------------------------------------------------------------
@@ -30,6 +31,10 @@ nav[role=navigation] {
 		&:hover {
 			background: darken($mainColor,10%);
 		}
+	}
+
+	ul{
+		list-style: none;
 	}
 
 	li {
@@ -130,8 +135,7 @@ nav[role=navigation] {
 			margin: 0;
 			padding: 0;
 			display: none;
-			min-width: 16rem;
-			max-width: 16rem;
+			min-width: 16em;
 			width: auto;
 			position: absolute;
 			top: 0;
@@ -158,30 +162,26 @@ nav[role=navigation] {
 		// Specific level nagiation sytle overrides
 		//-----------------------------------------------------------------------
 		&.lvl1 {
-			text-align: justify;
-			-ms-text-justify: newspaper; // fix crappy ie justify text rendering
+
+			> li{
+				> a{
+					text-align: center;
+				}
+			}
 
 			li {
-				display: inline-block;
 				border: none;
-
-				&.filler {
-					content: '';
-					width: 100%;
-					display: inline-block;
-					font-size: 0;
-				}
+				display: inline-block;
 			}
 		}
 
 		.lvl2 {
 			top: 44px;
 			left: 0;
-			width: auto;
 		}
 
 		.lvl3 {
-			left: 16rem;
+			left: 100%;
 		}
 	}
 
@@ -207,6 +207,10 @@ nav[role=navigation] {
 	.fcbNav {
 		background: #005e9a;
 		width: $rowWidth;
+
+		ul{
+			min-width: 18em;
+		}
 
 		a {
 			height: 52px;
