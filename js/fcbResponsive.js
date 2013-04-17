@@ -17,13 +17,6 @@ Use the comment-based directives to compress and minify all js files into one
 
 $(document).ready(function () {
 
-	//fcbNav function
-	justifiedMenu($('nav#menu'));
-
-	$(window).resize(function(){
-		justifiedMenu($('nav#menu'));
-	});
-
 	$(".append-around").appendAround();
 
 	$('body').addClass('js');
@@ -89,6 +82,14 @@ $(document).ready(function () {
 				var sForm = $('.header-search-form');
 				sForm.submit();
 			});
+
+			//fcbNav function
+			justifiedMenu($('nav#menu'));
+
+			$(window).resize(function(){
+				justifiedMenu($('nav#menu'));
+			});
+			
 		}
 	})	   
 	.listen();
