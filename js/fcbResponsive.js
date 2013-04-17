@@ -66,7 +66,7 @@ $(document).ready(function () {
 	})	   
 	.listen();
 
-	enquire.register("screen and (min-width:740px)", {
+	enquire.register("screen and (min-width:768px)", {
 
 		match: function() {
 			/*

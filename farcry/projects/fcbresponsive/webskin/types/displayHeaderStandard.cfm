@@ -138,7 +138,7 @@
     <cfif stParam.breadcrumb>
     <div class="breadcrumbs">
         <div class="wrapper clearfix">
-            <skin:breadcrumb separator=" / " here='#stobj.label#'>
+            <ui:breadcrumb separator="<span>/</span>" here='<span class="self">#stobj.label#</span>'>
         </div>
     </div>
     </cfif>

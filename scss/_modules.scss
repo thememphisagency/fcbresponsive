@@ -127,6 +127,13 @@
 	a {
 		@include font-size(12);
 		color:#006fb6;
+		display: none;
+		&.parent{
+			display: inline-block;
+		}
+	}
+	span{
+		display: none;
 	}
 }
 
