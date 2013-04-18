@@ -62,6 +62,7 @@ $(document).ready(function () {
 
 			activateMobileMenu();
 			activateMobileSearch();
+			activateMobileFooterLinks();
 		}
 	})	   
 	.listen();
@@ -74,6 +75,9 @@ $(document).ready(function () {
 			which does not preserve the order of unmatch then match when changing to the different media queries ).
 			This will be resolved in V2 as stated here https://github.com/WickyNilliams/enquire.js/issues/29
 			*/
+			
+			deactivateMobileFooterLinks();
+
 			$('#menu-link').off('click');
 			$('.parent > a').off('click');
 
@@ -91,7 +95,7 @@ $(document).ready(function () {
 			});
 			
 		}
-	})	   
+	},true)	   
 	.listen();
 
 
@@ -207,4 +211,17 @@ function justifiedMenu(queryObj){
 		$(this).css({ width:width + "px" });
 
 	});
+}
+
+function activateMobileFooterLinks(){
+	$('footer h4 a').on('click', function(){
+		$('footer ul').hide();
+		$(this).parent().siblings('ul').show();
+		return false;
+	});
+}
+
+function deactivateMobileFooterLinks(){
+	$('footer h4 a').off('click');
+	$('footer ul').show();
 }

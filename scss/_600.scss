@@ -73,6 +73,10 @@ aside {
 		width:25%;
 	}
 
+	ul {
+		display: block;
+	}
+
 	h4, h4 .morelink {
 		display:block;
 		margin:32px 0 15px 0;
@@ -80,23 +84,10 @@ aside {
 		color:#000;
 	}
 
-	ul {
-		padding: 0 0 0 1.1em;
-		li {
-			@include font-size(12);
-			text-indent: 0;
-			line-height: 2em;
-			font-family: $mainFont;
-		}
-	}
 	ul.contact {
 		list-style-type: none;
 		text-indent: 0;
 		padding: 0;
-
-		[class^="icon-"]:before {
-			display: none;
-		}
 	}
 	
 }
