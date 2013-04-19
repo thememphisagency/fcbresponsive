@@ -72,6 +72,13 @@
 .breadcrumbs{
 	a {
 		display: inline-block;
+		&.parent{
+			&:before{
+				content: '';
+				margin: 0;
+				width: auto;
+			}
+		}		
 	}
 	span {
 		display: inline-block;

@@ -130,6 +130,9 @@
 		display: none;
 		&.parent{
 			display: inline-block;
+			&:before{
+				text-decoration: none;
+			}
 		}
 	}
 	span{
