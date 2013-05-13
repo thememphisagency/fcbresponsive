@@ -1,4 +1,6 @@
 <cfsetting enablecfoutputonly="true">
+<!--- @@displayname: Title and teaser and thumbnail --->
+<!--- @@author: Sandy Trinh --->
 
 <!--- import tag libraries --->
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin">

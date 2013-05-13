@@ -718,3 +718,31 @@ aside.bottom{
 }
 
 .googlemap img { max-width: none; }
+
+/* Image banner */
+.banner {
+
+	.bannerImageContent{
+		text-align: center;
+		margin: 52px auto 0;
+		h3{
+			@include font-size(32);
+			color: $black;
+			font-family: $mainFont;
+			padding: 0 0 6px;
+			margin: 0;
+		}
+		p{
+			@include font-size(13);
+			color: $black;			
+			font-family: $secondaryFont;
+		}
+	}	
+	.galleria-image-nav-left .icon-left-open{
+		display: none;
+	}
+	.galleria-image-nav-right .icon-right-open{
+		display: none;
+	}
+
+}
