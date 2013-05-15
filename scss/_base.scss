@@ -19,25 +19,7 @@ body {
 
 a img { border: none; }
 
-a {
-	color: $linkGreen;
-	text-decoration: underline; 
-	line-height: inherit;
-	font-family: $mainFont;
-	font-weight: 700;
-	font-style: italic;
-    @include font-size(14);
-
-    &:hover { 
-    	color: darken($linkGreen, 5%); 
-    }
-
-    &:focus { 
-    	color: darken($linkGreen, 5%); 
-    }
-}
-
-  p a, p a:visited { line-height: inherit; }
+p a, p a:visited { line-height: inherit; }
 
 
 //Clear fix

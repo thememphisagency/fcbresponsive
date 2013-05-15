@@ -31,6 +31,9 @@ nav[role=navigation] {
 		&:hover {
 			background: darken($mainColor,10%);
 		}
+		span{
+			color: #fff;
+		}		
 	}
 
 	ul{
@@ -38,6 +41,9 @@ nav[role=navigation] {
 	}
 
 	li {
+		padding: 0;
+		@include font-size(18);
+		line-height: 18px;
 
 		&.filler {
 			display: none;

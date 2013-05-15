@@ -24,6 +24,11 @@ h1, h2, h3, h4, h5, h6, a, p {
     vertical-align: baseline;
 }
 
+a{
+    font-weight: 400;
+    font-style: normal;  
+}
+
 // Declare wysiwyg font styles here
 //-----------------------------------------------------------
 h1 {
@@ -113,16 +118,25 @@ p {
     color: rgba(51,51,51,1);
 }
 
-blockquote {
-    text-indent: 0px;
-    font-style: normal;
-    font-weight: 600;
-    font-family: $secondaryFont;
-    @include font-size(20);
-    line-height: 28px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    color: rgba(51,51,51,1);
+ul,ol{
+    list-style-type: square;
+    padding: 0 0 0 18px;
+   
+    li{
+        color: $mainColor;
+        @include font-size(14);
+        padding: 0 0 10px;
+        line-height: 20px;
+
+        span{
+            @include font-size(14);
+            color: rgba(51,51,51,1);
+        }
+    }    
+}
+
+ol{
+    list-style-type: decimal;
 }
 
 // Declare wysiwyg specific styles here
@@ -135,6 +149,22 @@ p.intro {
     line-height: 27px;
     color: #555555;
     margin-top: 0px;
+}
+
+p.blockquote {
+    text-indent: 0px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: $secondaryFont;
+    @include font-size(20);
+    line-height: 28px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: rgba(51,51,51,1);
+}
+
+.imgNormal, .imgLeft, .imgRight{
+    padding: 0 0 10px;
 }
 
 // 768px

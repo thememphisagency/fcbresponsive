@@ -26,6 +26,8 @@ $(document).ready(function () {
 		$('html,body').animate({scrollTop:0}, 500);	
 	});
 
+	enableListColourMarkers();
+	
 	// Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking).
 	if ( Modernizr.touch && !window.location.hash ) {
 		$(window).load(function () {
@@ -46,6 +48,32 @@ $(document).ready(function () {
 		}, false); 
 	}
 
+	//Add placeholder support for IE9 below browsers
+	if(!Modernizr.input.placeholder){
+
+		$('[placeholder]').focus(function() {
+		  var input = $(this);
+		  if (input.val() == input.attr('placeholder')) {
+			input.val('');
+			input.removeClass('placeholder');
+		  }
+		}).blur(function() {
+		  var input = $(this);
+		  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+			input.addClass('placeholder');
+			input.val(input.attr('placeholder'));
+		  }
+		}).blur();
+		$('[placeholder]').parents('form').submit(function() {
+		  $(this).find('[placeholder]').each(function() {
+			var input = $(this);
+			if (input.val() == input.attr('placeholder')) {
+			  input.val('');
+			}
+		  })
+		});
+
+	}
 
 	/******************************************** 
 		- All functionality that requires responsive     
@@ -224,4 +252,13 @@ function activateMobileFooterLinks(){
 function deactivateMobileFooterLinks(){
 	$('footer h4 a').off('click');
 	$('footer ul').show();
+}
+
+function enableListColourMarkers(){
+	$('.bodyContent li').each(function(){
+		var listContent = $(this).html();
+		if(listContent.search('span') < 0){
+			$(this).html('<span>' + listContent + '</span>');
+		}		
+	});
 }

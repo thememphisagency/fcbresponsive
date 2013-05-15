@@ -4,7 +4,7 @@
 <cfimport taglib="/farcry/core/tags/container" prefix="con">
 
 <cfoutput>
-<div class="columns #stParam.columns#">
+<div class="columns #stParam.columns#" bodyContent>
 	<h1>#stObj.title#</h1>
 	<p class="byline">#dateformat(stObj.publishDate, "d mmmm yyyy")#</p>
 </cfoutput>

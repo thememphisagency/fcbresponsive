@@ -8,7 +8,7 @@
 <cfparam name="stParam.breadcrumb" default="false">
 
 <cfoutput>
-<div class="columns #stParam.columns#">
+<div class="columns #stParam.columns# bodyContent">
 	<h1>#stObj.title#</h1>
 </cfoutput>
 
