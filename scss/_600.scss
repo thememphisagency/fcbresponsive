@@ -84,6 +84,12 @@ aside {
 		color:#000;
 	}
 
+	h4 a, h4 span{
+		&:after{
+			display: none;
+		}
+	}
+
 	ul.contact {
 		list-style-type: none;
 		text-indent: 0;

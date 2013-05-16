@@ -564,17 +564,36 @@ footer {
 		display:list-item;
 		margin:25px 0 0 20px;
 		color:#666666;
-	}
 
-	h4, h4 a, h4 span {
-		@include font-size(16);
-		color:#666666;
-		line-height:30px;				
-		font:  {
-			family: $mainFont;
-			weight: 700;
-			style: italic;
-		}
+		a, span {
+				text-decoration: none;
+				@include font-size(16);
+				color:#666666;
+				line-height:30px;				
+				font:  {
+					family: $mainFont;
+					weight: 700;
+					style: italic;
+				}
+
+			&:after{
+				@include font-size(18);
+				content: '\e75c';
+				font-family: 'fontello';
+				font-style: normal;
+				font-weight: normal;
+				speak: none;
+				display: inline-block;
+				text-decoration: inherit;
+				width: 1em;
+				margin-right: 0.2em;
+				text-align: center;
+				line-height: 36px;
+				margin-left: 0.2em;
+				float: right;
+			}
+
+		}				
 	}
 
 	.morelink  {
