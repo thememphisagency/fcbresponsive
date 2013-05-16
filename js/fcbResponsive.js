@@ -242,16 +242,16 @@ function justifiedMenu(queryObj){
 }
 
 function activateMobileFooterLinks(){
-	$('footer h4 a').on('click', function(){
-		$('footer ul').hide();
+	$('.footerlinks h4 a, .footerlinks h4 span').on('click', function(){
+		$('.footerlinks ul').hide();
 		$(this).parent().siblings('ul').show();
 		return false;
 	});
 }
 
 function deactivateMobileFooterLinks(){
-	$('footer h4 a').off('click');
-	$('footer ul').show();
+	$('.footerlinks h4 a, .footerlinks h4 span').off('click');
+	$('.footerlinks ul').show();
 }
 
 function enableListColourMarkers(){
@@ -261,4 +261,20 @@ function enableListColourMarkers(){
 			$(this).html('<span>' + listContent + '</span>');
 		}		
 	});
+}
+
+function justifiedFooterNavBlocksHeight(){
+	var iMaxHeight = 0;
+	$('.footerlinks .columns').each(function (){
+		var iColumnHeight = $(this).height();
+		if(iColumnHeight > iMaxHeight) iMaxHeight = iColumnHeight;
+	});
+	
+	if(iMaxHeight > 0) $('.footerlinks .columns').height(iMaxHeight);
+}
+
+function deActivateJustifiedFooterNavBlocksHeight(){
+	$('.footerlinks .columns').each(function (){
+		$(this).height('auto');
+	});	
 }

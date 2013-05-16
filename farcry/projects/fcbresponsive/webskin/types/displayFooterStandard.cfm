@@ -46,13 +46,13 @@
                     <con:container label="ColumnOne" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>
                 <div class="three mobile-four columns">                   
-                    <con:container label="ColumnTwo" bShowIfEmpty="false" lRules="ruleFooterLinks" />
+                   <con:container label="ColumnTwo" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>                
                 <div class="three mobile-four columns">
-                    <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks" />
+                   <con:container label="ColumnThree" bShowIfEmpty="false" lRules="ruleFooterLinks" />
                 </div>               
-                <div class="three mobile-four columns">
-                    <con:container label="ColumnFour" bShowIfEmpty="false" lRules="ruleFooterLinks" />                   
+                <div class="three mobile-four columns last">
+                   <con:container label="ColumnFour" bShowIfEmpty="false" lRules="ruleFooterLinks" />         
                 </div>              
             </div>
 

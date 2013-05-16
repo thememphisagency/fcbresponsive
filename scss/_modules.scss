@@ -529,6 +529,9 @@ footer {
 	
 	.siteinfo {
 		background-color:#dedede;
+
+
+		background: red;
 		text-align: center;
 		padding: 0 0 19px 0;
 	}
@@ -545,6 +548,14 @@ footer {
 			text-indent: 0;
 			line-height: 2em;
 			font-family: $mainFont;
+
+			a{
+				color:#666666;
+				font:  {
+					family: $mainFont;
+					weight: 700;
+				}				
+			}
 		}
 	}
 
@@ -555,7 +566,7 @@ footer {
 		color:#666666;
 	}
 
-	h4, h4 .morelink {
+	h4, h4 a, h4 span {
 		@include font-size(16);
 		color:#666666;
 		line-height:30px;				
