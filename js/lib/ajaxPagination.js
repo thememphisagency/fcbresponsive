@@ -15,10 +15,6 @@ function paginationClick(link) {
 		case 'ajaxSearchPaginator':
 		searchPagination(link);
 		break;
-		case 'ajaxPlantEquipmentPhotosPaginator':
-		case 'ajaxPlantEquipmentServicesPaginator':
-		plantEquipmentPagination(link);
-		break;
 	}	
 }
 
