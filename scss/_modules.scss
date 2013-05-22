@@ -757,3 +757,22 @@ aside.bottom{
 	}
 
 }
+
+.gridGuide {
+	// border:1px solid #000;
+	.columns {
+		background-color: aqua;
+		border-right:1px solid #000;		
+		&:first-child{
+			border-left:1px solid #000;	
+		}
+	}
+
+	.gridGuideInner {
+		border:1px solid #000;		
+	}
+
+	.append-around {
+		display: none;
+	}
+}
