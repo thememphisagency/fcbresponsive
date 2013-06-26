@@ -23,3 +23,30 @@ $screenMedium: 1px !important;
 @import "980";
 @import "992";
 
+@import "480";
+@import "600";
+@import "768";
+@import "980";
+@import "992";
+
+
+@media print {
+	@import "print";
+}
+
+// 1382px
+@media only screen and (min-width: 1382px) {
+	@import "1382";
+}
+
+// 2x (Retina)
+@media (min--moz-device-pixel-ratio: 1.5),
+       (-o-min-device-pixel-ratio: 3/2),
+       (-webkit-min-device-pixel-ratio: 1.5),
+       (min-device-pixel-ratio: 1.5),
+       (min-resolution: 144dpi),
+       (min-resolution: 1.5dppx) {
+
+	/* Retina rules! */
+	@import "2x";
+}
