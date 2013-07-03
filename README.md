@@ -6,19 +6,13 @@ Responsive framework for FarCry
 
 ### CSS
 
-We use [COMPASS](http://compass-style.org/).
+We use SASS & [COMPASS](http://compass-style.org/).
 
-To compile the scss to css, navigate to the root folder for the project:
+To compile the scss to css, navigate to the root folder for the project and run the following in your CLI:
 
-	compass watch [DIRECTORY]
+	sass --compass --sourcemap --watch scss/fcbResponsive.scss:css/fcbResponsive.css
 
-If you would like to compile the scss with with the debug info for easy css debuging in chrome
-
-	compass watch [DIRECTORY] --debug-info
-
-If you recieve an error when compiling with compass about not finding the modular-scale package, please run this command in your command panel.
-
-	gem install modular-scale
+This will generate a css sourcemap for chrome.
 
 ### JS
 

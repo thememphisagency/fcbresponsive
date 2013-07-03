@@ -15,7 +15,6 @@
     <cfset sSeoTitle = stObj.seoTitle />
 </cfif>
 
-<cfcontent reset="true">
 <cfoutput><!DOCTYPE HTML>
 <html class="no-js">
 <head>
@@ -33,12 +32,12 @@
     <cfif structKeyExists(stObj, "extendedMetaData") AND len(trim(stObj.extendedMetaData))>
         <cfoutput><meta name="description" content="#trim(stObj.extendedMetaData)#" /></cfoutput>
     <cfelse>
-        <cfoutput><meta name="description" content="#trim(application.config.fcbWebsite.metaDescription)#" /></cfoutput>        
-    </cfif> 
+        <cfoutput><meta name="description" content="#trim(application.config.fcbWebsite.metaDescription)#" /></cfoutput>
+    </cfif>
     <cfif structKeyExists(stObj, "metaKeywords") AND len(trim(stObj.metaKeywords))>
         <cfoutput><meta name="keywords" content="#trim(stObj.metaKeywords)#" /></cfoutput>
     <cfelse>
-        <cfoutput><meta name="keywords" content="#trim(application.config.fcbWebsite.metaKeywords)#" /></cfoutput>      
+        <cfoutput><meta name="keywords" content="#trim(application.config.fcbWebsite.metaKeywords)#" /></cfoutput>
     </cfif>
     <!-- facebook open graph meta data -->
     <cfif application.config.fcbWebsite.enableSocial>
@@ -47,12 +46,12 @@
         <cfif structKeyExists(stObj, 'teaser') AND len(stObj.teaser) GT 0>
             <cfset sTeaser = trim(stObj.teaser) />
         <cfelseif stObj.typename EQ 'bProduct' AND structKeyExists(stObj,'description') AND len(stObj.description) GT 0>
-            <cfset sTeaser = trim(stObj.description) /> 
+            <cfset sTeaser = trim(stObj.description) />
         </cfif>
 
         <cfset sTeaserImage = 'http://#CGI.SERVER_NAME#/wsimages/default_Facebook-Thumb.jpg' />
         <cfif structKeyExists(stObj, 'teaserImage') AND isValid('uuid', stObj.teaserImage)>
-            <skin:view objectid="#stObj.teaserImage#" typename="dmImage" template="displayFacebookSourceImageURL" r_html="sTeaserImage" />  
+            <skin:view objectid="#stObj.teaserImage#" typename="dmImage" template="displayFacebookSourceImageURL" r_html="sTeaserImage" />
         </cfif>
         <cfoutput>
         <meta property="og:title" content="#trim(REReplace(stObj.label, '[^a-zA-Z0-9-_\s]', '', 'all'))#"/>
@@ -81,8 +80,13 @@
         <![endif]-->
         <link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/classic/galleria.classic.css">
         <link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/dots/galleria.dots.css">
-        <link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" />
+        <cfif #HTTP_USER_AGENT# CONTAINS "MSIE 9.0" OR HTTP_USER_AGENT CONTAINS "MSIE 8.0">
+            <link rel="stylesheet" type="text/css" href="/css/desktopOnly.css" />
+        <cfelse>
+            <link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" />
+        </cfif>        
         <script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
+        <script src="/js/lib/lib.js" type="text/javascript"></script><!-- this load any required library function -->
 </head>
 
 <body>
@@ -108,11 +112,11 @@
     <header class="top">
         <div class="wrapper">
             <a class="logo" href="/" title="#application.config.general.sitetitle#">#application.config.general.sitetitle#</a>
-            
+
             <div class="header-search">
                 <button class="toggleBtn search">
                     <i class="icon-search"></i>
-                    <span class="hide">Search</span>         
+                    <span class="hide">Search</span>
                 </button>
                   <form action="/search" method="post" class="header-search-form">
                     <input type="text" class="search" placeholder="Search our website..." value="" name="criteria" />

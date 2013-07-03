@@ -51,3 +51,31 @@ ul.disclaimer {
 	display:block
 }
 // 5. THEME 				==============================
+
+//FCB Nav
+
+nav[role=navigation]  {
+	height: 52px;
+	top: 96px;
+	padding: 0px; // we dont need the extra padding here
+	background: none;
+}
+
+.fcbNav {
+	background: #005e9a;
+	width: $rowWidth;
+
+	ul{
+		min-width: 18em;
+	}
+
+	a {
+		height: 52px;
+		@include font-size(16);
+		padding: 0.95em 18px;
+	}
+
+	.lvl2 {
+		top: 52px;
+	}
+}

@@ -144,11 +144,11 @@
     %opposite-auto { #{$defaultOpposite}: auto; }
 
     @for $i from 1 through $totalColumns - 2 {
-      .offset-by-#{convert-number-to-word($i)} { @extend %no-default-margin; }
+      //.offset-by-#{convert-number-to-word($i)} { @extend %no-default-margin; }
     }
     @for $i from 2 through $totalColumns - 2 {
-      .push-#{convert-number-to-word($i)} { @extend %default-auto; }
-      .pull-#{convert-number-to-word($i)} { @extend %opposite-auto; }
+      //.push-#{convert-number-to-word($i)} { @extend %default-auto; }
+      //.pull-#{convert-number-to-word($i)} { @extend %opposite-auto; }
     }
 
     /* Mobile 4-column Grid */
@@ -271,11 +271,11 @@
     }
 
     @for $i from 1 through $totalColumns - 2 {
-      .offset-by-#{convert-number-to-word($i)} { @extend %no-default-margin; }
+      //.offset-by-#{convert-number-to-word($i)} { @extend %no-default-margin; }
     }
     @for $i from 2 through $totalColumns - 2 {
-      .push-#{convert-number-to-word($i)} { @extend %default-auto; }
-      .pull-#{convert-number-to-word($i)} { @extend %opposite-auto; }
+      //.push-#{convert-number-to-word($i)} { @extend %default-auto; }
+      //.pull-#{convert-number-to-word($i)} { @extend %opposite-auto; }
     }
 
     /* medium 6-column Grid */

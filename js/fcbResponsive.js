@@ -14,6 +14,7 @@ Use the comment-based directives to compress and minify all js files into one
 // @depends lib/jquery.validate.min.js
 // @depends lib/jquery.fitvids.min.js
 // @depends lib/jquery.foundation.forms.js
+// @depends lib/ajaxPagination.js
 
 $(document).ready(function () {
 
@@ -162,6 +163,7 @@ $(document).ready(function () {
 	$('.close').on("click", function(){
 		$(this).parent().remove();	
 	});
+	
 });
 
 
