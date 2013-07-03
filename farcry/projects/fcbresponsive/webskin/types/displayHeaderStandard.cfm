@@ -86,6 +86,7 @@
             <link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" />
         </cfif>        
         <script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
+        <script src="/js/lib/lib.js" type="text/javascript"></script><!-- this load any required library function -->
 </head>
 
 <body>
