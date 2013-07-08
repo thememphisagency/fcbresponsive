@@ -10,13 +10,13 @@
 	<h1>#stObj.title#</h1>
 </cfoutput>
 
-<con:container label="#stObj.objectID#_Body_Top" />
+<con:container label="#stObj.objectID#_Body_Top" lRules="#application.config.fcbWebsite.lFarcryRules#" />
 
 <cfif structKeyExists(stObj, "body") AND len(stObj.body)>
 	<cfoutput>#stObj.body#</cfoutput>
 </cfif>
 
-<con:container label="#stObj.objectID#_Body_Bottom" />
+<con:container label="#stObj.objectID#_Body_Bottom" lRules="#application.config.fcbWebsite.lFarcryRules#" />
 
 <cfoutput></div><!-- End .columns --></cfoutput>
 

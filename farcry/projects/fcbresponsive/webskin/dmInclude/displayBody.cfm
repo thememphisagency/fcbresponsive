@@ -16,16 +16,16 @@
 	<skin:breadcrumb separator=" / " includeSelf="true">
 </cfif>
 
-<con:container label="#stObj.objectID#_Body_Top" />
+<con:container label="#stObj.objectID#_Body_Top" lRules="#application.config.fcbWebsite.lFarcryRules#" />
 
-<cfif structKeyExists(stobj, "webskinTypename") AND structKeyExists(stobj, "webskin") AND len(stobj.webskinTypename) AND len(stobj.webskin)>	
+<cfif structKeyExists(stobj, "webskinTypename") AND structKeyExists(stobj, "webskin") AND len(stobj.webskinTypename) AND len(stobj.webskin)>
 	<skin:view typename="#stobj.webskinTypename#" webskin="#stobj.webskin#" stInclude="#stobj#" />
 <cfelseif len(stobj.include)>
 	<!--- USE skin:include tag to include the file. --->
 	<skin:include template="#stObj.include#" />
 </cfif>
 
-<con:container label="#stObj.objectID#_Body_Bottom" />
+<con:container label="#stObj.objectID#_Body_Bottom" lRules="#application.config.fcbWebsite.lFarcryRules#" />
 
 <cfoutput></div><!-- End .columns --></cfoutput>
 

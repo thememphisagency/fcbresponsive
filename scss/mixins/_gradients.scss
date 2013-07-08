@@ -1,0 +1,7 @@
+//This is an example gradient mixin
+@mixin navNormalGradient{
+	background: #121212; // for older browser
+	// IE9 SVG, needs conditional override of 'filter' to 'none'
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(top, #3c3c3c 0%,#121212 100%,#7db9e8 100%));
+}
