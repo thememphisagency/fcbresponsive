@@ -13,7 +13,7 @@
 // 2. LAYOUT				==============================
 .wrapper {
 	max-width: 980px;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 
 .row.content-block .teaser.medium-three:last-child {
@@ -42,7 +42,7 @@
 }
 
 ul.disclaimer {
-	margin: 21px 183px 0;	
+	margin: 21px 183px 0;
 	display: inline-block;
 }
 // 4. STATE 				==============================
@@ -78,4 +78,29 @@ nav[role=navigation]  {
 	.lvl2 {
 		top: 52px;
 	}
+}
+
+.addThisContainer {
+  display: inline-block;
+  margin-left: 90px;
+  vertical-align: bottom;
+  p {
+    margin: 0 10px 0 0;
+    @include font-size(14);
+    color:$white;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 700;
+  }
+  .addthis_toolbox {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  aside &{
+    width: 100%;
+    margin: 0 0 15px;
+    p{
+      color: #fd8000;
+    }
+  }
 }
