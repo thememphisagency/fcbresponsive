@@ -98,7 +98,7 @@ header.top {
 	}
 }
 
-.thumbnail { 
+.thumbnail {
 	width: auto !important;
 }
 
@@ -106,13 +106,15 @@ header.top {
 	width:100% !important;
 }
 
-.header-search {
+.header-search, .bannerRotator, .fluid-width-video-wrapper {
 	display: none !important;
 }
 
-.bannerRotator {
-	display: none !important;
+.row{
+  width: auto !important;
+  float: none !important;
 }
+
 
 // 6. LAYOUT 				==============================
 // 7. VENDOR-SPECIFIC 		==============================
