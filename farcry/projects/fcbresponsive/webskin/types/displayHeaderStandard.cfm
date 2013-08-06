@@ -81,10 +81,10 @@
         <link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/classic/galleria.classic.css">
         <link type="text/css" rel="stylesheet" href="#application.url.webroot#/js/lib/galleria/themes/dots/galleria.dots.css">
         <cfif #HTTP_USER_AGENT# CONTAINS "MSIE 9.0" OR HTTP_USER_AGENT CONTAINS "MSIE 8.0">
-            <link rel="stylesheet" type="text/css" href="/css/desktopOnly.css" />
+            <link rel="stylesheet" type="text/css" href="/css/desktopOnly.css?v=#application.config.fcbWebsite.version#" />
         <cfelse>
-            <link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css" />
-        </cfif>        
+            <link rel="stylesheet" type="text/css" href="/css/fcbResponsive.css?v=#application.config.fcbWebsite.version#" />
+        </cfif>
         <script src="/js/lib/modernizer-custom.js" type="text/javascript"></script>
         <script src="/js/lib/lib.js" type="text/javascript"></script><!-- this load any required library function -->
 </head>
