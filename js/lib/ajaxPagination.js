@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$('.ajaxPagination li a').click(function(e) {
+	$('.ajaxPagination li span a').live("click",function(e) {
 		e.preventDefault();
 		paginationClick($(this));
 	});	
