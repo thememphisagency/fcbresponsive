@@ -15,7 +15,8 @@
 	<cfproperty ftSeq="53" ftFieldset="Farcry" name="campaignMonitorListID" type="string" default="" hint="" ftLabel="Campaign Monitor List ID" ftHint="The ID of the subscriber list to which the subscriber should be added." />
 	<cfproperty ftSeq="54" ftFieldset="Farcry" name="enableSocial" type="boolean" default="1" hint="" ftLabel="Enable facebook and twitter" />
 	<cfproperty ftSeq="55" ftFieldset="Farcry" name="lFarcryRules" type="string" default="ruleHandpicked,ruleDynamicInclude,rulePaginatorSearchByCategory" hint="" ftLabel="Farcry Rules" ftType="list" ftRenderType="dropdown" ftSelectMultiple="true" ftHint="Select a list of Farcry rules that are used for content authoring." ftListData="getRules" />
-  <cfproperty ftSeq="56" ftFieldset="Farcry" name="version" type="string" default="1.0" hint="" ftLabel="Site Version" ftHint="The version number of the site. (Also used to force refresh css cache)" />
+  <cfproperty ftSeq="56" ftFieldset="Farcry" name="bEnableAddThis" type="boolean" default="1" hint="" ftLabel="Enable AddThis?" />
+  <cfproperty ftSeq="57" ftFieldset="Farcry" name="version" type="string" default="1.0" hint="" ftLabel="Site Version" ftHint="The version number of the site. (Also used to force refresh css cache)" />
 
 
 	<cffunction name="getRules" returntype="string" hint="Get a list of rules availabel">
