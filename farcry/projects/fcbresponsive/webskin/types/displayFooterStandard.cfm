@@ -92,7 +92,7 @@
     </footer>
 
     <!--- All Js files should be included in this file --->
-    <script src="/js/fcbResponsive.min.js" type="text/javascript"></script>
+    <script src="/js/fcbResponsive.min.js?v=#application.config.fcbWebsite.version#" type="text/javascript"></script>
 
     </cfoutput>
     <!--- Only output the tracking code when user is not a logged in admin --->
