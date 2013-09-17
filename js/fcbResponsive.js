@@ -1,11 +1,11 @@
 /*jslint browser: true*/
 /*global $, $, Modernizr, FastClick, enquire */
 
-/* 
-Use the comment-based directives to compress and minify all js files into one 
+/*
+Use the comment-based directives to compress and minify all js files into one
 */
 
-// @depends lib/respond.min.js
+// @depends lib/media.match.min.js
 // @depends lib/jquery-1.8.3.min.js
 // @depends lib/enquire.min.js
 // @depends lib/appendAround.js
@@ -22,13 +22,13 @@ $(document).ready(function () {
 
 	$('body').addClass('js');
 
-	$(".toTop").click(function(event){		
-		event.preventDefault();	
-		$('html,body').animate({scrollTop:0}, 500);	
+	$(".toTop").click(function(event){
+		event.preventDefault();
+		$('html,body').animate({scrollTop:0}, 500);
 	});
 
 	enableListColourMarkers();
-	
+
 	// Hide address bar on mobile devices (except if #hash present, so we don't mess up deep linking).
 	if ( Modernizr.touch && !window.location.hash ) {
 		$(window).load(function () {
@@ -46,7 +46,7 @@ $(document).ready(function () {
 		// Instantiate FastClick
 		window.addEventListener('load', function() {
 		    var ft = new FastClick(document.body);
-		}, false); 
+		}, false);
 	}
 
 	//Add placeholder support for IE9 below browsers
@@ -76,14 +76,14 @@ $(document).ready(function () {
 
 	}
 
-	/******************************************** 
-		- All functionality that requires responsive     
+	/********************************************
+		- All functionality that requires responsive
 		Should be included here
-	*********************************************/	
+	*********************************************/
 	enquire.register("screen and (min-width:320px) and (max-width:739px)", {
 		match: function() {
 			/*
-			First de register all events in mobile view (This should be called in the unmatch function for enquire.register but there currently is a bug 
+			First de register all events in mobile view (This should be called in the unmatch function for enquire.register but there currently is a bug
 			which does not preserve the order of unmatch then match when changing to the different media queries ).
 			This will be resolved in V2 as stated here https://github.com/WickyNilliams/enquire.js/issues/29
 			*/
@@ -93,25 +93,24 @@ $(document).ready(function () {
 			activateMobileSearch();
 			activateMobileFooterLinks();
 		}
-	})	   
-	.listen();
+	});
 
 	enquire.register("screen and (min-width:768px)", {
 
 		match: function() {
 			/*
-			First de register all events in mobile view (This should be called in the unmatch function for enquire.register but there currently is a bug 
+			First de register all events in mobile view (This should be called in the unmatch function for enquire.register but there currently is a bug
 			which does not preserve the order of unmatch then match when changing to the different media queries ).
 			This will be resolved in V2 as stated here https://github.com/WickyNilliams/enquire.js/issues/29
 			*/
-			
+
 			deactivateMobileFooterLinks();
 
 			$('#menu-link').off('click');
 			$('.parent > a').off('click');
 
 			$('.toggleBtn.search').on("click", function(e){
-				e.preventDefault();				
+				e.preventDefault();
 				var sForm = $('.header-search-form');
 				sForm.submit();
 			});
@@ -122,10 +121,9 @@ $(document).ready(function () {
 			$(window).resize(function(){
 				justifiedMenu($('nav#menu'));
 			});
-			
+
 		}
-	},true)	   
-	.listen();
+	});
 
 
 	// Contact Form validation
@@ -143,8 +141,8 @@ $(document).ready(function () {
 			email : 'Please enter a valid email address',
 			comment: 'Please enter a comment',
 			phone : 'Please enter your phone number in digits with no spaces between them.'
-		},		
-        errorElement: "small"		
+		},
+        errorElement: "small"
 	});
 
 	// Submit contact form using custom button
@@ -161,25 +159,25 @@ $(document).ready(function () {
 
 	// Allow all close buttons to close the parent
 	$('.close').on("click", function(){
-		$(this).parent().remove();	
+		$(this).parent().remove();
 	});
-	
+
 });
 
 
 
 function activateMobileSearch() {
-	/* toogle button for search */			
+	/* toogle button for search */
 	$('.toggleBtn.search').on("click", function(e){
 		e.preventDefault();
-		
+
 		var sForm = $('.header-search-form');
 		var sInput = $('.header-search-form .search');
 
 		sForm.toggleClass('active');
-		if(sForm.hasClass('active')) { 
+		if(sForm.hasClass('active')) {
 			sInput.focus();
-			
+
 			if( $('.toggleBtn.menu').hasClass('active') ) {
 				$('.toggleBtn.menu').removeClass('active');
 				$('#menu').removeClass('active');
@@ -194,7 +192,7 @@ function activateMobileMenu() {
 	$menulink = $('#menu-link'),
 	$menuTrigger = $('.parent > a');
 
-	$menulink.on("click", function(e) {		
+	$menulink.on("click", function(e) {
 		e.preventDefault();
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
@@ -204,7 +202,7 @@ function activateMobileMenu() {
 		}
 	});
 
-	// This is setup to only show top level nav in mobile menu. 
+	// This is setup to only show top level nav in mobile menu.
 	// Script below will need more work	(e.preventdefault() stops the nav click event allowing sub menu to show)
 	$menuTrigger.on("click", function(e) {
 		//e.preventDefault();
@@ -225,11 +223,11 @@ function justifiedMenu(queryObj){
 
 	navChildrens.each(function(i) {
 		totalWidth += $(this).outerWidth(true);
-	});	
+	});
 
 	totalExpand = (navWidth - totalWidth) / numOfNavChildrens;
 	roundedExpand =  parseInt(totalExpand);
-	remainder = Math.floor((totalExpand - roundedExpand) * numOfNavChildrens);	
+	remainder = Math.floor((totalExpand - roundedExpand) * numOfNavChildrens);
 
 	navAnchors.each(function(i) {
 
@@ -261,7 +259,7 @@ function enableListColourMarkers(){
 		var listContent = $(this).html();
 		if(listContent.search('span') < 0){
 			$(this).html('<span>' + listContent + '</span>');
-		}		
+		}
 	});
 }
 
@@ -271,12 +269,12 @@ function justifiedFooterNavBlocksHeight(){
 		var iColumnHeight = $(this).height();
 		if(iColumnHeight > iMaxHeight) iMaxHeight = iColumnHeight;
 	});
-	
+
 	if(iMaxHeight > 0) $('.footerlinks .columns').height(iMaxHeight);
 }
 
 function deActivateJustifiedFooterNavBlocksHeight(){
 	$('.footerlinks .columns').each(function (){
 		$(this).height('auto');
-	});	
+	});
 }
